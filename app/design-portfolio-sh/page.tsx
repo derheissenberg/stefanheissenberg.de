@@ -25,6 +25,10 @@ import { WantToSeeMoreSection } from "@/components/sections/WantToSeeMoreSection
 export const metadata: Metadata = {
   title: "Design Portfolio | Stefan Heißenberg",
   description: "Selected UX Strategy projects and case studies from Stefan Heißenberg",
+  robots: {
+    index: false, // LEARNING: Exclude this page from search engine indexing
+    follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+  },
 };
 
 export default function DesignPortfolioPage() {

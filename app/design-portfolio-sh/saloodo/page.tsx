@@ -25,6 +25,10 @@ import { SaloodoCaseStudyHero } from "@/components/case-studies/saloodo/SaloodoC
 export const metadata: Metadata = {
   title: "Saloodo Case Study | Design Portfolio | Stefan Heißenberg",
   description: "From Zero to One: Building a Digital Marketplace - Saloodo case study",
+  robots: {
+    index: false, // LEARNING: Exclude this case study page from search engine indexing
+    follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+  },
 };
 
 // LEARNING: Tech stack logos for the "Refactoring for Scale" section

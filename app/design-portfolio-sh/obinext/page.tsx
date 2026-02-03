@@ -26,6 +26,10 @@ import { MetricCard } from "@/components/ui/MetricCard";
 export const metadata: Metadata = {
   title: "OBI Next Case Study | Design Portfolio | Stefan Heißenberg",
   description: "Blueprint for Transformation: 30 days from concept to MVP. The bathroom planner that changed how a €8.2B company serves customers.",
+  robots: {
+    index: false, // LEARNING: Exclude this case study page from search engine indexing
+    follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+  },
 };
 
 export default function OBINextCaseStudyPage() {

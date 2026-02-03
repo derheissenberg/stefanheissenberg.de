@@ -27,6 +27,10 @@ import { DHLCaseStudySection } from "@/components/case-studies/dhl/DHLCaseStudyS
 export const metadata: Metadata = {
   title: "DHL Case Study | Design Portfolio | Stefan Heißenberg",
   description: "Driving DHL's Digital Transformation: A Data-Driven Approach for Global Logistics",
+  robots: {
+    index: false, // LEARNING: Exclude this case study page from search engine indexing
+    follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+  },
 };
 
 // LEARNING: Customer logos for the "Global Launch" section

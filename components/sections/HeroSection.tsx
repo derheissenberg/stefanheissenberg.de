@@ -221,7 +221,7 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
           - Allows precise control: tight spacing between text, larger gap before button
           - Matches Figma design exactly
         */}
-        <div className="flex max-w-[320px] flex-col items-start text-left lg:max-w-xl">
+        <div className="flex max-w-[320px] flex-col items-start text-left mt-[12vh] lg:mt-0 lg:max-w-xl">
           {/**
            * NAME ELEMENT: "Stefan Heißenberg"
            * LEARNING: Animated gradient text effect (same as KeyCreatorIdentifiersSection)

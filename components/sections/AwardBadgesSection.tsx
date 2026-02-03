@@ -15,14 +15,16 @@ import Image from "next/image";
 
 export function AwardBadgesSection() {
   return (
-    <section className="bg-[var(--background)] py-12 lg:py-16" aria-label="Awards and certifications">
+    <section className="bg-[var(--background)] py-8 lg:py-16" aria-label="Awards and certifications">
       {/* Container: 1160px max-width, centered, no horizontal padding (matches Figma) */}
       {/* LEARNING: max-w-[1160px] matches Figma container width exactly */}
-      <div className="mx-auto max-w-[1160px]">
+      {/* LEARNING: Reduced padding on mobile (py-8) for tighter spacing */}
+      <div className="mx-auto max-w-[1160px] px-6 lg:px-0">
         {/* Grid layout: 3 columns, 30px horizontal gap, labels aligned at bottom */}
         {/* LEARNING: grid-cols-3 creates 3 equal columns, gap-x-[30px] for horizontal spacing */}
+        {/* LEARNING: Added gap-y-[24px] for mobile vertical spacing, reduced from default for tighter layout */}
         {/* Each grid cell uses flex-col to stack icon(s) and label vertically */}
-        <div className="grid grid-cols-1 gap-x-[30px] sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-[30px] gap-y-[24px] sm:grid-cols-2 md:grid-cols-3 md:gap-y-0">
           {/* Award Winning Design */}
           {/* LEARNING: flex flex-col with h-full ensures each badge group fills grid cell height */}
           {/* items-center centers icons horizontally, flex-grow spacer pushes label to bottom for alignment */}
@@ -50,12 +52,14 @@ export function AwardBadgesSection() {
                 />
               </div>
             </div>
-            {/* Spacer: flex-grow pushes label to bottom, ensuring all labels align */}
+            {/* Spacer: flex-grow pushes label to bottom, ensuring all labels align on desktop */}
             {/* LEARNING: flex-grow takes up remaining space, pushing label to same vertical position */}
-            <div className="flex-grow"></div>
+            {/* LEARNING: Hidden on mobile (md:block) to remove extra vertical space, shown on desktop for alignment */}
+            <div className="hidden flex-grow md:block"></div>
             {/* Label - 16px gap from icon container (matches Figma gap-y) */}
             {/* LEARNING: mt-[16px] creates 16px vertical gap between icon and label */}
-            <p className="mt-[16px] text-center text-sm font-medium text-white sm:text-base">
+            {/* LEARNING: Increased mobile font size from text-sm (14px) to text-[17px] (~21% increase) for better readability */}
+            <p className="mt-[16px] text-center text-[17px] font-medium text-white sm:text-base">
               Award Winning Design
             </p>
           </div>
@@ -76,8 +80,9 @@ export function AwardBadgesSection() {
                 sizes="200px"
               />
             </div>
-            {/* Spacer pushes label to same vertical position as other labels */}
-            <div className="flex-grow"></div>
+            {/* Spacer pushes label to same vertical position as other labels on desktop */}
+            {/* LEARNING: Hidden on mobile (md:block) to remove extra vertical space */}
+            <div className="hidden flex-grow md:block"></div>
             {/* Label with same spacing */}
             <p className="mt-[16px] text-center text-sm font-medium text-white sm:text-base">UX Master</p>
           </div>
@@ -97,10 +102,12 @@ export function AwardBadgesSection() {
                 />
               </div>
             </div>
-            {/* Spacer pushes label to same vertical position */}
-            <div className="flex-grow"></div>
+            {/* Spacer pushes label to same vertical position on desktop */}
+            {/* LEARNING: Hidden on mobile (md:block) to remove extra vertical space */}
+            <div className="hidden flex-grow md:block"></div>
             {/* Label with same spacing */}
-            <p className="mt-[16px] text-center text-sm font-medium text-white sm:text-base">Scrum Master</p>
+            {/* LEARNING: Increased mobile font size from text-sm (14px) to text-[17px] (~21% increase) for better readability */}
+            <p className="mt-[16px] text-center text-[17px] font-medium text-white sm:text-base">Scrum Master</p>
           </div>
         </div>
       </div>

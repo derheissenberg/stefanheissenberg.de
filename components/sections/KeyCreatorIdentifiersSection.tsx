@@ -21,11 +21,11 @@ import { MetricCard } from "@/components/ui/MetricCard";
 
 const metrics = [
   { value: "400+", label: "Projects delivered", color: "blue" as const },
-  { value: "19", label: "Selfhosted Websites", color: "yellow" as const },
+  { value: "20", label: "Selfhosted Websites", color: "yellow" as const },
   { value: "5", label: "Startups founded", color: "blue" as const },
-  { value: "6160", label: "RAW photos in 2024", color: "yellow" as const },
-  { value: "20", label: "Books read in 2024", color: "blue" as const },
-  { value: "8720", label: "Documented daily ideas since 2019.", color: "yellow" as const },
+  { value: "6.720", label: "RAW photos in 2025", color: "yellow" as const },
+  { value: "24", label: "Books read in 2025", color: "blue" as const },
+  { value: "10.425", label: "Documented daily ideas since 2019.", color: "yellow" as const },
 ];
 
 export function KeyCreatorIdentifiersSection() {

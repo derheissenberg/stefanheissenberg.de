@@ -104,8 +104,9 @@ export function MetricCard({ value, label, color }: MetricCardProps) {
         */}
         {/* LEARNING: Outfit Black (900) font applied to numbers for bold, modern display typography */}
         {/* LEARNING: Symbols (€, +, %, ×) are rendered at 70% size (0.7em) to prevent them from dominating */}
+        {/* LEARNING: Mobile font size: 82px (reduced by 15% from 96px) for better balance */}
         <p
-          className={`${gradientClasses} bg-clip-text text-5xl font-black leading-none text-transparent animate-gradient sm:text-6xl lg:text-7xl`}
+          className={`${gradientClasses} bg-clip-text text-[82px] font-black leading-none text-transparent animate-gradient sm:text-6xl lg:text-7xl`}
           style={{ 
             backgroundSize: "300%",
             fontFamily: "var(--font-outfit), system-ui, sans-serif",
@@ -126,7 +127,8 @@ export function MetricCard({ value, label, color }: MetricCardProps) {
           })}
         </p>
         {/* Label - no animation, stays white/grey */}
-        <p className="mt-3 text-sm text-[var(--foreground)]/80 sm:text-base">{label}</p>
+        {/* LEARNING: Increased mobile font size from text-sm (14px) to text-[17px] (~21% increase) for better readability */}
+        <p className="mt-3 text-[17px] text-[var(--foreground)]/80 sm:text-base">{label}</p>
       </div>
     </GlowCard>
   );

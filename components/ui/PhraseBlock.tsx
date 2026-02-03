@@ -56,16 +56,18 @@ export function PhraseBlock({ text, color, rowSpan = 1, fontSize }: PhraseBlockP
   // LEARNING: Flexible font sizing using clamp() - scales based on container/viewport
   // Ensures text always fits within the box, adapting to available space
   // Formula: clamp(min, preferred, max) - scales smoothly between min and max
-  // Using more conservative values to ensure text never overflows boxes
+  // Mobile-first approach: Much larger base sizes for prominent quotes on mobile
+  // Small mobile (< 640px): Even larger sizes for maximum prominence
+  // Desktop/tablet: Smaller sizes for better balance on larger screens
   // Viewport-based scaling (vw) combined with container-relative sizing
   const flexibleFontSize = fontSize === "harmonized" 
-    ? "clamp(1rem, 2.5vw + 0.5rem, 1.75rem)" // 16px → scales → 28px (more conservative)
+    ? "clamp(1.875rem, 5vw + 1.25rem, 1.75rem)" // Small mobile: 30px → scales → 28px, Desktop: capped at 28px
     : fontSize === "small"
-    ? "clamp(0.75rem, 1.5vw + 0.5rem, 1rem)" // 12px → scales → 16px
+    ? "clamp(1.25rem, 2.5vw + 1rem, 1.125rem)" // Small mobile: 20px → scales → 18px, Desktop: capped at 18px
     : fontSize === "large"
-    ? "clamp(1rem, 2.5vw + 0.5rem, 1.5rem)" // 16px → scales → 24px
+    ? "clamp(1.875rem, 4.5vw + 1.25rem, 1.875rem)" // Small mobile: 30px → scales → 30px, Desktop: capped at 30px
     : fontSize === "xlarge"
-    ? "clamp(1.25rem, 3vw + 0.5rem, 2.5rem)" // 20px → scales → 40px
+    ? "clamp(2.5rem, 6vw + 2rem, 2.5rem)" // Small mobile: 40px → scales → 40px, Desktop: capped at 40px
     : undefined; // Fallback to Tailwind classes if no fontSize specified
   
   return (
@@ -77,8 +79,10 @@ export function PhraseBlock({ text, color, rowSpan = 1, fontSize }: PhraseBlockP
       {/* Text will always fit within the box, scaling responsively with available space */}
       {/* LEARNING: overflow-hidden prevents text from overflowing box boundaries */}
       {/* LEARNING: max-w-full ensures text doesn't exceed container width */}
+      {/* LEARNING: data-phrase-block attribute enables CSS media query targeting for small mobile breakpoint */}
       <p
         className={`${flexibleFontSize ? "" : fontSizeClasses[finalFontSize]} leading-tight text-white text-center max-w-full break-words`}
+        data-phrase-block={flexibleFontSize ? finalFontSize : undefined}
         style={{
           fontFamily: "var(--font-cherry-bomb), system-ui, sans-serif",
           ...(flexibleFontSize ? { fontSize: flexibleFontSize } : {}),

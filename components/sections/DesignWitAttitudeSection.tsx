@@ -24,8 +24,9 @@
 import { PhraseBlock } from "@/components/ui/PhraseBlock";
 
 export function DesignWitAttitudeSection() {
+  // LEARNING: Reduced vertical padding on mobile (py-10) for tighter spacing, normal padding on desktop (lg:py-20)
   return (
-    <section className="bg-[var(--background)] px-8 py-16 lg:py-20" aria-label="Design with attitude">
+    <section className="bg-[var(--background)] px-8 py-10 lg:py-20" aria-label="Design with attitude">
       {/* Container: 1160px max-width matches other sections */}
       <div className="mx-auto max-w-[1160px]">
         {/* LEARNING: Section heading uses consistent h2 style matching "82 Customers" */}
@@ -36,13 +37,13 @@ export function DesignWitAttitudeSection() {
         {/* Bento grid: Single column mobile, 4 columns desktop */}
         {/* LEARNING: grid-cols-1 creates single column on mobile (matches Figma) */}
         {/* LEARNING: md:grid-cols-4 creates 4-column layout on desktop */}
-        {/* LEARNING: auto-rows-[150px] sets base row height for single-span cards */}
+        {/* LEARNING: auto-rows-[200px] on mobile (increased from 150px) for larger text, 150px on desktop */}
         {/* LEARNING: gap-4 provides consistent spacing between cards */}
-        <div className="grid grid-cols-1 gap-4 auto-rows-[150px] md:grid-cols-4">
-          {/* Column 1, Row 1: "No fear to follow your passion." - SEPARATE card */}
+        <div className="grid grid-cols-1 gap-4 auto-rows-[200px] md:grid-cols-4 md:auto-rows-[150px]">
+          {/* Column 1, Row 1: "Beginners mind." - SEPARATE card */}
           {/* LEARNING: Harmonized font size with flexible sizing - text scales to fit box */}
-          {/* LEARNING: 1:2 ratio - "No fear..." spans 1 row, "Beginners mind." spans 2 rows */}
-          <PhraseBlock text="No fear to follow your passion." color="yellow" rowSpan={1} fontSize="harmonized" />
+          {/* LEARNING: 1:2 ratio - "Beginners mind." spans 1 row, "No fear..." spans 2 rows */}
+          <PhraseBlock text="Beginners mind." color="yellow" rowSpan={1} fontSize="harmonized" />
           
           {/* Column 2, Rows 1-2: "Learn rules to break them." (spans 2 rows) */}
           {/* LEARNING: md:row-span-2 makes this card span 2 rows in the grid */}
@@ -58,11 +59,11 @@ export function DesignWitAttitudeSection() {
           {/* LEARNING: Harmonized font size with flexible sizing */}
           <PhraseBlock text="Get things done." color="cyan" rowSpan={1} fontSize="harmonized" />
           
-          {/* Column 1, Rows 2-3: "Beginners mind." - SEPARATE card, spans 2 rows (1:2 ratio) */}
-          {/* LEARNING: Changed to row-span-2 for 1:2 ratio with "No fear..." (1 row : 2 rows) */}
+          {/* Column 1, Rows 2-3: "No fear to follow your passion." - SEPARATE card, spans 2 rows (1:2 ratio) */}
+          {/* LEARNING: Changed to row-span-2 for 1:2 ratio with "Beginners mind." (1 row : 2 rows) */}
           {/* LEARNING: Flexible font sizing ensures text fits even in smaller box */}
           <div className="md:row-span-2">
-            <PhraseBlock text="Beginners mind." color="yellow" rowSpan={2} fontSize="harmonized" />
+            <PhraseBlock text="No fear to follow your passion." color="yellow" rowSpan={2} fontSize="harmonized" />
           </div>
           
           {/* Column 3, Row 2: "Use what you have." (blue) */}

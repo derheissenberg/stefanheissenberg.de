@@ -26,12 +26,12 @@ export function AlohaSection() {
           </p>
           <p>
             With over 14 years across agencies like{" "}
-            {/* LEARNING: Company links with white default color, animated gradient on hover matching LinkedIn/email links */}
+            {/* LEARNING: Company links with paragraph text color (foreground/90) as default, animated gradient on hover matching LinkedIn/email links */}
             <a
               href="https://doccheck.agency/de/#/homepage"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
+              className="text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
               style={{ backgroundSize: "300%" }}
             >
               antwerpes
@@ -41,7 +41,7 @@ export function AlohaSection() {
               href="https://www.sunzinet.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
+              className="text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
               style={{ backgroundSize: "300%" }}
             >
               sunzinet
@@ -51,7 +51,7 @@ export function AlohaSection() {
               href="https://www.saloodo.com/de/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
+              className="text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
               style={{ backgroundSize: "300%" }}
             >
               Saloodo!
@@ -61,7 +61,7 @@ export function AlohaSection() {
               href="https://www.onlypn.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
+              className="text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
               style={{ backgroundSize: "300%" }}
             >
               OnlyPN

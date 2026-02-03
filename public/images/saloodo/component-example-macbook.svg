@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2166 1564" fill="none">
+  <rect width="2166" height="1564" fill="#1a1a1a"/>
+  <rect x="333" y="100" width="1500" height="1000" rx="20" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="4"/>
+  <rect x="383" y="150" width="1400" height="850" fill="#1a1a1a"/>
+  <rect x="433" y="1120" width="1300" height="30" rx="5" fill="#3a3a3a"/>
+  <text x="1083" y="600" fill="#666" font-family="Arial" font-size="48" text-anchor="middle">Component Library</text>
+  <text x="1083" y="660" fill="#444" font-family="Arial" font-size="24" text-anchor="middle">MacBook Mockup - Replace with actual image</text>
+</svg>

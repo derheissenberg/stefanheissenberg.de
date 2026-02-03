@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297 590" fill="none">
+  <rect width="297" height="590" fill="#1a1a1a"/>
+  <rect x="10" y="10" width="277" height="570" rx="30" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="2"/>
+  <rect x="30" y="80" width="237" height="450" fill="#075E54"/>
+  <circle cx="148" cy="40" r="8" fill="#3a3a3a"/>
+  <text x="148" y="300" fill="#25D366" font-family="Arial" font-size="18" text-anchor="middle">WhatsApp</text>
+  <text x="148" y="330" fill="#666" font-family="Arial" font-size="12" text-anchor="middle">Integration Mockup</text>
+</svg>

@@ -1,26 +1,409 @@
+/**
+ * GLOBAL STYLES: globals.css
+ * Design tokens and base styles for stefanheissenberg.de
+ *
+ * Defines: background, foreground, accent palette, CTA gradient.
+ * Tailwind handles most utilities; this stays minimal.
+ */
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A0A0A;
+  --foreground: #ededed;
+
+  /* Accent palette */
+  --accent-cyan: #00D4FF;
+  --accent-blue: #0066FF;
+  --accent-yellow: #FFD600;
+  --accent-orange: #FF6B00;
+
+  /* Primary CTA gradient: 4-corner mesh gradient */
+  /* LEARNING: CSS doesn't support true mesh gradients, so we approximate with a diagonal gradient */
+  /* Top-left: #017cdb, Bottom-left: #016dae, Top-right: #1873db, Bottom-right: #5166db */
+  --cta-gradient-top-left: #017cdb;
+  --cta-gradient-bottom-left: #016dae;
+  --cta-gradient-top-right: #1873db;
+  --cta-gradient-bottom-right: #5166db;
+  
+  /* Mesh gradient approximation using diagonal linear-gradient */
+  /* LEARNING: Using 135deg diagonal with color stops positioned to create smooth blending */
+  /* The gradient transitions: top-left → top-right → bottom-right → bottom-left */
+  --gradient-cta: linear-gradient(
+    135deg,
+    var(--cta-gradient-top-left) 0%,
+    var(--cta-gradient-top-right) 33%,
+    var(--cta-gradient-bottom-right) 66%,
+    var(--cta-gradient-bottom-left) 100%
+  );
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+  --font-mono: var(--font-kode-mono), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  /* LEARNING: --font-cherry-bomb is set by Next.js font loader on HTML element */
+  /* No need to redefine here - use directly with fallback */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-outfit, system-ui), sans-serif;
+}
+
+/* LEARNING: Section heading h2 style - matches "82 Customers" heading */
+/* Used consistently across all section headings for visual harmony */
+/* Responsive sizing: 1.5rem (24px) on mobile, 1.875rem (30px) on tablet+ */
+/* Uses Outfit font with extra light weight (200) for elegant, refined typography */
+.section-heading {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 200; /* extra light */
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .section-heading {
+    font-size: 1.875rem; /* text-3xl */
+  }
+}
+
+/* LEARNING: Animated gradient text effect */
+/* Keyframes define the animation steps */
+/* backgroundPosition animates from 0% to 100% to create moving gradient effect */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* LEARNING: Custom animation class for Tailwind */
+/* Uses the gradient keyframes with 6s duration, ease timing, infinite loop */
+.animate-gradient {
+  animation: gradient 6s ease infinite;
+}
+
+/* LEARNING: Animated gradient background for CTA button */
+/* Uses same blue gradient as KeyCreatorIdentifiersSection numbers: cyan-400 → blue-500 → cyan-400 */
+/* All background properties in CSS to avoid React style conflicts */
+/* Matches exactly the gradient used in MetricCard for blue numbers */
+.button-gradient-animated {
+  background-image: linear-gradient(to right, rgb(34, 211, 238), rgb(59, 130, 246), rgb(34, 211, 238));
+  background-size: 300%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  animation: gradient 6s ease infinite;
+}
+
+/* LEARNING: Animated gradient border and text for secondary button */
+/* Uses same blue gradient animation as primary button */
+/* Technique: Wrapper approach - outer div has gradient background, inner has dark background */
+/* This creates a reliable gradient border effect that works across all browsers */
+/* Border is always visible by default (not only on hover) */
+/* LEARNING: width: fit-content ensures button only takes space needed for content, not 100% width */
+/* LEARNING: overflow: hidden needed for glow effect to work properly */
+.button-secondary-gradient {
+  position: relative;
+  display: inline-flex;
+  width: fit-content; /* LEARNING: Explicit fit-content to prevent 100% width expansion */
+  padding: 2px; /* Border thickness - increased for better visibility */
+  background: linear-gradient(to right, rgb(34, 211, 238), rgb(59, 130, 246), rgb(34, 211, 238));
+  background-size: 300%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem; /* rounded-lg */
+  animation: gradient 6s ease infinite;
+  overflow: hidden; /* LEARNING: Required for glow effect to be contained */
+  /* LEARNING: Ensure border is always visible - no opacity changes */
+  opacity: 1;
+}
+
+/* LEARNING: Inner wrapper for button content */
+/* Dark background creates the border effect by showing gradient around edges */
+/* Border thickness increased to 2px, so adjust border-radius accordingly */
+/* LEARNING: width: 100% removed - let it shrink to fit content naturally */
+/* LEARNING: z-index ensures content appears above glow effect */
+.button-secondary-gradient-inner {
+  background-color: var(--background);
+  border-radius: calc(0.5rem - 2px); /* Adjusted for 2px border thickness */
+  /* LEARNING: No width constraint - naturally fits content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* LEARNING: Prevent shrinking below content size */
+  position: relative; /* LEARNING: Required for z-index and ::before pseudo-element */
+  z-index: 1; /* LEARNING: Above glow effect */
+  overflow: hidden; /* LEARNING: Contain glow effect within inner div */
+}
+
+/* LEARNING: Gradient text for secondary button */
+/* Applied to text span inside the inner wrapper */
+/* Font styles (font-family, font-size, font-weight, letter-spacing) are applied via Tailwind classes */
+/* This class only handles the gradient text effect, not typography */
+.button-secondary-gradient-text {
+  background-image: linear-gradient(to right, rgb(34, 211, 238), rgb(59, 130, 246), rgb(34, 211, 238));
+  background-size: 300%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient 6s ease infinite;
+  /* LEARNING: Ensure font styles from Tailwind classes are not overridden */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+/* LEARNING: Mouse-following glow effect for cards */
+/* CSS variables --x and --y are set by JavaScript on mouse move */
+/* radial-gradient creates spotlight effect that follows cursor */
+/* ::before pseudo-element doesn't interfere with card content */
+
+/* Base glow card styles */
+.glow-card,
+.glow-card-blue,
+.glow-card-yellow {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow effect using ::before pseudo-element */
+.glow-card::before,
+.glow-card-blue::before,
+.glow-card-yellow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* LEARNING: radial-gradient creates circular glow */
+  /* var(--x, 50%) var(--y, 50%): Position at mouse location, default to center */
+  /* 600px circle: Size of the glow (large enough to cover card) */
+  /* rgba(255, 255, 255, 0.1): Glow color and opacity */
+  /* transparent 40%: Fades to transparent at 40% radius */
+  background: radial-gradient(
+    600px circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.1),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* LEARNING: Allows clicks to pass through to card content */
+  z-index: 0; /* LEARNING: Behind card content */
+}
+
+/* Blue glow variant (matches blue gradient theme) */
+.glow-card-blue::before {
+  background: radial-gradient(
+    600px circle at var(--x, 50%) var(--y, 50%),
+    rgba(34, 211, 238, 0.15), /* cyan-400 with opacity */
+    transparent 40%
+  );
+}
+
+/* Yellow/orange glow variant (matches yellow gradient theme) */
+.glow-card-yellow::before {
+  background: radial-gradient(
+    600px circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 214, 0, 0.15), /* yellow accent with opacity */
+    transparent 40%
+  );
+}
+
+/* Show glow on hover */
+.glow-card:hover::before,
+.glow-card-blue:hover::before,
+.glow-card-yellow:hover::before {
+  opacity: 1;
+}
+
+/* LEARNING: Mouse-following glow effect for secondary buttons */
+/* Same technique as GlowCard - uses CSS variables --x and --y for cursor tracking */
+/* Applied only to secondary and secondary-gradient button variants */
+
+/* Base button glow styles (secondary buttons only) */
+/* LEARNING: Exact same structure as glow-card for consistency */
+.button-glow {
+  position: relative;
+  overflow: hidden;
+  /* LEARNING: Initialize CSS variables to center (fallback if JS doesn't set them) */
+  --x: 50%;
+  --y: 50%;
+}
+
+/* LEARNING: Ensure button content appears above glow effect */
+.button-glow > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* LEARNING: For secondary-gradient buttons, apply glow to inner div instead */
+/* The inner div is where the content is, so glow should be on it to be visible */
+/* We'll use a different approach - glow on inner div, not outer button */
+.button-secondary-gradient.button-glow .button-secondary-gradient-inner {
+  position: relative;
+  z-index: 1;
+  /* LEARNING: Inner div will have its own glow effect via ::before */
+}
+
+/* Glow effect using ::before pseudo-element */
+/* LEARNING: Exact same structure as glow-card::before */
+.button-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* LEARNING: radial-gradient creates circular glow that follows mouse */
+  /* var(--x, 50%) var(--y, 50%): Position at mouse location, default to center */
+  /* 400px circle: Size of the glow (adjusted for button size) */
+  /* rgba(34, 211, 238, 0.3): Cyan glow matching button gradient theme - increased opacity */
+  /* transparent 40%: Fades to transparent at 40% radius */
+  background: radial-gradient(
+    400px circle at var(--x, 50%) var(--y, 50%),
+    rgba(34, 211, 238, 0.3), /* cyan-400 with opacity - increased for better visibility */
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* LEARNING: Allows clicks to pass through to button */
+  z-index: 0; /* LEARNING: Behind button content, but above gradient background */
+  border-radius: inherit; /* LEARNING: Match button border-radius */
+  /* LEARNING: Ensure pseudo-element is created and positioned correctly */
+  display: block;
+}
+
+/* LEARNING: For secondary-gradient buttons, apply glow to inner div */
+/* The outer button's ::before is covered by inner div, so we use inner div's ::before */
+/* CSS variables --x and --y are now set directly on the inner div by JavaScript */
+.button-secondary-gradient.button-glow .button-secondary-gradient-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* LEARNING: Glow effect on inner div - uses CSS variables set on inner div itself */
+  /* Subtle glow effect - reduced opacity and smaller radius for more refined appearance */
+  background: radial-gradient(
+    400px circle at var(--x, 50%) var(--y, 50%),
+    rgba(34, 211, 238, 0.25), /* Cyan glow - subtle and refined */
+    rgba(34, 211, 238, 0.1) 30%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0; /* Behind text content */
+  border-radius: inherit;
+}
+
+/* Show glow on hover for inner div */
+/* LEARNING: Hover on parent button triggers glow on inner div */
+.button-secondary-gradient.button-glow:hover .button-secondary-gradient-inner::before {
+  opacity: 1;
+}
+
+/* Show glow on hover (secondary buttons only) */
+.button-glow:hover::before {
+  opacity: 1;
+}
+
+/* LEARNING: Ensure glow is visible for secondary-gradient buttons specifically */
+/* The gradient background might be covering the glow, so we ensure it's above */
+.button-secondary-gradient.button-glow:hover::before {
+  opacity: 1;
+  z-index: 1; /* Ensure it's above the gradient background */
+}
+
+/* LEARNING: Ghost button variant - no border, just gradient text */
+/* Simplified structure: anchor tag with gradient text span, no inner wrapper */
+.button-ghost {
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem; /* rounded-lg */
+  overflow: hidden; /* LEARNING: Required for glow effect to be contained */
+}
+
+/* LEARNING: Ghost button uses same gradient text effect as secondary-gradient */
+.button-ghost-text {
+  background-image: linear-gradient(to right, rgb(34, 211, 238), rgb(59, 130, 246), rgb(34, 211, 238));
+  background-size: 300%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient 6s ease infinite;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  position: relative;
+  z-index: 1; /* LEARNING: Above glow effect */
+}
+
+/* LEARNING: Glow effect for ghost button - applied directly to anchor tag */
+.button-ghost.button-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    400px circle at var(--x, 50%) var(--y, 50%),
+    rgba(34, 211, 238, 0.25),
+    rgba(34, 211, 238, 0.1) 30%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.button-ghost.button-glow:hover::before {
+  opacity: 1;
+}
+
+
+
+/* LEARNING: Hover effect for primary button */
+/* Uses scale and brightness filter instead of opacity to maintain text contrast */
+/* Text stays white and readable, button becomes slightly larger and brighter */
+.button-primary-hover {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Primary button hover: slight scale up and brightness increase */
+/* Maintains text contrast while providing clear visual feedback */
+.button-primary-hover:hover {
+  transform: scale(1.02); /* LEARNING: Slight scale up (2%) for subtle lift effect */
+  filter: brightness(1.1); /* LEARNING: 10% brighter - enhances gradient without affecting text */
+}
+
+/* LEARNING: CSS fallback for 3-column grid on large screens */
+/* Ensures the grid displays correctly even if Tailwind lg:grid-cols-3 fails */
+/* Uses data-debug-grid attribute as selector for the KeyCreatorIdentifiersSection grid */
+@media (min-width: 1024px) {
+  [data-debug-grid="3cols-desktop"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
 }

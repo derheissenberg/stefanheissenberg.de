@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1695" fill="none">
+  <rect width="2000" height="1695" fill="#1a1a1a"/>
+  <rect x="100" y="100" width="1800" height="1495" rx="20" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="4"/>
+  <text x="1000" y="800" fill="#666" font-family="Arial" font-size="48" text-anchor="middle">Detail Page Funnel</text>
+  <text x="1000" y="860" fill="#444" font-family="Arial" font-size="24" text-anchor="middle">Analytics Dashboard - Replace with actual image</text>
+</svg>

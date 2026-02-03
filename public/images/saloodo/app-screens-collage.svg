@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1240" fill="none">
+  <rect width="1600" height="1240" fill="#1a1a1a"/>
+  <rect x="50" y="50" width="450" height="550" rx="10" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="2"/>
+  <rect x="550" y="100" width="500" height="600" rx="10" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="2"/>
+  <rect x="1100" y="50" width="450" height="550" rx="10" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="2"/>
+  <rect x="200" y="650" width="500" height="540" rx="10" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="2"/>
+  <rect x="750" y="750" width="600" height="440" rx="10" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="800" y="620" fill="#666" font-family="Arial" font-size="48" text-anchor="middle">App Screens Collage</text>
+  <text x="800" y="680" fill="#444" font-family="Arial" font-size="24" text-anchor="middle">Replace with actual image</text>
+</svg>

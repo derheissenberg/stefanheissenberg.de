@@ -1,0 +1,215 @@
+# Stefan Heißenberg — Vibe Coding Rules
+# Save as `.cursorrules` in your project root
+
+## WHO I AM
+
+I am Stefan Heißenberg, a Senior UX Leader transitioning into code.
+- 14+ years in UX/Product Design at enterprise scale (DHL, Bayer, BIONTECH)
+- Professional designer learning to code — not a developer learning design
+- Building real projects while learning: portfolio site, startup (OnlyPN)
+- Goal: mastery through understanding, not just shipping
+
+---
+
+## MY LEARNING PHILOSOPHY
+
+```
+"Get things done. Don't die in perfection."
+— But also: understand everything I ship.
+```
+
+I want to become a great vibe coder, which means:
+- I build WITH AI, not just copy-paste FROM AI
+- Every line of code should teach me something
+- No magic shortcuts I don't understand
+- Clean, readable code > clever code
+
+---
+
+## TECH STACK
+
+- **Framework:** Next.js 14+ (App Router)
+- **Styling:** Tailwind CSS + Custom CSS when needed
+- **Animations:** Framer Motion + CSS @property
+- **Language:** TypeScript
+
+---
+
+## CODE STRUCTURE RULES
+
+### 1. One component per file
+```
+✅ /components/ui/Button.tsx
+✅ /components/ui/Card.tsx
+❌ /components/ui/index.tsx (with multiple components)
+```
+
+### 2. Clear folder structure
+```
+/src
+  /app                    # Pages (Next.js App Router)
+  /components
+    /ui                   # Reusable atomic components
+    /sections             # Page sections (Hero, About, etc.)
+    /layout               # Nav, Footer, etc.
+  /lib                    # Utilities and helpers
+  /types                  # TypeScript definitions
+  /styles                 # Global CSS
+```
+
+### 3. Descriptive naming
+```typescript
+// ❌ BAD
+const x = motion.div;
+const handleClick = () => {};
+className="wrapper"
+
+// ✅ GOOD
+const AnimatedContainer = motion.div;
+const handleContactButtonClick = () => {};
+className="hero-section-container"
+```
+
+---
+
+## COMMENT REQUIREMENTS
+
+### File header (required on every component)
+```typescript
+/**
+ * COMPONENT: ComponentName
+ * PURPOSE: What this component does
+ * 
+ * KEY CONCEPTS:
+ * - List techniques used and why
+ * - Help me understand the approach
+ */
+```
+
+### Inline comments (required for complex code)
+```typescript
+// LEARNING: Explain what this does and why this approach was chosen
+```
+
+### Example
+```typescript
+/**
+ * COMPONENT: HeroSection
+ * PURPOSE: Main landing section with headline and call-to-action
+ * 
+ * KEY CONCEPTS:
+ * - "use client" directive: Required because we use Framer Motion (client-side)
+ * - motion.div: Framer Motion wrapper that enables animation props
+ * - whileInView: Triggers animation when element scrolls into viewport
+ */
+
+"use client"; // LEARNING: Framer Motion uses hooks, so this must be a client component
+
+import { motion } from "framer-motion";
+
+export function HeroSection() {
+  // LEARNING: Variants define reusable animation states
+  // "hidden" = starting state, "visible" = ending state
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <motion.section
+      variants={fadeIn}
+      initial="hidden"        // LEARNING: Start in the "hidden" state
+      whileInView="visible"   // LEARNING: Animate to "visible" when in viewport
+      viewport={{ once: true }} // LEARNING: Only animate once, not on every scroll
+    >
+      {/* content */}
+    </motion.section>
+  );
+}
+```
+
+---
+
+## HOW TO RESPOND TO MY PROMPTS
+
+### Before writing code
+1. Briefly explain what you'll build
+2. List the files you'll create
+3. Note any key concepts I should understand
+
+### While writing code
+1. One file at a time
+2. Full comments as shown above
+3. Pause after each file for questions
+
+### After writing code
+1. Summarize what was created
+2. Explain any decisions you made
+3. Ask if I want to continue or have questions
+
+### When I ask "why"
+- Give the deeper explanation
+- Compare alternatives
+- Connect to concepts I might already know from design
+
+### When I'm stuck or have an error
+- Don't just fix it — explain what went wrong
+- Show me how to debug it myself
+- Connect the error to the underlying concept
+
+---
+
+## COMPLEXITY: BUILD UP GRADUALLY
+
+When I ask for something complex:
+
+```
+STEP 1: Show me the simplest working version
+STEP 2: Explain what each part does
+STEP 3: Then add enhancements one at a time
+STEP 4: Explain each enhancement before adding
+```
+
+I'd rather have 3 iterations that I understand than 1 complete solution I can't follow.
+
+---
+
+## WHAT I'M INTERESTED IN LEARNING
+
+These are topics I want to explore in this project (I'll ask for them when ready):
+
+- **Animations:** Scroll-triggered reveals, text animations, micro-interactions
+- **Visual effects:** Glassmorphism, animated gradients, glow effects
+- **CSS techniques:** @property for animatable custom properties, backdrop-filter
+- **Framer Motion:** Variants, stagger animations, orchestration
+- **Next.js:** App Router patterns, server vs client components, optimization
+
+When I ask about these topics, feel free to go deeper with explanations.
+
+---
+
+## PROJECT CONTEXT
+
+### Current project: stefanheissenberg.de
+- Portfolio website
+- Design source: Figma (connected via MCP)
+- Goal: Showcase UX work with strong visual craft
+
+### Future project: OnlyPN
+- Startup website
+- Same tech stack
+- Learning transfers from portfolio project
+
+---
+
+## REMEMBER
+
+- I'm learning, not just shipping
+- Comments are not optional
+- Explain your choices
+- One step at a time
+- Treat me as an intelligent designer learning a new craft
+
+---
+
+*Last updated: January 2025*

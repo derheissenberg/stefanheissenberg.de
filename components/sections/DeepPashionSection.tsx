@@ -44,7 +44,8 @@ export function DeepPashionSection() {
               <h3 className="text-xl font-bold text-[var(--accent-yellow)] sm:text-2xl">{principle.heading}</h3>
               {/* LEARNING: Increased mobile font size from text-sm (14px) to text-[17px] (~21% increase) for better readability */}
               <p className="mt-2 text-[17px] font-medium text-[var(--accent-cyan)] sm:text-base">{principle.subheading}</p>
-              <p className="mt-4 leading-[140%] text-[var(--foreground)]/90">{principle.body}</p>
+              {/* LEARNING: Font style matching AlohaSection paragraphs - text-lg (18px) for consistent body text sizing */}
+              <p className="mt-4 text-lg leading-[140%] text-[var(--foreground)]/90">{principle.body}</p>
             </div>
           ))}
         </div>

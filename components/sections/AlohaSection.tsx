@@ -6,18 +6,50 @@
  * - Centered, max-width content for comfortable reading
  * - Three paragraphs with proper spacing
  * - Contact links (LinkedIn, email) styled as text links
+ * - Waving hand animation using Framer Motion (motion.span + animate prop)
+ *
+ * WAVING HAND ANIMATION:
+ * - motion.span wraps the 👋 emoji for rotation animation
+ * - transformOrigin: pivot at bottom (wrist) so hand waves around that point
+ * - Keyframes: 3 waves with overshoot, then pause (natural "hello!" cadence)
+ * - Custom cursor: waving hand on section content (div); links keep pointer for click affordance
  */
+
+"use client";
+
+import { motion } from "framer-motion";
 
 export function AlohaSection() {
   return (
     <section className="bg-[var(--background)] px-6 pt-16 pb-[100px] lg:px-12 lg:pt-20" aria-label="About me">
-      <div className="mx-auto max-w-3xl">
-        {/* LEARNING: Font style matching "UX Strategy" from HeroSection - Outfit extralight, large responsive sizing */}
+      {/* LEARNING: Waving hand cursor on entire content block; links override with cursor-pointer */}
+      <div
+        className="mx-auto max-w-3xl"
+        style={{ cursor: "url('/cursors/waving-hand.svg') 16 8, pointer" }}
+      >
+        {/* LEARNING: Cherry Bomb display font for playful "Aloha" greeting (matches DesignWitAttitudeSection phrase blocks) */}
         <h2 
-          className="inline-block text-left text-[48px] font-extralight leading-none text-white lg:text-[66px]"
-          style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+          className="inline-block text-left text-[48px] leading-none text-white lg:text-[66px]"
+          style={{ fontFamily: "var(--font-cherry-bomb), system-ui, sans-serif" }}
         >
-          Aloha 👋
+          Aloha{" "}
+          {/* LEARNING: Natural waving hand - pivot at wrist (bottom), multiple waves, then pause
+              - transformOrigin: "55% 85%" = pivot at lower area (wrist), not center
+              - Keyframes [0, 20, -5, 20, -5, 20, 0]: 3 waves with slight overshoot
+              - Cursor from parent div (waving hand); removed redundant cursor here
+          */}
+          <motion.span
+            className="inline-block"
+            style={{ transformOrigin: "55% 85%" }}
+            animate={{ rotate: [0, 20, -5, 20, -5, 20, 0] }}
+            transition={{
+              duration: 0.9,
+              repeat: Infinity,
+              repeatDelay: 2,
+            }}
+          >
+            👋
+          </motion.span>
         </h2>
         <div className="mt-8 space-y-6 text-lg leading-[140%] text-[var(--foreground)]/90">
           <p>
@@ -31,7 +63,7 @@ export function AlohaSection() {
               href="https://doccheck.agency/de/#/homepage"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
+              className="cursor-pointer text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
               style={{ backgroundSize: "300%" }}
             >
               antwerpes
@@ -41,7 +73,7 @@ export function AlohaSection() {
               href="https://www.sunzinet.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
+              className="cursor-pointer text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
               style={{ backgroundSize: "300%" }}
             >
               sunzinet
@@ -51,7 +83,7 @@ export function AlohaSection() {
               href="https://www.saloodo.com/de/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
+              className="cursor-pointer text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
               style={{ backgroundSize: "300%" }}
             >
               Saloodo!
@@ -61,7 +93,7 @@ export function AlohaSection() {
               href="https://www.onlypn.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
+              className="cursor-pointer text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
               style={{ backgroundSize: "300%" }}
             >
               OnlyPN
@@ -82,7 +114,7 @@ export function AlohaSection() {
             href="https://www.linkedin.com/in/stefanheissenberg/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 bg-clip-text font-medium text-transparent underline animate-gradient"
+            className="cursor-pointer bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 bg-clip-text font-medium text-transparent underline animate-gradient"
             style={{ backgroundSize: "300%" }}
           >
             Linkedin
@@ -91,7 +123,7 @@ export function AlohaSection() {
           {/* LEARNING: Animated blue gradient link matching "Stefan Heißenberg" text and ghost button styling */}
           <a
             href="mailto:hallo@stefanheissenberg.de"
-            className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 bg-clip-text font-medium text-transparent underline animate-gradient"
+            className="cursor-pointer bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 bg-clip-text font-medium text-transparent underline animate-gradient"
             style={{ backgroundSize: "300%" }}
           >
             email

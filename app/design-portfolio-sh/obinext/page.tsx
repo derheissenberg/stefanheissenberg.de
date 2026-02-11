@@ -101,12 +101,13 @@ export default function OBINextCaseStudyPage() {
 
       {/* KPI Cards Section */}
       {/* LEARNING: 3-column grid on desktop, responsive to 1-column on mobile */}
+      {/* LEARNING: Synchronized animation - all cards animate simultaneously (no delay) */}
       <section className="bg-[var(--background)] px-5 py-10 md:px-8 lg:px-12 lg:py-12">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-            <MetricCard value="+62.5%" label="Conversion lift" color="blue" />
-            <MetricCard value="€3.5M+" label="Business Impact in year one" color="yellow" />
-            <MetricCard value="2.5×" label="Sales Productivity" color="blue" />
+            <MetricCard value="+62.5%" label="Conversion lift" color="blue" delay={0} />
+            <MetricCard value="€3.5M+" label="Business Impact in year one" color="yellow" delay={0} />
+            <MetricCard value="2.5×" label="Sales Productivity" color="blue" delay={0} />
           </div>
         </div>
       </section>

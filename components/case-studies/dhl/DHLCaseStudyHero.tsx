@@ -85,9 +85,16 @@ export function DHLCaseStudyHero() {
         {/* Statistics Grid */}
         {/* LEARNING: Responsive grid - 2 columns desktop (2x3), 3 columns tablet (3x2), 1 column mobile (1x6) */}
         {/* Matches KeyCreatorIdentifiersSection pattern but with different responsive breakpoints */}
+        {/* LEARNING: Synchronized animation - all cards animate simultaneously (no delay) */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:gap-5">
           {statistics.map((stat, index) => (
-            <MetricCard key={index} value={stat.value} label={stat.label} color={stat.color} />
+            <MetricCard 
+              key={index} 
+              value={stat.value} 
+              label={stat.label} 
+              color={stat.color}
+              delay={0} // LEARNING: No delay - all cards animate together
+            />
           ))}
         </div>
       </div>

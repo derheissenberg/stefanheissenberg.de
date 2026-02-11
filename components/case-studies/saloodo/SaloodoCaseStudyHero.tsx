@@ -77,9 +77,16 @@ export function SaloodoCaseStudyHero() {
 
         {/* Statistics Grid */}
         {/* LEARNING: Responsive grid - 3 columns on desktop, 2 on tablet, 1 on mobile */}
+        {/* LEARNING: Synchronized animation - all cards animate simultaneously (no delay) */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {statistics.map((stat, index) => (
-            <MetricCard key={index} value={stat.value} label={stat.label} color={stat.color} />
+            <MetricCard 
+              key={index} 
+              value={stat.value} 
+              label={stat.label} 
+              color={stat.color}
+              delay={0} // LEARNING: No delay - all cards animate together
+            />
           ))}
         </div>
       </div>

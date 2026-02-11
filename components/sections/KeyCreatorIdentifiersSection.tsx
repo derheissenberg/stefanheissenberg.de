@@ -45,12 +45,19 @@ export function KeyCreatorIdentifiersSection() {
         {/* Color pattern: Alternating blue/yellow ensures each blue is next to a yellow */}
         {/* LEARNING: Tailwind responsive grid - lg:grid-cols-3 applies at 1024px+ */}
         {/* CSS fallback in globals.css ensures 3 columns even if Tailwind fails */}
+        {/* LEARNING: Synchronized animation - all cards animate simultaneously (no delay) */}
         <div 
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5" 
           data-debug-grid="3cols-desktop"
         >
           {metrics.map((metric, index) => (
-            <MetricCard key={index} value={metric.value} label={metric.label} color={metric.color} />
+            <MetricCard 
+              key={index} 
+              value={metric.value} 
+              label={metric.label} 
+              color={metric.color}
+              delay={0} // LEARNING: No delay - all cards animate together
+            />
           ))}
         </div>
       </div>

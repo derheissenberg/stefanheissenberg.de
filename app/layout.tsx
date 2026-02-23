@@ -33,6 +33,9 @@ const cherryBomb = Cherry_Bomb_One({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/images/stefan-heissenberg-favicon.png",
+  },
   title: "Stefan Heißenberg | Head of Experience Design | UX Strategy Leader",
   description:
     "Senior UX Leader with 14+ years experience. Head of Experience Design at DHL Global Forwarding. Expert in B2B digital transformation, design systems, and leading distributed teams across EMEA. Based in Cologne, open to European opportunities.",

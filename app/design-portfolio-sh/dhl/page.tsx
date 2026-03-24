@@ -24,12 +24,31 @@ import { Button } from "@/components/ui/Button";
 import { DHLCaseStudyHero } from "@/components/case-studies/dhl/DHLCaseStudyHero";
 import { DHLCaseStudySection } from "@/components/case-studies/dhl/DHLCaseStudySection";
 
+const baseUrl = "https://www.stefanheissenberg.de";
+const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
+
 export const metadata: Metadata = {
-  title: "DHL Case Study | Design Portfolio | Stefan Heißenberg",
-  description: "Driving DHL's Digital Transformation: A Data-Driven Approach for Global Logistics",
+  title: "DHL UX Case Study | myDHLi | Design Portfolio | Stefan Heißenberg",
+  description: "UX Strategy case study: Driving DHL's digital transformation. UX research, design systems, UI design for global logistics platform myDHLi.",
+  alternates: {
+    canonical: `${baseUrl}/design-portfolio-sh/dhl`,
+  },
   robots: {
     index: false, // LEARNING: Exclude this case study page from search engine indexing
     follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+  },
+  openGraph: {
+    url: `${baseUrl}/design-portfolio-sh/dhl`,
+    title: "DHL UX Case Study | myDHLi | Design Portfolio | Stefan Heißenberg",
+    description: "UX Strategy case study: Driving DHL's digital transformation. UX research, design systems, UI design for global logistics platform myDHLi.",
+    siteName: "Stefan Heißenberg",
+    locale: "en_US",
+    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Experience Design" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DHL UX Case Study | myDHLi | Design Portfolio | Stefan Heißenberg",
+    description: "UX Strategy case study: DHL digital transformation. UX research, design systems, UI design for global logistics.",
   },
 };
 
@@ -59,9 +78,24 @@ const uxResearchLogos = [
   { src: "/images/mydhli/uxresearch/adobe-analytics-adobe-experience.png", alt: "Adobe Analytics", width: 60, height: 60 },
 ];
 
+const dhlArticleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Driving DHL's Digital Transformation: A Data-Driven UX Approach for Global Logistics",
+  description:
+    "UX Strategy case study: Architecting myDHLi from concept to global platform. UX research, UI design, design systems, and design ops for DHL Global Forwarding.",
+  keywords: "myDHLi, DHL, UX Strategy, UX Design, UI Design, Design Systems, Design Leadership, Digital Transformation, B2B Logistics",
+  author: { "@id": "https://www.stefanheissenberg.de/#person" },
+  publisher: { "@id": "https://www.stefanheissenberg.de/#person" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.stefanheissenberg.de/design-portfolio-sh/dhl" },
+  datePublished: "2018-01-01",
+  dateModified: "2026-01-24",
+};
+
 export default function DHLCaseStudyPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dhlArticleJsonLd) }} />
       {/* Back Button */}
       {/* LEARNING: Uses ghost button variant - smaller size but keeps all animated gradient effects */}
       <section className="bg-[var(--background)] px-5 pt-8 md:px-8 lg:px-12 lg:pt-12">

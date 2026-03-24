@@ -22,12 +22,31 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SaloodoCaseStudyHero } from "@/components/case-studies/saloodo/SaloodoCaseStudyHero";
 
+const baseUrl = "https://www.stefanheissenberg.de";
+const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
+
 export const metadata: Metadata = {
-  title: "Saloodo Case Study | Design Portfolio | Stefan Heißenberg",
-  description: "From Zero to One: Building a Digital Marketplace - Saloodo case study",
+  title: "Saloodo UX Case Study | Design Portfolio | Stefan Heißenberg",
+  description: "UX Strategy case study: Building a digital freight marketplace. UX design, UI design, design systems, and UX ROI from zero to scale.",
+  alternates: {
+    canonical: `${baseUrl}/design-portfolio-sh/saloodo`,
+  },
   robots: {
     index: false, // LEARNING: Exclude this case study page from search engine indexing
     follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+  },
+  openGraph: {
+    url: `${baseUrl}/design-portfolio-sh/saloodo`,
+    title: "Saloodo UX Case Study | Design Portfolio | Stefan Heißenberg",
+    description: "UX Strategy case study: Building a digital freight marketplace. UX design, UI design, design systems, and UX ROI from zero to scale.",
+    siteName: "Stefan Heißenberg",
+    locale: "en_US",
+    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Experience Design" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Saloodo UX Case Study | Design Portfolio | Stefan Heißenberg",
+    description: "UX Strategy case study: Digital freight marketplace. UX design, UI design, design systems from zero to scale.",
   },
 };
 
@@ -57,9 +76,24 @@ const analyticsLogos = [
   { src: "/images/saloodo/ux-roi/power-bi.svg", alt: "Power BI", width: 45, height: 60 },
 ];
 
+const saloodoArticleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "From Zero to One: Building a Digital Marketplace - Saloodo UX Case Study",
+  description:
+    "UX Strategy case study: Building and scaling the Saloodo digital freight marketplace. UX design, UI design, design system refactoring, UX ROI, MEA expansion.",
+  keywords: "Saloodo, Digital Marketplace, UX Strategy, UX Design, UI Design, Design Systems, Design Leadership, Freight, DHL",
+  author: { "@id": "https://www.stefanheissenberg.de/#person" },
+  publisher: { "@id": "https://www.stefanheissenberg.de/#person" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.stefanheissenberg.de/design-portfolio-sh/saloodo" },
+  datePublished: "2018-01-01",
+  dateModified: "2026-01-24",
+};
+
 export default function SaloodoCaseStudyPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(saloodoArticleJsonLd) }} />
       {/* Back Button */}
       <section className="bg-[var(--background)] px-5 pt-8 md:px-8 lg:px-12 lg:pt-12">
         <div className="mx-auto max-w-6xl">

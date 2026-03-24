@@ -22,12 +22,38 @@ import { OBINextCaseStudyTeaser } from "@/components/portfolio/OBINextCaseStudyT
 import { CustomersSection } from "@/components/sections/CustomersSection";
 import { WantToSeeMoreSection } from "@/components/sections/WantToSeeMoreSection";
 
+const baseUrl = "https://www.stefanheissenberg.de";
+const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
+
 export const metadata: Metadata = {
-  title: "Design Portfolio | Stefan Heißenberg",
-  description: "Selected UX Strategy projects and case studies from Stefan Heißenberg",
+  title: "UX Design Portfolio | Stefan Heißenberg | UX Strategy & Case Studies",
+  description: "UX and UI design portfolio. Selected UX Strategy projects and design case studies from Stefan Heißenberg, UX Design Director.",
+  alternates: {
+    canonical: `${baseUrl}/design-portfolio-sh`,
+  },
   robots: {
     index: false, // LEARNING: Exclude this page from search engine indexing
     follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+  },
+  openGraph: {
+    url: `${baseUrl}/design-portfolio-sh`,
+    title: "UX Design Portfolio | Stefan Heißenberg | UX Strategy & Case Studies",
+    description: "UX and UI design portfolio. Selected UX Strategy projects and design case studies from Stefan Heißenberg, UX Design Director.",
+    siteName: "Stefan Heißenberg",
+    locale: "en_US",
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Stefan Heißenberg - Head of Experience Design",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UX Design Portfolio | Stefan Heißenberg | UX Strategy & Case Studies",
+    description: "UX and UI design portfolio. UX Strategy projects from Stefan Heißenberg, UX Design Director.",
   },
 };
 

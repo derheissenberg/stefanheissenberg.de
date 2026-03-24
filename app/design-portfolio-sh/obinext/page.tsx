@@ -23,18 +23,52 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { MetricCard } from "@/components/ui/MetricCard";
 
+const baseUrl = "https://www.stefanheissenberg.de";
+const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
+
 export const metadata: Metadata = {
-  title: "OBI Next Case Study | Design Portfolio | Stefan Heißenberg",
-  description: "Blueprint for Transformation: 30 days from concept to MVP. The bathroom planner that changed how a €8.2B company serves customers.",
+  title: "OBI Next UX Case Study | Design Portfolio | Stefan Heißenberg",
+  description: "UX Strategy case study: 30 days from concept to MVP. UX and UI design for the bathroom planner that transformed how a €8.2B retailer serves customers.",
+  alternates: {
+    canonical: `${baseUrl}/design-portfolio-sh/obinext`,
+  },
   robots: {
     index: false, // LEARNING: Exclude this case study page from search engine indexing
     follow: true, // LEARNING: Allow search engines to follow links (for link equity)
   },
+  openGraph: {
+    url: `${baseUrl}/design-portfolio-sh/obinext`,
+    title: "OBI Next UX Case Study | Design Portfolio | Stefan Heißenberg",
+    description: "UX Strategy case study: 30 days from concept to MVP. UX and UI design for the bathroom planner that transformed how a €8.2B retailer serves customers.",
+    siteName: "Stefan Heißenberg",
+    locale: "en_US",
+    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Experience Design" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OBI Next UX Case Study | Design Portfolio | Stefan Heißenberg",
+    description: "UX Strategy case study: 30 days concept to MVP. UX/UI design for bathroom planner, €8.2B retailer transformation.",
+  },
+};
+
+const obinextArticleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Blueprint for Transformation: 30 days from concept to MVP",
+  description:
+    "UX Strategy case study: OBI Next bathroom planner. UX and UI design—30 days to MVP, +62.5% conversion lift, €3.5M+ business impact.",
+  keywords: "OBI Next, BadPlaner, Bathroom Planner, UX Strategy, UX Design, UI Design, Design Leadership, MVP, Digital Transformation",
+  author: { "@id": "https://www.stefanheissenberg.de/#person" },
+  publisher: { "@id": "https://www.stefanheissenberg.de/#person" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.stefanheissenberg.de/design-portfolio-sh/obinext" },
+  datePublished: "2020-01-01",
+  dateModified: "2026-01-24",
 };
 
 export default function OBINextCaseStudyPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obinextArticleJsonLd) }} />
       {/* Back Button */}
       {/* LEARNING: Uses ghost button variant - smaller size but keeps all animated gradient effects */}
       <section className="bg-[var(--background)] px-5 pt-8 md:px-8 lg:px-12 lg:pt-12">

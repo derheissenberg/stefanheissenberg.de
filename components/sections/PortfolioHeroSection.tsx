@@ -102,7 +102,7 @@ export function PortfolioHeroSection({ ctaHref = "mailto:hallo@stefanheissenberg
               textShadow: "0px 4px 7px rgba(0, 0, 0, 0.25)",
             }}
           >
-            Since we have not yet met in person, I've compiled an overview of relevant projects for you. I am happy to answer your questions.
+            I've been designing digital products for fifteen years — agencies, consulting, startups, enterprise. These three case studies cover the chapters that shaped me most. Happy to answer questions on anything in between.
           </p>
 
           {/* BUTTON CONTAINER: Same CTA button as landing page */}

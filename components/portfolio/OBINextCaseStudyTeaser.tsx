@@ -33,9 +33,9 @@ export function OBINextCaseStudyTeaser() {
           />
         </div>
       }
-      headline="Creation of a blueprint for a new business model"
+      headline="30 days to launch, six months to a blueprint"
       bodyText={[
-        "It started with a bet: launch a bathroom planner in 30 days to prove rapid prototyping could work at enterprise scale. Over the next six months, we built, tested, broke, and rebuilt—running user tests, shipping features mid-sprint, and learning what actually worked. The bathroom planner was just the beginning. The real product was the playbook for how a €7B company builds digital innovation.",
+        "OBI Next was OBI Group's bet that a retailer could move like a startup. I came in with sunzinet to build the bathroom planner MVP in 30 days — then stayed six months to prove it worked with data. The pattern we found became OBI's playbook for digital services: kitchen planner, garden planner, 14 configurators across 640+ stores.",
       ]}
       imageSrc="/images/portfolio/obinext-casestudy-teaser.png"
       imageAlt="OBI Next bathroom planner on laptop"

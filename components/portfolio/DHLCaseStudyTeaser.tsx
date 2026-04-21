@@ -32,9 +32,9 @@ export function DHLCaseStudyTeaser() {
           />
         </div>
       }
-      headline="How an idea became the biggest B2B portal"
+      headline="How an idea became DHL Global Forwarding's B2B portal"
       bodyText={[
-        "myDHLi is the B2B customer portal of DHL Global Forwarding & Freight. It gives you 360° visibility and full control over your shipments. Quote + Book, Track, Documents, Analytics - everything at your fingertips. Follow critical shipments and share information with colleagues, customers and suppliers. All in one place.",
+        "myDHLi started as a sketch I drew while still at Saloodo!. Seven years later it's the central portal for DHL Global Forwarding — quoting, booking, tracking, documents, analytics for 22,000+ enterprise customers across 50+ countries.",
       ]}
       imageSrc="/images/portfolio/dhl-casestudy-teaser.png"
       imageAlt="DHL myDHLi portal on tablet and smartphones"

@@ -31,9 +31,9 @@ export function SaloodoCaseStudyTeaser() {
           />
         </div>
       }
-      headline="Disruptor in logistics via an aggressive data-driven approach"
+      headline="Disrupting logistics with an aggressive data-driven playbook"
       bodyText={[
-        "Saloodo! is a digital marketplace for logistic and makes it easy for shippers to find verified road freight carriers. Founded as a corporate venture of DHL, we used DHL Freight as a unfair competitive advantage to outsource a high number of shipments to carriers.",
+        "Saloodo! was DHL's bet on a digital freight marketplace — shippers on one side, verified road carriers on the other, matched with ML. I joined as the founding designer when the pilot was ready to scale. Small team, fast decisions, real consequences.",
       ]}
       imageSrc="/images/portfolio/casestudy-saloodo_visual_MEA-desktop.png"
       imageSrcDesktop="/images/portfolio/casestudy-saloodo_visual_MEA-desktop.png"

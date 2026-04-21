@@ -42,9 +42,7 @@ export function WantToSeeMoreSection({ ctaHref = "mailto:hallo@stefanheissenberg
         {/* Responsive sizing, proper line-height, and foreground color with opacity */}
         <div className="mb-10 text-left">
           <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg">
-            With 400+ projects delivered across pharma, logistics, retail, fintech, and enterprise software, I've seen
-            what works at scale—and what doesn't. Curious about specific industries, use cases, or challenges similar to
-            yours? I'm happy to walk you through relevant experience and share lessons learned.
+          Four hundred projects across pharma, logistics, retail, and fintech taught me the same lesson over and over: the hard part is never the interface. If you're wrestling with something that looks like one of these — or nothing like them — I'm happy to walk through it.
           </p>
         </div>
 

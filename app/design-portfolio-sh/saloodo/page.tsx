@@ -127,10 +127,10 @@ export default function SaloodoCaseStudyPage() {
             {/* Text Content */}
             <div className="order-2 space-y-4">
               <p className="max-w-[820px] text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Over the next two years, I built the design team from scratch, established a user-centered design culture and helped expand the marketplace from European pilot to global platform serving customers across three continents.
+                Over two years, we built the design team, established a user-centred design culture, and took the marketplace from European pilot to global platform across three continents.
               </p>
               <p className="max-w-[820px] text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                This was my crucible—where I learned to move at startup velocity, measure everything that mattered, and build infrastructure that could scale to 50+ countries without breaking.
+                That chapter taught me more than any job before or since — how to move at startup speed, measure everything that mattered, and build infrastructure that would hold across 50+ countries without breaking.
               </p>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function SaloodoCaseStudyPage() {
                 Design System
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                My job was to build the infrastructure for rapid geographic expansion. I've builded a new design system from scratch: a living style guide based on Atomic Design principles—reusable components that could adapt to different markets without constant redesign. Connected design tokens directly to React components so changes propagated automatically.
+                We built a new design system from scratch — atomic principles, reusable components that could adapt market to market without redesigns, tokens wired directly into React so changes propagated automatically. The goal was infrastructure for geographic expansion, not a visual refresh.
               </p>
             </div>
 
@@ -173,7 +173,7 @@ export default function SaloodoCaseStudyPage() {
                 Frontend Refactor
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Worked with engineering to rebuild the entire frontend in React/Redux. This wasn't just a visual refresh—we systematically eliminated technical debt and created a foundation that could handle exponential growth.
+                With engineering, we rebuilt the entire frontend in React/Redux. Not a coat of paint — systematic removal of technical debt, and a foundation that could hold the growth we needed.
               </p>
             </div>
 
@@ -182,7 +182,7 @@ export default function SaloodoCaseStudyPage() {
                 The Result
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                We launched across multiple European markets in rapid succession—Netherlands, Italy, Poland, Austria, Denmark—each rollout taking weeks instead of months because we'd built scalable infrastructure. The refactored platform could handle regional variations (language, currency, regulations) without forking the codebase.
+                We launched across multiple European markets in rapid succession — Netherlands, Italy, Poland, Austria, Denmark — each rollout running in weeks because the infrastructure was already there. The refactored platform handled regional variations in language, currency, and regulation without forking the codebase.
               </p>
             </div>
 
@@ -191,7 +191,7 @@ export default function SaloodoCaseStudyPage() {
                 Business Impact
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Backed by DHL's trust and our improved conversion rates, we achieved profitable unit economics that justified aggressive marketing spend. We built a loyal customer base that kept coming back because the product actually worked well.
+                DHL's backing plus our own conversion data gave us unit economics that justified real marketing spend. Customers came back because the thing worked.
               </p>
             </div>
           </div>
@@ -251,16 +251,16 @@ export default function SaloodoCaseStudyPage() {
           {/* Content */}
           <div className="mx-auto max-w-[820px] space-y-4">
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              Saloodo! had an unfair advantage: access to DHL's decades of freight data. Our data science team used this to experiment with machine learning products completely new to the logistics industry—dynamic pricing models, load optimization algorithms, carrier recommendation systems.
+              Saloodo! had one advantage nobody else in the space had: access to DHL's decades of freight data. The data science team used it to experiment with machine learning that was genuinely new for logistics — dynamic pricing, load optimisation, carrier recommendations.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              I worked closely with brilliant data engineers, translating complex algorithms into interfaces users could trust. The most sophisticated work was our PTL (Part Truckload) optimization engine: we tracked carriers' booked routes and available capacity, then recommended compatible shipments along their existing routes.
+              I worked closely with the data science team, translating algorithms into interfaces users could trust. The most interesting work was our PTL (Part Truckload) optimisation engine. We tracked carriers' booked routes and available capacity, then recommended compatible shipments along the routes they were already driving.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              This created real marketplace efficiency. Carriers filled partially empty trucks with shipments they were already driving past—reducing empty miles, improving utilization, and enabling competitive pricing because marginal cost was low. Shippers got better rates. Carriers improved margins. The algorithm generated value for both sides.
+              The marketplace efficiency was real. Carriers filled partially empty trucks with shipments they'd have driven past anyway. Empty miles went down. Utilisation went up. Shippers got better rates because marginal cost was low. Both sides came out ahead.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              This collaboration taught me how machine learning models work, what data they need, and how to design experiences that make complex algorithms trustworthy. More importantly: how smart algorithms create marketplace value, not just automate processes.
+              What that collaboration taught me: how ML models actually work, what data they need, and how to design experiences that make complex algorithms trustworthy. More importantly — how smart algorithms create marketplace value instead of just automating processes.
             </p>
           </div>
         </div>
@@ -304,16 +304,16 @@ export default function SaloodoCaseStudyPage() {
           {/* Content */}
           <div className="mx-auto max-w-[820px] space-y-4">
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              In startups, you build what drives customer lifetime value and measurable return—not only what stakeholders request or what's cool. I established reporting frameworks connecting design decisions directly to business outcomes.
+              In a startup, you build what drives customer lifetime value and measurable return — not what stakeholders request, not what's cool. We built reporting frameworks that connected design decisions directly to business outcomes.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              I partnered with performance marketing to build comprehensive tracking infrastructure, then established bi-weekly product performance reviews with cross-functional teams.
+              Performance marketing and product shared the same tracking infrastructure. Bi-weekly product performance reviews ran across functions.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              We examined what actually mattered: CAC trends, LTV:CAC ratios, payback periods, funnel drop-offs, unit economics. Together as a team we gained common understanding of goals and ROI.
+              We looked at what actually mattered — CAC trends, LTV:CAC ratios, payback periods, funnel drop-offs, unit economics — and the team built a shared understanding of goals and ROI.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              Every major feature had defined success metrics: conversion lift, retention improvement, cost reduction. I analyzed qualified user test results together with hard analytics like task completion times, session recordings, and conversion data. By identifying friction points and presenting actionable insights, we systematically improved the experience and reduced shipment creation time for first-time users by over 40%.
+              Every major feature shipped with defined success metrics: conversion lift, retention improvement, cost reduction. Qualitative tests and hard analytics lived in the same conversation — task completion, session recordings, conversion data. Friction points showed up. Evidence got presented. Shipment creation time for first-time users dropped by over 40%.
             </p>
           </div>
 
@@ -345,10 +345,10 @@ export default function SaloodoCaseStudyPage() {
               Use Case Prioritization
             </h3>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              We scored every potential feature on business value (revenue impact, cost savings, strategic importance) and user value. Without quantified evidence from at least one dimension, features didn't even make it on the roadmap.
+              Every potential feature got scored on business value (revenue impact, cost savings, strategic importance) and user value. Without quantified evidence from at least one dimension, features didn't even make it onto the roadmap.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              We changed the platform with confidence because we had the data we needed and learned to ask the right questions. That way we could experiment, measure, and iterate faster than traditional logistics companies could schedule a meeting.
+              We changed the platform with confidence because we had the data we needed and had learned to ask the right questions. That way we could experiment, measure, and iterate faster than traditional logistics companies could schedule a meeting.
             </p>
           </div>
         </div>
@@ -403,7 +403,7 @@ export default function SaloodoCaseStudyPage() {
                 The Challenge
               </h3>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                By early 2019, Saloodo! had proven itself in Europe. DHL saw massive opportunity in Middle East & Africa, but the business model needed fundamental adaptation. The MEA market had different dynamics—high smartphone penetration but lower trust in purely digital platforms, different logistics infrastructure, different payment norms, different regulatory environments.
+                By early 2019, Saloodo! had proven itself in Europe. DHL saw an opportunity in Middle East & Africa, but the business model needed fundamental adaptation. MEA had different dynamics — high smartphone penetration but lower trust in purely digital platforms, different logistics infrastructure, different payment norms, different regulations.
               </p>
             </div>
 
@@ -420,7 +420,7 @@ export default function SaloodoCaseStudyPage() {
                 The Question
               </h3>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Could we scale Saloodo! globally while adapting to radically different markets? Or would each region require a forked codebase, separate teams, and endless customization?
+                Could we scale Saloodo! globally while adapting to radically different markets? Or did every region need a forked codebase, a separate team, and endless customisation?
               </p>
             </div>
 
@@ -437,10 +437,10 @@ export default function SaloodoCaseStudyPage() {
                 Design Thinking Workshops in Dubai
               </h3>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                I traveled to Dubai to lead stakeholder workshops with local DHL teams, potential customers, and carrier partners. We used Design Thinking methodologies to understand what actually needed to change versus what could stay the same.
+                I went to Dubai to run stakeholder workshops with local DHL teams, potential customers, and carrier partners. Design Thinking methods helped us figure out what actually needed to change versus what could stay the same.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The workshops revealed critical insights. MEA customers needed local DHL entity contracts, not just marketplace transactions, to build trust. WhatsApp was the business platform, making SMS and email insufficient. Markets required convoy shipments for high-value goods due to security concerns. Most importantly, some markets needed a pure marketplace model while others required a DHL-backed forwarder hybrid.
+                The workshops surfaced the critical insights. MEA customers needed local DHL entity contracts, not just marketplace transactions, to build trust. WhatsApp was the business platform — SMS and email weren't enough. Some markets needed convoy shipments for high-value goods because of security concerns. And most importantly: some markets needed a pure marketplace model, while others needed a DHL-backed forwarder hybrid.
               </p>
             </div>
 
@@ -458,10 +458,10 @@ export default function SaloodoCaseStudyPage() {
                   The Solution: Scalable Multi-Tenant Architecture
                 </h3>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Based on these insights, I designed UX flows, sitemaps and design for a multi-tenant platform that could serve multiple DHL business units with separate branding, workflows, and margin structures. Two distinct business models could run on the same infrastructure.
+                  From the insights, we designed UX flows, sitemaps, and a multi-tenant platform that could serve multiple DHL business units with separate branding, workflows, and margin structures. Two distinct business models on one infrastructure.
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Regional customizations like WhatsApp integration, local payment methods, and convoy services worked without rebuilding the core platform.
+                  Regional customisations — WhatsApp integration, local payment methods, convoy services — ran without rebuilding the core.
                 </p>
               </div>
               
@@ -495,13 +495,13 @@ export default function SaloodoCaseStudyPage() {
                 Go-to-Market Execution: Speed as Competitive Advantage
               </h3>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The rollout happened fast. We launched in the UAE with Dubai as regional headquarters, then expanded to all six GCC countries within six weeks. Egypt and Jordan followed, with the Cairo kickoff event drawing 238 attendees. By November, we launched in South Africa, becoming the first international digital freight platform on the African continent with over 150 attendees at the Sandton event.
+                The rollout moved fast. UAE launched with Dubai as regional headquarters, then all six GCC countries within six weeks. Egypt and Jordan followed, with 238 people at the Cairo kickoff. By November we launched in South Africa — the first international digital freight platform on the continent, with over 150 at the Sandton event.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The numbers told the story: nine countries in six months, faster than any European expansion. MEA directly drove growth from 18,000 to 30,000 shippers.
+                The numbers told the story. Nine countries in six months, faster than any European expansion. MEA alone drove growth from 18,000 to 30,000 shippers.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Each additional country took days, not months, because the tenant architecture solved most complexity once. Regional teams could customize what mattered locally while core platform logic remained shared. One codebase. One design system. Multiple markets.
+                Each additional country took days, not months, because the tenant architecture solved most of the complexity once. Regional teams customised what mattered locally while core platform logic stayed shared. One codebase. One design system. Multiple markets.
               </p>
             </div>
 
@@ -518,7 +518,13 @@ export default function SaloodoCaseStudyPage() {
                 The Strategic Impact
               </h3>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                This successful expansion validated the entire global strategy. The MEA rollout proved that Saloodo! could adapt to radically different markets without breaking. By the time I transitioned to lead myDHLi in April 2020, the platform was operating on four continents, and the foundation I'd built in those Dubai workshops made it possible.
+                MEA validated the global strategy. It proved Saloodo! could adapt to radically different markets without breaking. By the time I transitioned to myDHLi in April 2020, the platform was running on four continents — and the foundation we'd built in those Dubai workshops was what made that possible.
+              </p>
+              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+                The MEA rollout taught me something I've taken into every role since. Scale isn't about shipping the same product to more places. It's about designing infrastructure flexible enough to meet each market on its own terms — trust dynamics, payment habits, communication channels — without forking the codebase or breaking the team.
+              </p>
+              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+                That's the work I want to keep doing. Building platforms that meet people where they actually are, backed by the research and data that tell you where that is.
               </p>
             </div>
           </div>

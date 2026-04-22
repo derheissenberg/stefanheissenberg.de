@@ -10,19 +10,19 @@
 
 const principles = [
   {
-    heading: "Authenticity Builds Trust",
-    subheading: "UX Leadership",
-    body: "Leading means translating vision into reality by understanding every aspect of the business first. When I transform user insights into product roadmaps, it's because I inspire courage across teams to go beyond the status quo and believe in user-centered culture. My approach connects UX metrics to business KPIs through conversations that help entire organizations see how empathy drives enterprise strategy.",
+    heading: "Builder",
+    subheading: "Discovery to Ship",
+    body: "Founding designer, five ventures of my own. I love the full loop — discovery, design, build, validation, ship. When handoffs slow things down, let's skip them. Design and code are now so close together — you can really focus on going beyond the status quo. That's where the work gets interesting.",
   },
   {
-    heading: "Agility For Scale",
-    subheading: "Entrepreneurship",
-    body: "Five founded companies plus Fortune 500 consulting taught me that great digital culture works at any scale. Whether architecting enterprise solutions for major corporations or launching startup marketplaces, I've built across every platform. This dual perspective—startup speed with enterprise depth—shapes how I approach any organisational transformation.",
+    heading: "Team Builder",
+    subheading: "Leading Distributed Teams",
+    body: "6 years leading distributed teams taught me the framework that makes trust possible: clear ownership, fewer handoffs, people running their own tracks end to end. I stay close enough to coach, far enough to let people own the outcome. Good culture isn't a perk — it's what makes scale possible at any size.",
   },
   {
-    heading: "Designing Influence",
-    subheading: "Product Native",
-    body: "Great products emerge from obsessive attention to feedback channels and deep understanding of business and customer needs. The symbiosis of UX and business metrics creates powerful synergy—driving profit, revenue, and market capitalization. This alignment transforms every interaction into an opportunity to define, measure, and govern successful UX across organizations, building trusted brands that transform markets.",
+    heading: "Evidence Builder",
+    subheading: "Building UX Research From Scratch",
+    body: "Going deep on how a business actually works is where I get pulled in. How revenue flows, where the friction lives, what each team really cares about. Empathy for users isn't separate from that — it's what you build on top of understanding the whole product. That's when UX metrics and business metrics start shaping strategy.",
   },
 ];
 

@@ -306,10 +306,10 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
            * - max-w-xl = ~576px = ~60-70 characters (perfect)
            */}
           <p
-            className="mt-2 inline-block max-w-full text-left text-[20px] leading-[160%] tracking-[0.2em] text-white lg:max-w-xl lg:text-[27px]"
+            className="mt-2 inline-block max-w-full text-left text-[20px] leading-[160%] tracking-[0.2em] text-white lg:max-w-[760px] lg:text-[24px] lg:tracking-[0.08em]"
             style={{ textShadow: "0px 4px 7px rgba(0, 0, 0, 0.25)" }}
           >
-            that merges UX- and business metrics to drive growth from startup to enterprise level.
+            Fifteen years designing digital products. Connecting UX metrics with business outcomes — from startup to enterprise.
           </p>
 
           {/**

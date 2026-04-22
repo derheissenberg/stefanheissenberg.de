@@ -33,7 +33,7 @@ export function DeepPashionSection() {
         {/* LEARNING: Section heading uses consistent h2 style matching "82 Customers" */}
         {/* LEARNING: Outfit font with extra light weight (200) applied via inline style */}
         <h2 className="section-heading mb-12" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 200 }}>
-          Deep Pashion
+          Deep Passion
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {principles.map((principle, index) => (

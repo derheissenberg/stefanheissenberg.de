@@ -130,16 +130,16 @@ export default function DHLCaseStudyPage() {
               </h2>
               <div className="space-y-4">
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  I joined DHL through Saloodo!, a digital marketplace startup operating inside the DHL Group.
+                I joined DHL through Saloodo!, a digital marketplace startup — independent, DHL-funded, not a department inside the group. I came in as the founding designer.
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  As Lead Experience Designer, I worked with an aggressive data-driven team that treated logistics like a tech product—rapid experimentation, ML-powered recommendations, and ruthless focus on conversion metrics.
+                The team treated logistics like a tech product — rapid experimentation, ML-powered recommendations, and an honest focus on conversion metrics.
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  We were DHL's "digital speedboat"—small enough to move fast, protected enough to take risks. That positioning became crucial when DHL Global Forwarding needed to reimagine their entire customer experience.
+                We were DHL's "digital speedboat" — small enough to move fast, protected enough to take risks. That positioning mattered when DHL Global Forwarding needed to reimagine its B2B customer experience.
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  While logistics giants were comfortable, competitors were moving: Flexport raised $1B, Amazon Freight undercut prices by 30%, Uber Freight scaled globally. The $800B logistics market was being digitized—and DHL needed to catch up.
+                Outside our walls the market was moving fast. Flexport raised $1B. Amazon Freight cut prices by 30%. Uber Freight scaled globally. The $800B logistics industry was being digitised — and DHL needed to be in the race.
                 </p>
               </div>
             </div>
@@ -192,26 +192,26 @@ export default function DHLCaseStudyPage() {
                   lineHeight: "160%",
                 }}
               >
-                Architecting myDHLi from Concept to Global Platform
+                From Concept to Global Platform
               </h2>
               <div className="space-y-4">
                 <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                   Late 2018
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  While at Saloodo, I was tapped to create the initial concept for myDHLi—a unified B2B portal to replace DHL Global Forwarding's 1,000+ disconnected applications.
+                While I was still at Saloodo!, DHL Global Forwarding asked me to sketch what a unified B2B portal could look like — one place to replace the dozens of disconnected apps customers were navigating.
                 </p>
                 <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                   The Vision
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  One platform for 360° shipment visibility across all transport modes, available 24/7 globally.
+                One platform. 360° shipment visibility across air, ocean, road, and rail. Available 24/7 anywhere in the world.
                 </p>
                 <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                   The Reality
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  This wasn't a design problem—it was organizational transformation. Decoupling legacy systems, introducing agile to waterfall teams, and convincing stakeholders to abandon "1,000 apps" for "one customer experience."
+                Not really a design problem. An organisational one. Decoupling legacy systems. Introducing agile to teams that had only ever shipped waterfall. Convincing stakeholders that dozens of apps had to become one customer experience — and meaning it.
                 </p>
               </div>
             </div>
@@ -343,12 +343,13 @@ export default function DHLCaseStudyPage() {
               lineHeight: "150%",
             }}
           >
-            May 2020: Global Launch During COVID-19
+            May 2020: Global Launch, Mid-Pandemic
           </h2>
           
           {/* Text Content - centered, max 820px */}
           <p className="mx-auto max-w-[820px] text-center text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-            Promoted to Head of Experience Design (April 2020), I led the global rollout across 5 continents during the pandemic. Launched Quote + Book, Follow + Share collaboration, real-time tracking, analytics dashboards with single sign-on.
+          April 2020 I took over as Head of Experience Design for myDHLi. Four weeks later we shipped to production — Quote + Book, Follow + Share, real-time tracking, analytics dashboards, single sign-on — across five continents while the world was locked down.
+          COVID didn't stop the rollout. It made the case for it. Customers who had relied on phone calls and emails suddenly needed a self-service portal that worked. We had one ready.
           </p>
           
           {/* Customer Logos - full width up to 1280px (max-w-6xl) */}
@@ -385,10 +386,15 @@ export default function DHLCaseStudyPage() {
           </h2>
           <div className="mx-auto max-w-[820px] space-y-4 text-left">
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              When I arrived at DHL, decisions were made in conference rooms based on stakeholder opinions, not user evidence. I built the research and analytics infrastructure from the ground up—integrating UserTesting.com, Hotjar, Google/Adobe Analytics, then building custom KPI dashboards that gave product teams real-time visibility into what was actually working.
+            When I arrived at myDHLi, the research infrastructure didn't exist. Decisions were intuition-led. Stakeholders had strong opinions and we had no way to test them.
+So I built the foundation — UserTesting, Hotjar, Adobe and Google Analytics, custom KPI dashboards wired into the product teams. Then I put research rhythms inside the sprint cycle, so the work stayed close to the evidence.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              Beyond installing tools, I established recurring research rhythms integrated directly into sprint cycles for rapid experimentation. The transformation was profound: design evolved from subjective craft to measurable discipline. Teams could now validate hypotheses, measure feature impact, and make evidence-based decisions with research embedded in our product lifecycle.
+            The shift was tangible. We stopped building what stakeholders requested and started building what data and users actually pointed to. Stakeholder collaboration changed with it. Discussions now ran on facts and results were measurable.
+            We added more channels to the real voice of the customer — NPS, regular interviews, frequent user tests — reported the findings openly, and trained teams to read research and interpret data themselves. The work became a shared conversation instead of a negotiation.
+            </p>
+            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            We added more channels to the real voice of the customer — NPS, regular interviews, frequent user tests — reported the findings openly, and trained teams to read research and interpret data themselves. The work became a shared conversation instead of a negotiation.
             </p>
           </div>
           
@@ -441,13 +447,13 @@ export default function DHLCaseStudyPage() {
             {/* Text Content */}
             <div className="order-1 max-w-[820px] space-y-4 lg:order-2">
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Building infrastructure was only half the battle. DHL's product culture was fundamentally stakeholder-focused, not customer-focused—teams optimized for internal requests and political dynamics rather than solving real user problems.
+                Infrastructure was only half of it. The product culture had grown stakeholder-first, not customer-first — teams optimised for internal requests because that's what got rewarded.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                I led a cultural transformation by training over 50 team members across product, development, and business units on UX fundamentals through deep workshops on research methods and data interpretation. I embedded designers in cross-functional teams as user advocates, made user testing mandatory before major releases, and created shared repositories of research insights accessible to everyone.
+                So we made the user the starting point. Designers embedded in cross-functional squads. User testing became standard before major releases. A shared repository made research findings accessible to anyone who needed them. And the workshops — research methods, data interpretation — kept the muscle alive across product, engineering, and business teams.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The shift was tangible. Within my teams and the product organization I work with, user-centered thinking became the natural starting point for product decisions, not an afterthought.
+                The shift was tangible. Inside the product org I work with, user-centred thinking became the default starting point for decisions — not the checkpoint near the end.
               </p>
             </div>
           </div>
@@ -483,7 +489,7 @@ export default function DHLCaseStudyPage() {
                   The Challenge
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  DHL had fragmented design—old-fashioned guidelines updated sporadically, competing libraries across divisions (myDHLi, dhl.com, legacy portals), no shared technical foundation. Every team reinvented components differently.
+                  DHL had fragments. Guidelines updated every few years, libraries that competed across divisions (myDHLi, dhl.com, legacy portals), no shared technical base. Every team rebuilt the same buttons from scratch.
                 </p>
               </div>
               <div className="space-y-4">
@@ -491,21 +497,21 @@ export default function DHLCaseStudyPage() {
                   5-Year Strategic Journey (2019-2024)
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  I audited major portals, documenting components and use cases. Rather than replacing everything, I built the foundation—aligning our myDHLi library with existing tech stacks while creating space for harmonisation.
+                  We audited the major portals, documenting components and use cases. Rather than replacing everything, we built the foundation — aligning the myDHLi library with existing tech stacks while creating space to harmonise the design.
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Led cross-division collaboration to merge our library with dhl.com's primary system. Navigated multiple tool transitions (Abstract → Sketch Cloud → Figma) while maintaining consistency. Connected React components to design tokens—making the system living and technically integrated.
+                  Cross-division collaboration merged our library with the primary system on dhl.com. We survived three tool transitions (Abstract → Sketch Cloud → Figma) without losing consistency. React components got wired to design tokens, so the system was actually alive — not a PDF.
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Represented multiple business units in DHL Group-wide committee, spreading design culture and defining standards for the future.
+                  Representing multiple business units on a DHL Group-wide committee, we helped define the standards for what came next.
                 </p>
               </div>
               <div className="space-y-4">
                 <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  The Paradigm Shift
+                  The Shift
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  We reversed the model. From static guidelines with inconsistent components, we created the design system that is the guideline—living frontend components with connected Figma libraries became the source of truth.
+                  We reversed the model. Guidelines used to describe components. Now the components are the guideline — living frontend with connected Figma libraries as the source of truth. No more PDFs.
                 </p>
               </div>
               <div className="space-y-4">
@@ -513,7 +519,7 @@ export default function DHLCaseStudyPage() {
                   The Impact
                 </p>
                 <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Created DHL Group's first scaled design system, now established across leading business units. Enabled faster development, consistent experiences, and cross-division collaboration. The foundation for all future DHL digital products.
+                  A scaled design system established across leading business units inside DHL. Faster development. Consistent experiences. The foundation everything new gets built on.
                 </p>
               </div>
               <Button
@@ -555,19 +561,13 @@ export default function DHLCaseStudyPage() {
           </h2>
           <div className="mx-auto max-w-[820px] space-y-4">
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              As myDHLi grew to serve 22,000+ customers globally, I built operational infrastructure to scale without sacrificing quality or velocity.
+              myDHLi grew. 22,000+ enterprise customers, more product tracks, more stakeholders. The design organisation had to grow with it without breaking what made it good. Headcount was the easy part. The harder part was building the frameworks around it: documentation as the default, async-first across EMEA time zones, dual-track agile so discovery and delivery ran in parallel, and governance that let designers from other divisions contribute to the system without breaking it.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              I grew the design organization to over 10 designers distributed across EMEA time zones—but growth was never just about headcount.
+              The Figma move was the turning point. It became the home for the design system and the open playground for sharing — the invitation other teams needed to contribute. The internal design community started talking across divisions in a way that wasn't possible before.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              I created frameworks for enablement, trust, and coaching that let designers run independently and take ownership. Documentation became our foundation, enabling async-first communication across time zones without constant meetings or approval bottlenecks. I implemented dual-track agile so discovery and delivery could run in parallel, established design system governance for cross-division contributions, and navigated our tool evolution from Abstract through Sketch Cloud to Figma.
-            </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              That final transition to Figma became transformative—it's now the base for our design system with playgrounds that allow sharing designs across teams. This open architecture welcomes everyone to contribute and share. The design community is now in active exchange, collaborating across divisions in ways that weren't possible before. It's incredibly rewarding to see that cultural shift materialise.
-            </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              The result: we move at startup speed while maintaining enterprise quality, handling three to five times more projects with roughly the same team size through systematic processes and shared infrastructure.
+              Three to five times more projects with roughly the same team size. That's what the infrastructure was built to do.
             </p>
           </div>
           
@@ -612,7 +612,7 @@ export default function DHLCaseStudyPage() {
                 THE CHALLENGE
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                One of our biggest challenges was attracting small- and medium-sized businesses. Our operational costs made one-time shipments unprofitable, and the 10-12 day onboarding process was simply too slow and complex for companies with lower shipment volumes. We were losing an entire customer segment before they even got started.
+              The portal had always meant to serve the smaller customers. The economics had never allowed it. Operational costs made one-time shipments unprofitable, and a 10–12 day onboarding process was too slow for companies with lower shipment volumes. The enterprise accounts — the ones with contracts big enough to justify every extra day of setup — were covered. Everyone else was losing interest before they got started.
               </p>
             </div>
             
@@ -621,16 +621,13 @@ export default function DHLCaseStudyPage() {
                 THE PROJECT
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                I was the lead designer in a cross-functional initiative for the US market. Our goal was to reimagine the online sales experience—remove friction, accelerate onboarding, and make smaller accounts economically viable.
+                A cross-functional initiative for the US market opened the window. I came in as lead designer to rebuild the online sales experience — remove friction, accelerate onboarding, and make smaller accounts economically viable.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Through detailed process mapping, we discovered that the main bottleneck wasn't compliance itself, but a series of redundant review and approval layers between departments.
+                Process mapping surfaced the real bottleneck. It wasn't compliance itself — it was the layers of review and approval between departments that compliance had been blamed for. That insight reframed the project.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                That insight changed our approach entirely. I facilitated workshops with operations and sales to redesign the workflow. We consolidated decision-making, removed redundant approval layers, and set up clear data-driven criteria. By empowering teams to make faster decisions and removing redundant approval layers, we reduced onboarding from 10–12 days to just 3–4 days, before we built a single new feature.
-              </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                These insights enabled us to validate our findings with setting up real prospects and to report on meaningful KPIs, proving the model's effectiveness and building confidence among senior stakeholders.
+                Workshops with operations and sales rebuilt the workflow. Decision-making consolidated. Redundant approvals removed. Clear data-driven criteria replacing subjective gates. Onboarding dropped from 10–12 days to 3–4 days — before a single new feature shipped. Real prospects validated the model, the KPIs got reported back, and the numbers gave us room to keep pushing.
               </p>
             </div>
             
@@ -639,13 +636,19 @@ export default function DHLCaseStudyPage() {
                 THE RESULT
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                After full digital enablement, we achieved setup times of under 24 hours, empowering both operations and sales teams to run with greater autonomy while maintaining manual control where necessary.
+                Full digital enablement brought setup times to under 24 hours.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                More importantly, we architected the foundation for self-registration—where customers will access booking tools instantly with automated account creation and invisible compliance processes running seamlessly in the background.
+                A self-registration concept had been sitting in my drawer for years — instant booking access, automated account creation, compliance running in the background. It hadn't moved because the business case had never been loud enough to reach the top of the roadmap. The 91% reduction made it loud. Stakeholder support arrived. Priority shifted. The concept moved from drawer to foundation inside the same project.
               </p>
               <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The project became a global front-runner within the organisation. It convinced senior leadership to adopt the new process as a blueprint for all DHL markets worldwide.
+                Senior leadership adopted the new process as the blueprint for other DHL markets. A $2.5 billion segment we had never properly served opened up. The smaller customers landed on the roadmap with the same weight as the enterprise ones.
+              </p>
+              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+                What I'm proud of in this one isn't the 91%. It's that the small shippers — the founders, the teams without an account manager on speed dial — finally got the same digital service the enterprise accounts took for granted. That's the work I'm really passionate about.
+              </p>
+              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+                Standing in for the users without a stakeholder voice, and backing them with the research and data that give them weight in the room. Building momentum patiently enough that when the window opens, the team is ready to take the shot.
               </p>
             </div>
             

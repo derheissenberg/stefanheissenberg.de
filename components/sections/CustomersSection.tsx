@@ -41,18 +41,29 @@ const customerLogos = [
 
 export function CustomersSection() {
   return (
-    <section className="bg-[var(--background)] px-6 py-16 lg:px-12 lg:py-20" aria-label="Customers">
+    <section className="bg-[var(--background)] px-6 py-20 lg:px-12 lg:py-28" aria-label="Customers">
       <div className="mx-auto max-w-6xl">
-        <h2
-          className="mb-[22px] text-center text-[13px] uppercase text-white/60 sm:text-[15px]"
-          style={{
-            fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
-            fontWeight: 500,
-            letterSpacing: "0.32em",
-          }}
-        >
-          82 Customers
-        </h2>
+        <div className="mb-16 text-center lg:mb-20">
+          <p
+            className="mb-[22px] text-[13px] uppercase text-white/60 sm:text-[15px]"
+            style={{
+              fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+              fontWeight: 500,
+              letterSpacing: "0.32em",
+            }}
+          >
+            Clients &amp; Collaborators
+          </p>
+          <h2
+            className="mx-auto inline-block max-w-[720px] text-[38px] leading-[1.1] tracking-tight text-white sm:text-[46px] lg:text-[56px]"
+            style={{
+              fontFamily: "var(--font-outfit), system-ui, sans-serif",
+              fontWeight: 700,
+            }}
+          >
+            Grateful for the teams I&apos;ve worked with.
+          </h2>
+        </div>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {customerLogos.map((logo, index) => (
             <GlowCard

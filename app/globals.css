@@ -83,10 +83,48 @@ body {
   }
 }
 
+@keyframes hero-wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  12% {
+    transform: rotate(14deg);
+  }
+  24% {
+    transform: rotate(-8deg);
+  }
+  36% {
+    transform: rotate(14deg);
+  }
+  48% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+}
+
 /* LEARNING: Custom animation class for Tailwind */
 /* Uses the gradient keyframes with 6s duration, ease timing, infinite loop */
 .animate-gradient {
   animation: gradient 6s ease infinite;
+}
+
+/* LEARNING: Gradient text helper used for large display words.
+   Mirrors link gradient technique without spacing hacks/padding. */
+.gradient-text-safe {
+  background-image: linear-gradient(to right, rgb(34, 211, 238), rgb(59, 130, 246), rgb(34, 211, 238));
+  background-size: 300%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient 6s ease infinite;
+  display: inline;
+  text-rendering: geometricPrecision;
 }
 
 /* LEARNING: Animated gradient background for CTA button */

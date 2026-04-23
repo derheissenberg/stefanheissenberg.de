@@ -43,9 +43,14 @@ export function CustomersSection() {
   return (
     <section className="bg-[var(--background)] px-6 py-16 lg:px-12 lg:py-20" aria-label="Customers">
       <div className="mx-auto max-w-6xl">
-        {/* LEARNING: Section heading uses consistent h2 style across all sections */}
-        {/* LEARNING: Outfit font with extra light weight (200) applied via inline style */}
-        <h2 className="section-heading mb-12" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 200 }}>
+        <h2
+          className="mb-[22px] text-center text-[13px] uppercase text-white/60 sm:text-[15px]"
+          style={{
+            fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+            fontWeight: 500,
+            letterSpacing: "0.32em",
+          }}
+        >
           82 Customers
         </h2>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">

@@ -29,9 +29,14 @@ export function DesignWitAttitudeSection() {
     <section className="bg-[var(--background)] px-8 py-10 lg:py-20" aria-label="Design with attitude">
       {/* Container: 1160px max-width matches other sections */}
       <div className="mx-auto max-w-[1160px]">
-        {/* LEARNING: Section heading uses consistent h2 style matching "82 Customers" */}
-        {/* LEARNING: Outfit font with extra light weight (200) applied via inline style */}
-        <h2 className="section-heading mb-12" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 200 }}>
+        <h2
+          className="mb-[22px] text-center text-[13px] uppercase text-white/60 sm:text-[15px]"
+          style={{
+            fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+            fontWeight: 500,
+            letterSpacing: "0.32em",
+          }}
+        >
           Design wit Attitude
         </h2>
         {/* Bento grid: Single column mobile, 4 columns desktop */}

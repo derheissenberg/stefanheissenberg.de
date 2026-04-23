@@ -40,9 +40,14 @@ export function KeyCreatorIdentifiersSection() {
         {/* Container: 1160px max-width matches AwardBadgesSection for alignment */}
         {/* LEARNING: max-w-[1160px] ensures content width matches Trust Badges section above */}
         <div className="relative mx-auto max-w-[1160px]">
-          {/* LEARNING: Section heading uses consistent h2 style matching "82 Customers" */}
-          {/* LEARNING: Outfit font with extra light weight (200) applied via inline style */}
-          <h2 className="section-heading mb-12" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 200 }}>
+          <h2
+            className="mb-[22px] text-center text-[13px] uppercase text-white/60 sm:text-[15px]"
+            style={{
+              fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+              fontWeight: 500,
+              letterSpacing: "0.32em",
+            }}
+          >
             Key Creator Identifiers
           </h2>
           {/* Grid: 3 columns desktop (3×2), 2 columns tablet, 1 column mobile, compact gaps */}

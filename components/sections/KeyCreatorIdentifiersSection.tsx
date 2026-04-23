@@ -13,7 +13,7 @@
  * - Container: max-w-[1160px] (matches AwardBadgesSection)
  * - Grid: 3 columns desktop (3×2 grid), 2 columns tablet, 1 column mobile
  * - Gap: 16-20px between cards (gap-4 lg:gap-5)
- * - Section padding: py-16 lg:py-20, px-8 for horizontal alignment
+ * - Section padding: pt-2 pb-16 lg:pt-6 lg:pb-20 (tighter top gap below awards), px-8 horizontal
  * - Color pattern: Alternating blue/yellow (blue, yellow, blue, yellow...)
  */
 
@@ -34,7 +34,7 @@ const metrics = [
 
 export function KeyCreatorIdentifiersSection() {
   return (
-    <section className="relative bg-[var(--background)] px-8 py-16 lg:py-20" aria-label="Key creator identifiers">
+    <section className="relative bg-[var(--background)] px-8 pt-2 pb-16 lg:pt-6 lg:pb-20" aria-label="Key creator identifiers">
       <AuroraBlue />
       <div className="relative z-[1]">
         {/* Container: 1160px max-width matches AwardBadgesSection for alignment */}

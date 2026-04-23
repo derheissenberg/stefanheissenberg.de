@@ -46,7 +46,7 @@ const badges = [
 
 export function AwardBadgesSection() {
   return (
-    <section className="bg-[var(--background)] py-8 lg:py-14" aria-label="Awards and certifications">
+    <section className="bg-[var(--background)] pt-0 pb-8 lg:pb-14" aria-label="Awards and certifications">
       <div className="mx-auto max-w-[1160px] px-6 lg:px-0">
         <div className="mb-8 h-px w-full bg-white/10 lg:mb-10" />
         <div className="grid grid-cols-2 gap-[30px] lg:grid-cols-4">

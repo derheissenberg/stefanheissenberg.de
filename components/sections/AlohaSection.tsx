@@ -18,15 +18,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import HorizonDrift from "@/components/backgrounds/HorizonDrift";
 
 export function AlohaSection() {
+  const wavingHandCursor = { cursor: "url('/cursors/waving-hand.svg') 16 8, pointer" } as const;
+
   return (
-    <section className="bg-[var(--background)] px-6 pt-16 pb-[100px] lg:px-12 lg:pt-20" aria-label="About me">
-      {/* LEARNING: Waving hand cursor on entire content block; links override with cursor-pointer */}
-      <div
-        className="mx-auto max-w-3xl"
-        style={{ cursor: "url('/cursors/waving-hand.svg') 16 8, pointer" }}
-      >
+    <section className="relative bg-[var(--background)] px-6 pt-16 pb-[100px] lg:px-12 lg:pt-20" aria-label="About me">
+      <HorizonDrift />
+      <div className="relative z-[1]">
+        {/* LEARNING: Waving hand cursor on entire content block; links override with cursor-pointer */}
+        <div className="mx-auto max-w-3xl">
         {/* LEARNING: Cherry Bomb display font for playful "Aloha" greeting (matches DesignWitAttitudeSection phrase blocks) */}
         <h2 
           className="inline-block text-left text-[48px] leading-none text-white lg:text-[66px]"
@@ -62,7 +64,7 @@ export function AlohaSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
-              style={{ backgroundSize: "300%" }}
+              style={{ backgroundSize: "300%", ...wavingHandCursor }}
             >
               antwerpes
             </a>{" "}
@@ -72,7 +74,7 @@ export function AlohaSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
-              style={{ backgroundSize: "300%" }}
+              style={{ backgroundSize: "300%", ...wavingHandCursor }}
             >
               sunzinet
             </a>{" "}
@@ -82,7 +84,7 @@ export function AlohaSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer text-[var(--foreground)]/90 underline transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-500 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent hover:animate-gradient active:opacity-80"
-              style={{ backgroundSize: "300%" }}
+              style={{ backgroundSize: "300%", ...wavingHandCursor }}
             >
               Saloodo!
             </a>{" "}
@@ -103,7 +105,7 @@ export function AlohaSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 bg-clip-text font-medium text-transparent underline animate-gradient"
-            style={{ backgroundSize: "300%" }}
+            style={{ backgroundSize: "300%", ...wavingHandCursor }}
           >
             LinkedIn
           </a>{" "}
@@ -112,12 +114,13 @@ export function AlohaSection() {
           <a
             href="mailto:hallo@stefanheissenberg.de"
             className="cursor-pointer bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 bg-clip-text font-medium text-transparent underline animate-gradient"
-            style={{ backgroundSize: "300%" }}
+            style={{ backgroundSize: "300%", ...wavingHandCursor }}
           >
             email
           </a>
           .
         </p>
+        </div>
       </div>
     </section>
   );

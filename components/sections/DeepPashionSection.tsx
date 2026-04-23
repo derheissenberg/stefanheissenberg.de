@@ -8,6 +8,9 @@
  * - Dark cards with subtle border and backdrop blur for depth
  */
 
+import AuroraAmber from "@/components/backgrounds/AuroraAmber";
+import { GlowCard } from "@/components/ui/GlowCard";
+
 const principles = [
   {
     heading: "Builder",
@@ -28,26 +31,60 @@ const principles = [
 
 export function DeepPashionSection() {
   return (
-    <section className="bg-[var(--background)] px-6 py-16 lg:px-12 lg:py-20" aria-label="Core principles">
-      <div className="mx-auto max-w-6xl">
-        {/* LEARNING: Section heading uses consistent h2 style matching "82 Customers" */}
-        {/* LEARNING: Outfit font with extra light weight (200) applied via inline style */}
-        <h2 className="section-heading mb-12" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 200 }}>
-          Deep Passion
-        </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {principles.map((principle, index) => (
-            <div
-              key={index}
-              className="rounded-lg border border-[rgba(255,255,255,0.1)] bg-neutral-950/50 p-6 backdrop-blur-sm"
+    <section className="relative bg-[var(--background)] px-6 py-20 lg:px-12 lg:py-28" aria-label="Core principles">
+      <AuroraAmber />
+      <div className="relative z-[1]">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-16 text-center lg:mb-20">
+            <p
+              className="mb-[22px] text-[13px] uppercase text-white/60 sm:text-[15px]"
+              style={{
+                fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+                fontWeight: 500,
+                letterSpacing: "0.32em",
+              }}
             >
-              <h3 className="text-xl font-bold text-[var(--accent-yellow)] sm:text-2xl">{principle.heading}</h3>
-              {/* LEARNING: Increased mobile font size from text-sm (14px) to text-[17px] (~21% increase) for better readability */}
-              <p className="mt-2 text-[17px] font-medium text-[var(--accent-cyan)] sm:text-base">{principle.subheading}</p>
-              {/* LEARNING: Font style matching AlohaSection paragraphs - text-lg (18px) for consistent body text sizing */}
-              <p className="mt-4 text-lg leading-[140%] text-[var(--foreground)]/90">{principle.body}</p>
-            </div>
-          ))}
+              Deep Passion
+            </p>
+            <h2
+              className="inline-block text-[38px] leading-[1.1] tracking-tight text-white sm:text-[46px] lg:text-[56px]"
+              style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 700 }}
+            >
+              Three things I go deep on
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+            {principles.map((principle, index) => (
+              <GlowCard
+                key={index}
+                className="rounded-lg border border-[rgba(255,255,255,0.1)] bg-neutral-950/50 p-6 backdrop-blur-sm"
+                glowColor="white"
+              >
+                <h3
+                  className="text-xl font-bold text-white sm:text-2xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  {principle.heading}
+                </h3>
+                <p
+                  className="mt-2 text-[16px] leading-[1.35] text-white/[0.78]"
+                  style={{
+                    fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                    fontWeight: 600,
+                    letterSpacing: "-0.005em",
+                  }}
+                >
+                  {principle.subheading}
+                </p>
+                <p
+                  className="mt-4 text-[15px] leading-[1.6] text-white/[0.65]"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 400 }}
+                >
+                  {principle.body}
+                </p>
+              </GlowCard>
+            ))}
+          </div>
         </div>
       </div>
     </section>

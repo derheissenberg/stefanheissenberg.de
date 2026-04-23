@@ -7,7 +7,7 @@
  * - Column 1: Two separate yellow cards - "No fear..." (top, row 1) and "Beginners mind." (bottom, rows 2-3)
  * - Column 2: Two orange cards - "Learn rules..." (top, spans 2 rows) and "Create new ones." (bottom, row 3)
  * - Column 3: Three blue cards - "Start where you are." (row 1), "Use what you have." (row 2), "Do what you can." (row 3)
- * - Column 4: Three cyan cards - "Get things done." (row 1), "Don't die in perfection." (row 2), "Don't develope shit." (row 3)
+ * - Column 4: Three cyan cards - "Get things done." (row 1), "Don't die in perfection." (row 2), "Don't develop shit." (row 3)
  * - Responsive: Single column on mobile, 4 columns on desktop
  * - Uses PhraseBlock component for consistent styling
  *
@@ -15,7 +15,7 @@
  * Column 1: "No fear..." (row 1, spans 1 row), "Beginners mind." (rows 2-3, spans 2 rows) - 1:2 ratio
  * Column 2: "Learn rules..." (row-span-2, rows 1-2), "Create new ones." (row 3)
  * Column 3: "Start where you are." (row 1), "Use what you have." (row 2), "Do what you can." (row 3)
- * Column 4: "Get things done." (row 1), "Don't die in perfection." (row 2), "Don't develope shit." (row 3)
+ * Column 4: "Get things done." (row 1), "Don't die in perfection." (row 2), "Don't develop shit." (row 3)
  *
  * MOBILE STRUCTURE:
  * Single column, stacked vertically in order
@@ -37,7 +37,7 @@ export function DesignWitAttitudeSection() {
             letterSpacing: "0.32em",
           }}
         >
-          Design wit Attitude
+          Design with Attitude
         </h2>
         {/* Bento grid: Single column mobile, 4 columns desktop */}
         {/* LEARNING: grid-cols-1 creates single column on mobile (matches Figma) */}
@@ -88,9 +88,9 @@ export function DesignWitAttitudeSection() {
           {/* LEARNING: Harmonized font size - matches "Learn rules..." tablet size */}
           <PhraseBlock text="Do what you can." color="blue" rowSpan={1} fontSize="harmonized" />
           
-          {/* Column 4, Row 3: "Don't develope shit." (cyan) */}
+          {/* Column 4, Row 3: "Don't develop shit." (cyan) */}
           {/* LEARNING: Harmonized font size - matches "Learn rules..." tablet size */}
-          <PhraseBlock text="Don't develope shit." color="cyan" rowSpan={1} fontSize="harmonized" />
+          <PhraseBlock text="Don't develop shit." color="cyan" rowSpan={1} fontSize="harmonized" />
         </div>
       </div>
     </section>

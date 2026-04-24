@@ -34,14 +34,24 @@ const cherryBomb = Cherry_Bomb_One({
 
 const baseUrl = "https://www.stefanheissenberg.de";
 
+/** First stefanheissenberg.de domain / hosting (22 Nov 2012). */
+const siteFirstPublishedIso = "2012-11-22T00:00:00.000Z";
+/** Last meaningful content or build refresh (ISO 8601). */
+const siteLastModifiedIso = "2026-04-24T00:00:00.000Z";
+
 const pageTitle = "Stefan Heißenberg — Head of Experience Design | Product & Design Leadership";
 const pageDescription =
   "Head of Experience Design. 15 years building digital products from startup to enterprise. Product and design leadership across EMEA.";
 
-/** File on disk: `public/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png` */
+/** Portrait used in page UI and Person structured data (representative photo). */
 const heroImagePath = "/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png";
 const heroImageWidth = 1920;
 const heroImageHeight = 1200;
+
+/** Open Graph / Twitter card (recommended 1200×630). File: `public/images/og-image-stefan-heissenberg.png` */
+const ogImagePath = "/images/og-image-stefan-heissenberg.png";
+const ogImageWidth = 1200;
+const ogImageHeight = 630;
 
 const keywordsList =
   "Head of Experience Design, Head of Product, Head of Design, VP Design, VP Product, Director of Design, Director of Product, Principal Product Designer, Staff Product Designer, UX Strategy, UX Leadership, Product Leadership, Design Leadership, Design Systems, Product Discovery, UX Research, AI in Design, Distributed Teams, Remote Design Leadership, B2B SaaS, Enterprise UX, Logistics Tech, Fintech, Cologne, Germany, NRW, Stefan Heißenberg, stefanheissenberg";
@@ -79,10 +89,10 @@ export const metadata: Metadata = {
     lastName: "Heißenberg",
     images: [
       {
-        url: heroImagePath,
-        width: heroImageWidth,
-        height: heroImageHeight,
-        alt: "Stefan Heißenberg — Head of Experience Design",
+        url: ogImagePath,
+        width: ogImageWidth,
+        height: ogImageHeight,
+        alt: "Stefan Heißenberg — Head of Experience Design | Portfolio preview",
       },
     ],
   },
@@ -90,7 +100,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: [heroImagePath],
+    images: [
+      {
+        url: ogImagePath,
+        width: ogImageWidth,
+        height: ogImageHeight,
+        alt: "Stefan Heißenberg — Head of Experience Design | Portfolio preview",
+      },
+    ],
   },
   other: {
     "geo.region": "DE-NW",
@@ -164,6 +181,9 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: "Stefan Heißenberg",
   url: baseUrl,
+  image: `${baseUrl}${ogImagePath}`,
+  datePublished: siteFirstPublishedIso,
+  dateModified: siteLastModifiedIso,
   author: {
     "@type": "Person",
     name: "Stefan Heißenberg",

@@ -79,14 +79,14 @@ function drawAuroraBlue(ctx, { w, h, t }) {
 
   // Top & bottom edge fades so the section blends into adjacent black sections.
   const topFade = ctx.createLinearGradient(0, 0, 0, h * 0.35);
-  topFade.addColorStop(0, 'rgba(10,10,10,0.9)');
-  topFade.addColorStop(1, 'rgba(10,10,10,0)');
+  topFade.addColorStop(0, 'rgba(8,8,8,0.9)');
+  topFade.addColorStop(1, 'rgba(8,8,8,0)');
   ctx.fillStyle = topFade;
   ctx.fillRect(0, 0, w, h);
 
   const botFade = ctx.createLinearGradient(0, h * 0.65, 0, h);
-  botFade.addColorStop(0, 'rgba(10,10,10,0)');
-  botFade.addColorStop(1, 'rgba(10,10,10,0.9)');
+  botFade.addColorStop(0, 'rgba(8,8,8,0)');
+  botFade.addColorStop(1, 'rgba(8,8,8,0.9)');
   ctx.fillStyle = botFade;
   ctx.fillRect(0, 0, w, h);
 }

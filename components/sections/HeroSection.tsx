@@ -57,6 +57,7 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
               fill
               className="object-contain object-right-bottom"
               priority
+              unoptimized
               sizes="(max-width: 1600px) 100vw, 1600px"
               aria-hidden
             />
@@ -70,6 +71,7 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
               fill
               className="object-cover object-[center_20%]"
               priority
+              unoptimized
               sizes="(max-width: 1600px) 100vw, 1600px"
               aria-hidden
             />
@@ -77,7 +79,7 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(10,10,10,0.92)_0%,rgba(10,10,10,0.80)_28%,rgba(10,10,10,0.40)_48%,rgba(10,10,10,0)_68%)]" />
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(8,8,8,0.92)_0%,rgba(8,8,8,0.80)_28%,rgba(8,8,8,0.40)_48%,rgba(8,8,8,0)_68%)]" />
 
       <div className="relative z-10 mx-auto flex min-h-[760px] w-full max-w-[1600px] items-center px-10 lg:min-h-0 lg:h-full lg:px-16">
         <div className="w-full max-w-[640px] text-left">

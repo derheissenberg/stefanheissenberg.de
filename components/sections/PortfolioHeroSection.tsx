@@ -45,6 +45,7 @@ export function PortfolioHeroSection({ ctaHref = "mailto:hallo@stefanheissenberg
               fill
               className="object-contain object-right"
               priority
+              unoptimized
               sizes="(max-width: 1600px) 100vw, 1600px"
               aria-hidden
             />
@@ -61,6 +62,7 @@ export function PortfolioHeroSection({ ctaHref = "mailto:hallo@stefanheissenberg
               fill
               className="object-cover object-[center_20%]"
               priority
+              unoptimized
               sizes="(max-width: 1600px) 100vw, 1600px"
               aria-hidden
             />

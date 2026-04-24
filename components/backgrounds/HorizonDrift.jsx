@@ -28,7 +28,7 @@ function drawHorizonDrift(ctx, { w, h, t, pointer }) {
   // Warm atmospheric tint in the lower half.
   const atm = ctx.createLinearGradient(0, h * 0.4, 0, h);
   atm.addColorStop(0, 'rgba(249,115,22,0.095)');
-  atm.addColorStop(1, 'rgba(10,10,10,0)');
+  atm.addColorStop(1, 'rgba(8,8,8,0)');
   ctx.fillStyle = atm;
   ctx.fillRect(0, 0, w, h);
 
@@ -57,10 +57,10 @@ function drawHorizonDrift(ctx, { w, h, t, pointer }) {
   // Readability band — horizontal dark wash behind the text area.
   // Baked into the background itself (no card chrome on the text).
   const band = ctx.createLinearGradient(0, h * 0.22, 0, h * 0.82);
-  band.addColorStop(0,    'rgba(10,10,10,0)');
-  band.addColorStop(0.28, 'rgba(10,10,10,0.55)');
-  band.addColorStop(0.72, 'rgba(10,10,10,0.55)');
-  band.addColorStop(1,    'rgba(10,10,10,0)');
+  band.addColorStop(0,    'rgba(8,8,8,0)');
+  band.addColorStop(0.28, 'rgba(8,8,8,0.55)');
+  band.addColorStop(0.72, 'rgba(8,8,8,0.55)');
+  band.addColorStop(1,    'rgba(8,8,8,0)');
   ctx.fillStyle = band;
   ctx.fillRect(0, 0, w, h);
 
@@ -95,23 +95,23 @@ function drawHorizonDrift(ctx, { w, h, t, pointer }) {
 
   // Top edge fade so the section blends into an adjacent black section above.
   const topFade = ctx.createLinearGradient(0, 0, 0, h * 0.45);
-  topFade.addColorStop(0,   'rgba(10,10,10,0.95)');
-  topFade.addColorStop(0.5, 'rgba(10,10,10,0.35)');
-  topFade.addColorStop(1,   'rgba(10,10,10,0)');
+  topFade.addColorStop(0,   'rgba(8,8,8,0.95)');
+  topFade.addColorStop(0.5, 'rgba(8,8,8,0.35)');
+  topFade.addColorStop(1,   'rgba(8,8,8,0)');
   ctx.fillStyle = topFade;
   ctx.fillRect(0, 0, w, h);
 
   // Extra darkening in the upper-left (keeps the aloha heading legible).
   const ulDark = ctx.createRadialGradient(0, 0, 0, 0, 0, Math.max(w, h) * 0.55);
-  ulDark.addColorStop(0, 'rgba(10,10,10,0.55)');
-  ulDark.addColorStop(1, 'rgba(10,10,10,0)');
+  ulDark.addColorStop(0, 'rgba(8,8,8,0.55)');
+  ulDark.addColorStop(1, 'rgba(8,8,8,0)');
   ctx.fillStyle = ulDark;
   ctx.fillRect(0, 0, w, h);
 
   // Bottom vignette.
   const vg = ctx.createLinearGradient(0, h * 0.55, 0, h);
-  vg.addColorStop(0, 'rgba(10,10,10,0)');
-  vg.addColorStop(1, 'rgba(10,10,10,0.55)');
+  vg.addColorStop(0, 'rgba(8,8,8,0)');
+  vg.addColorStop(1, 'rgba(8,8,8,0.55)');
   ctx.fillStyle = vg;
   ctx.fillRect(0, 0, w, h);
 }

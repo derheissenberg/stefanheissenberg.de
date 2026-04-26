@@ -6,7 +6,7 @@
  * - Large, bold number with animated gradient (blue-cyan or yellow-orange)
  * - Count-up animation triggered on scroll into view
  * - Label text below in smaller, regular weight (no animation)
- * - Dark card background with subtle border/glow effect
+ * - Card: light backdrop blur (1.5px) and slightly higher fill opacity — cheaper than `backdrop-blur-sm` for many grid cells
  * - Animated gradient text effect using background-position animation
  * - Mouse-following glow effect using GlowCard wrapper
  *
@@ -129,7 +129,11 @@ export function MetricCard({ value, label, color, delay = 0 }: MetricCardProps) 
   };
 
   return (
-    <GlowCard ref={ref} glowColor={color} className="rounded-lg border border-neutral-800 bg-neutral-900/50 p-6 backdrop-blur-sm">
+    <GlowCard
+      ref={ref}
+      glowColor={color}
+      className="rounded-lg border border-neutral-800 bg-neutral-900/60 p-6 backdrop-blur-[1.5px]"
+    >
       {/* LEARNING: Content wrapper with relative positioning and z-index */}
       {/* Ensures content appears above the glow effect (::before pseudo-element) */}
       {/* LEARNING: text-center centers both the number and label horizontally */}

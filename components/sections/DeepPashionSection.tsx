@@ -5,7 +5,7 @@
  * KEY CONCEPTS:
  * - Grid layout: 3 columns desktop, stacked mobile
  * - Each card: yellow heading, blue subheading, white body text
- * - Dark cards with subtle border and backdrop blur for depth
+ * - Dark cards: subtle border, light backdrop blur (1.5px) + slightly higher fill opacity for perf vs heavy blur
  */
 
 import AuroraAmber from "@/components/backgrounds/AuroraAmber";
@@ -57,7 +57,7 @@ export function DeepPashionSection() {
             {principles.map((principle, index) => (
               <GlowCard
                 key={index}
-                className="rounded-lg border border-[rgba(255,255,255,0.1)] bg-neutral-950/50 p-6 backdrop-blur-sm"
+                className="rounded-lg border border-[rgba(255,255,255,0.1)] bg-neutral-950/60 p-6 backdrop-blur-[1.5px]"
                 glowColor="white"
               >
                 <h3

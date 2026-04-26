@@ -13,17 +13,17 @@ import { GlowCard } from "@/components/ui/GlowCard";
 
 const principles = [
   {
-    heading: "Builder",
+    heading: "Building",
     subheading: "Discovery to Ship",
     body: "Founding designer, five ventures of my own. I love the full loop — discovery, design, build, validation, ship. When handoffs slow things down, let's skip them. Design and code are now so close together — you can really focus on going beyond the status quo. That's where the work gets interesting.",
   },
   {
-    heading: "Team Builder",
+    heading: "Team Building",
     subheading: "Leading Distributed Teams",
     body: "6 years leading distributed teams taught me the framework that makes trust possible: clear ownership, fewer handoffs, people running their own tracks end to end. I stay close enough to coach, far enough to let people own the outcome. Good culture isn't a perk — it's what makes scale possible at any size.",
   },
   {
-    heading: "Evidence Builder",
+    heading: "Evidence Building",
     subheading: "Building UX Research From Scratch",
     body: "Going deep on how a business actually works is where I get pulled in. How revenue flows, where the friction lives, what each team really cares about. Empathy for users isn't separate from that — it's what you build on top of understanding the whole product. That's when UX metrics and business metrics start shaping strategy.",
   },

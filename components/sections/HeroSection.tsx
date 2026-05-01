@@ -125,7 +125,7 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
           </p>
 
           <div className="mt-10">
-            <Button variant="primary" href={ctaHref} className="text-[18px] tracking-[0.2em] lg:text-[21px]">
+            <Button variant="primary" href={ctaHref}>
               Get in touch
             </Button>
           </div>

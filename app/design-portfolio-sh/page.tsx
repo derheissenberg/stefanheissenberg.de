@@ -21,6 +21,7 @@ import { SaloodoCaseStudyTeaser } from "@/components/portfolio/SaloodoCaseStudyT
 import { OBINextCaseStudyTeaser } from "@/components/portfolio/OBINextCaseStudyTeaser";
 import { CustomersSection } from "@/components/sections/CustomersSection";
 import { WantToSeeMoreSection } from "@/components/sections/WantToSeeMoreSection";
+import { Footer } from "@/components/layout/Footer";
 
 const baseUrl = "https://www.stefanheissenberg.de";
 const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
@@ -78,6 +79,7 @@ export default function DesignPortfolioPage() {
       {/* Want to See More Section - Call-to-action encouraging visitors to reach out */}
       {/* LEARNING: New section with content from Figma, using harmonized typography and primary CTA button */}
       <WantToSeeMoreSection />
+      <Footer />
     </main>
   );
 }

@@ -21,6 +21,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { Footer } from "@/components/layout/Footer";
 import { MetricCard } from "@/components/ui/MetricCard";
 
 const baseUrl = "https://www.stefanheissenberg.de";
@@ -360,6 +361,7 @@ export default function OBINextCaseStudyPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

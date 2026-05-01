@@ -20,6 +20,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { Footer } from "@/components/layout/Footer";
 import { SaloodoCaseStudyHero } from "@/components/case-studies/saloodo/SaloodoCaseStudyHero";
 
 const baseUrl = "https://www.stefanheissenberg.de";
@@ -545,6 +546,7 @@ export default function SaloodoCaseStudyPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

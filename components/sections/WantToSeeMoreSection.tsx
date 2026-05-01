@@ -1,18 +1,6 @@
 /**
  * COMPONENT: WantToSeeMoreSection
- * PURPOSE: Call-to-action section encouraging visitors to reach out for more information
- *
- * KEY CONCEPTS:
- * - Centered content layout matching design-portfolio-sh page style
- * - Uses harmonized typography from design-portfolio-sh (not Figma styles)
- * - Primary CTA button (not Figma button specification)
- * - Responsive: centered on desktop, left-aligned on mobile
- *
- * CONTENT FROM FIGMA:
- * - Title: "Want to see more?"
- * - Paragraph 1: "With 400+ projects delivered across pharma, logistics, retail, fintech, and enterprise software, I've seen what works at scale—and what doesn't."
- * - Paragraph 2: "Curious about specific industries, use cases, or challenges similar to yours? I'm happy to walk you through relevant experience and share lessons learned."
- * - CTA: "Get in touch" (using primary CTA button component)
+ * PURPOSE: Outro for design-portfolio-sh — aligned with handoff 02-fifteen-years-outro.html
  */
 
 import { Button } from "@/components/ui/Button";
@@ -23,35 +11,49 @@ type WantToSeeMoreSectionProps = {
 
 export function WantToSeeMoreSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: WantToSeeMoreSectionProps) {
   return (
-    <section className="bg-[var(--background)] px-6 py-16 pb-[150px] lg:px-12 lg:py-20 lg:pb-[150px]" aria-label="Want to see more">
-      <div className="mx-auto max-w-4xl">
-        {/* LEARNING: Heading uses harmonized typography from design-portfolio-sh */}
-        {/* Matches section heading style: Outfit font, extra light (200), centered, responsive sizing */}
-        <h2
-          className="mb-8 text-center text-2xl text-white sm:text-3xl lg:text-4xl"
+    <section
+      className="bg-[var(--background)] px-5 py-20 pb-24 lg:px-12 lg:py-[120px] lg:pb-[140px]"
+      aria-label="More on request"
+    >
+      <div className="mx-auto max-w-[820px] text-center">
+        <p
+          className="text-[13px] uppercase text-[var(--accent-cyan)]"
           style={{
-            fontFamily: "var(--font-outfit), system-ui, sans-serif",
-            fontWeight: 200, // extra light
+            fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+            fontWeight: 500,
+            letterSpacing: "0.32em",
+            marginBottom: "24px",
           }}
         >
-          Want to see more?
+          More on request
+        </p>
+
+        <h2
+          className="text-[38px] font-bold leading-[1.05] tracking-[-0.02em] text-white sm:text-5xl lg:text-[56px]"
+          style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+        >
+          Fifteen years.{" "}
+          <em
+            className="gradient-text-safe inline italic font-bold"
+            style={{ backgroundSize: "300%", paddingRight: "0.06em" }}
+          >
+            Three highlights.
+          </em>
         </h2>
 
-        {/* LEARNING: Body text uses harmonized typography matching CaseStudyTeaser body text */}
-        {/* Left-aligned (block alignment), single paragraph combining both original paragraphs */}
-        {/* Responsive sizing, proper line-height, and foreground color with opacity */}
-        <div className="mb-10 text-left">
-          <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg">
-          Four hundred projects across pharma, logistics, retail, and fintech taught me the same lesson over and over: the hard part is never the interface. If you're wrestling with something that looks like one of these — or nothing like them — I'm happy to walk through it.
-          </p>
-        </div>
+        <p
+          className="mx-auto mt-[22px] max-w-[56ch] text-[18px] leading-[1.6] text-white/[0.72]"
+          style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 400 }}
+        >
+          Earlier work sits behind NDA. Happy to walk through my experience in conversation.
+        </p>
 
-        {/* LEARNING: CTA Button - Uses primary CTA button component from design-portfolio-sh */}
-        {/* Matches primary button styling: animated gradient background, Kode Mono font, scale hover effect */}
-        {/* Centered on all screen sizes */}
-        <div className="flex justify-center">
-          <Button variant="primary" href={ctaHref} className="text-[18px] tracking-[0.2em] lg:text-[21px]">
+        <div className="mt-9 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap sm:justify-center">
+          <Button variant="primary" href={ctaHref} className="w-full justify-center sm:w-auto">
             Get in touch
+          </Button>
+          <Button variant="outline" href="/" className="w-full justify-center sm:w-auto">
+            ← Back to home
           </Button>
         </div>
       </div>

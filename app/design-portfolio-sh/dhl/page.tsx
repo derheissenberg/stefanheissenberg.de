@@ -21,6 +21,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { Footer } from "@/components/layout/Footer";
 import { DHLCaseStudyHero } from "@/components/case-studies/dhl/DHLCaseStudyHero";
 import { DHLCaseStudySection } from "@/components/case-studies/dhl/DHLCaseStudySection";
 
@@ -667,6 +668,7 @@ So I built the foundation — UserTesting, Hotjar, Adobe and Google Analytics, c
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

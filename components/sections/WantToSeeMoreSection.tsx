@@ -17,12 +17,11 @@ export function WantToSeeMoreSection({ ctaHref = "mailto:hallo@stefanheissenberg
     >
       <div className="mx-auto max-w-[820px] text-center">
         <p
-          className="text-[13px] uppercase text-[var(--accent-cyan)]"
+          className="mb-[22px] text-[13px] uppercase text-white/60 sm:text-[15px]"
           style={{
             fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
             fontWeight: 500,
             letterSpacing: "0.32em",
-            marginBottom: "24px",
           }}
         >
           More on request

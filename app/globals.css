@@ -127,6 +127,34 @@ body {
   text-rendering: geometricPrecision;
 }
 
+/* LEARNING: Yellow → orange → yellow — same stops as MetricCard color="yellow" (Tailwind from-yellow-400 via-orange-500 to-yellow-400) */
+.gradient-text-orange-animated {
+  background-image: linear-gradient(to right, rgb(250, 204, 21), rgb(249, 115, 22), rgb(250, 204, 21));
+  background-size: 300%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient 6s ease infinite;
+  /* inline-block: reliable bg-clip with italic / nested spans (Safari) */
+  display: inline-block;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  text-rendering: geometricPrecision;
+}
+
+/* LEARNING: Single warm tone approximating the mid of the yellow-orange MetricCard gradient — inline emphasis without animation */
+.text-orange-gradient-static {
+  color: rgb(249, 115, 22);
+}
+
+/* LEARNING: Vibrant static orange for case-study subsection labels (uppercase kicker) */
+.text-case-study-label {
+  color: rgb(251, 146, 60);
+}
+
 /* LEARNING: Animated gradient background for CTA button */
 /* Uses same blue gradient as KeyCreatorIdentifiersSection numbers: cyan-400 → blue-500 → cyan-400 */
 /* All background properties in CSS to avoid React style conflicts */

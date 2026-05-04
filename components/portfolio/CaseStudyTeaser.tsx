@@ -13,6 +13,7 @@
  */
 
 import Image from "next/image";
+import { CaseStudyLeadText } from "@/components/case-studies/CaseStudyLeadText";
 import { Button } from "@/components/ui/Button";
 
 type CaseStudyTeaserProps = {
@@ -168,12 +169,9 @@ export function CaseStudyTeaser({
             {/* Left-aligned (block alignment) for consistent reading */}
             <div className="mb-8 space-y-4 text-left">
               {bodyText.map((paragraph, index) => (
-                <p
-                  key={index}
-                  className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg"
-                >
+                <CaseStudyLeadText key={index} className="max-w-none text-[var(--foreground)]/90">
                   {paragraph}
-                </p>
+                </CaseStudyLeadText>
               ))}
             </div>
 

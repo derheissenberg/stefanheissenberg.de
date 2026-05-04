@@ -1,21 +1,14 @@
 /**
  * COMPONENT: DHLCaseStudyHero
- * PURPOSE: Hero section for DHL case study page with title, intro, hero image, and statistics
+ * PURPOSE: Hero for DHL/myDHLi case study — lead headline, intro, project meta, myDHLi video, KPI MetricCards
  *
- * KEY CONCEPTS:
- * - Centered layout with max-width container
- * - Harmonized typography matching design-portfolio-sh page
- * - Statistics grid using MetricCard component (responsive: 2x3 desktop, 3x2 tablet, 1x6 mobile)
- * - Hero image with responsive sizing
- *
- * TYPOGRAPHY HARMONIZATION:
- * - Section label: Small text, Outfit font
- * - Main title: h2 style (Outfit, extra light 200, text-2xl sm:text-3xl, line-height 150%)
- * - Intro text: Body text style (Outfit, regular, text-base lg:text-lg, line-height 140%)
- * - Statistics: MetricCard component (Outfit Black 900 font for numbers)
+ * - Left-aligned editorial column in max-w-6xl
+ * - Outfit for titles/body; Kode Mono for meta labels (muted caps)
+ * - h1 mirrors export `.cs-display` sizing on all lines; headline uses full `max-w-6xl` width (lead stays narrower).
+ *   Three rows: portal title; “From Initial…”; gradient +italic +bold on “+22,000 Enterprise Customers.” (`!block`).
  */
 
-import Image from "next/image";
+import { CaseStudyLeadText } from "@/components/case-studies/CaseStudyLeadText";
 import { MetricCard } from "@/components/ui/MetricCard";
 
 const statistics = [
@@ -27,43 +20,74 @@ const statistics = [
   { value: "90%+", label: "Faster Onboarding & Quote Processing", color: "yellow" as const },
 ];
 
+const metaRows = [
+  { label: "CLIENT", value: "DHL Global Forwarding" },
+  { label: "ROLE", value: "Head of Experience Design" },
+  { label: "YEARS", value: "2018 — present" },
+  { label: "SCOPE", value: "Strategy · Research · Design System" },
+] as const;
+
+const labelStyle = {
+  fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+  fontWeight: 500,
+  letterSpacing: "0.24em",
+} as const;
+
 export function DHLCaseStudyHero() {
   return (
-    <section className="bg-[var(--background)] px-6 py-16 lg:px-12 lg:py-20" aria-label="DHL Case Study Hero">
-      <div className="mx-auto max-w-6xl">
-        {/* Section Label */}
-        <p className="mb-4 text-center text-sm uppercase tracking-wider text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-          DHL Case Study
-        </p>
-
-        {/* Main Title */}
-        {/* LEARNING: Uses h2 font style - Outfit, extra light (200), responsive sizing, line-height 150% */}
+    <section
+      className="bg-[var(--background)] px-6 pb-16 pt-3 md:pt-4 lg:px-12 lg:pb-20 lg:pt-5"
+      aria-label="DHL Case Study Hero"
+    >
+      <div className="mx-auto w-full max-w-6xl text-left xl:max-w-7xl">
         <h1
-          className="mx-auto mb-4 max-w-[820px] text-center text-2xl text-white sm:text-3xl lg:text-4xl"
+          className="mb-7 w-full max-w-none text-left text-white"
           style={{
             fontFamily: "var(--font-outfit), system-ui, sans-serif",
-            fontWeight: 200, // extra light
-            lineHeight: "150%",
+            fontSize: "clamp(40px, 6vw, 72px)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+            fontWeight: 600,
           }}
         >
-          Building DHL's Global B2B Portal
+          <span className="block text-[rgba(255,255,255,0.96)]">
+            Building DHL&apos;s Global B2B Portal
+          </span>
+          <span className="mt-[0.06em] block text-white">From Initial Concept to</span>
+          <span
+            className="gradient-text-safe mt-[0.06em] !block font-bold italic"
+            style={{ paddingRight: "0.1em", backgroundSize: "300%" }}
+          >
+            +22,000 Enterprise Customers.
+          </span>
         </h1>
-        <h2
-          className="mx-auto mb-8 max-w-[820px] text-center text-xl text-white sm:text-2xl lg:text-3xl"
-          style={{
-            fontFamily: "var(--font-outfit), system-ui, sans-serif",
-            fontWeight: 200, // extra light
-            lineHeight: "150%",
-          }}
-        >
-          From Initial Concept to +22,000 Enterprise Customers
-        </h2>
 
-        {/* Hero Video */}
-        {/* LEARNING: HTML5 video element with autoplay, loop, muted (required for autoplay), and controls */}
-        {/* LEARNING: Responsive video container with aspect-video ratio matching the image layout */}
-        {/* LEARNING: poster attribute provides a fallback image while video loads */}
-        <div className="mb-16 w-full">
+        <CaseStudyLeadText className="mt-8 mb-10">
+          Six years of UX leadership behind <strong className="font-semibold text-white">myDHLi</strong> — the unified
+          customer portal for DHL Global Forwarding. From a 2018 sketch in a &quot;digital speedboat&quot; startup to a
+          global platform serving 22,000+ enterprise customers across air, ocean, road and rail.
+        </CaseStudyLeadText>
+
+        <dl className="grid grid-cols-1 gap-8 border-t border-white/15 pt-10 sm:grid-cols-2 md:grid-cols-4 md:gap-x-10">
+          {metaRows.map((row) => (
+            <div key={row.label}>
+              <dt
+                className="text-[11px] uppercase text-white/50"
+                style={labelStyle}
+              >
+                {row.label}
+              </dt>
+              <dd
+                className="mt-2 text-[15px] leading-snug text-white lg:text-base"
+                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 500 }}
+              >
+                {row.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <div className="mb-16 mt-12 w-full">
           <div className="relative aspect-video w-full overflow-hidden rounded-lg">
             <video
               autoPlay
@@ -76,25 +100,14 @@ export function DHLCaseStudyHero() {
               aria-label="myDHLi – Simply Connected. Digital logistics boosting your business"
             >
               <source src="/videos/myDHLi – Simply Connected. Digital logistics boosting your business..mp4" type="video/mp4" />
-              {/* LEARNING: Fallback text for browsers that don't support video */}
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
 
-        {/* Statistics Grid */}
-        {/* LEARNING: Responsive grid - 2 columns desktop (2x3), 3 columns tablet (3x2), 1 column mobile (1x6) */}
-        {/* Matches KeyCreatorIdentifiersSection pattern but with different responsive breakpoints */}
-        {/* LEARNING: Synchronized animation - all cards animate simultaneously (no delay) */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:gap-5">
           {statistics.map((stat, index) => (
-            <MetricCard 
-              key={index} 
-              value={stat.value} 
-              label={stat.label} 
-              color={stat.color}
-              delay={0} // LEARNING: No delay - all cards animate together
-            />
+            <MetricCard key={index} value={stat.value} label={stat.label} color={stat.color} delay={0} />
           ))}
         </div>
       </div>

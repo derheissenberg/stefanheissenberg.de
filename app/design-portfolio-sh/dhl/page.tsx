@@ -200,22 +200,6 @@ export default function DHLCaseStudyPage() {
         </div>
       </section>
 
-      {/* Launch collage between section 03 and 04 */}
-      <section className="bg-[var(--background)] px-6 pb-8 lg:px-12 lg:pb-10">
-        <div className="mx-auto max-w-6xl">
-          <div className="relative aspect-[1280/720] w-full overflow-hidden">
-            <Image
-              src="/images/mydhli/Dashboard-collage.png"
-              alt="myDHLi Dashboard shown on iMac, iPad, and iPhone demonstrating responsive design"
-              fill
-              className="object-contain object-top"
-              sizes="(max-width: 1152px) 100vw, 1152px"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
       {/* UX Research and Analytics */}
       {/* LEARNING: Custom structure - text at 820px, logos at 1600px max-width for single line display */}
       <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">

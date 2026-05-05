@@ -13,37 +13,43 @@ type RailItem = {
 
 const railItems: RailItem[] = [
   {
-    step: "Step 01 · 2019",
+    step: "Step 01 · Late 2018",
+    caption: "1st scribble of myDHLi from 2019.",
+    src: "/images/mydhli/concept-design-scribble.png",
+    alt: "1st scribble of myDHLi from 2019",
+  },
+  {
+    step: "Step 02 · 2019",
     caption: "1st Axure prototype for customer interviews and stakeholder workshops.",
     src: "/images/mydhli/concept-low-fidelity-wireframe.png",
     alt: "1st Axure prototype for customer interviews and stakeholder workshops",
   },
   {
-    step: "Step 02 · 2019",
+    step: "Step 03 · 2019",
     caption: "Early flow chart for system discovery, and basis for self-registration.",
     src: "/images/mydhli/flowcharts-uxflow-architecture-design.png",
     alt: "Early flow chart for system discovery",
   },
   {
-    step: "Step 03 · 2019",
+    step: "Step 04 · 2019",
     caption: "Early DHL landscape and architecture brainstorming session.",
     src: "/images/mydhli/architecture-hands-on-concepts.png",
     alt: "Early DHL landscape and architecture brainstorming session",
   },
   {
-    step: "Step 04 · 2019",
+    step: "Step 05 · 2019",
     caption: "Initial myDHLi kick-off/stakeholder workshops with Saloodo-Team in Bonn",
     src: "/images/mydhli/kick-off-workshop-stakeholder.png",
     alt: "Initial myDHLi kick-off/stakeholder workshops with Saloodo-Team in Bonn",
   },
   {
-    step: "Step 05 · 2019",
+    step: "Step 06 · 2019",
     caption: "UX-research & analytics training",
     src: "/images/mydhli/analytics-coaching-stefanheissenberg.png",
     alt: "UX-research & analytics training",
   },
   {
-    step: "Step 06 · 2019",
+    step: "Step 07 · 2019",
     caption: "IT-Workshops in Prague",
     src: "/images/mydhli/it-workshops.png",
     alt: "IT-Workshops in Prague",
@@ -89,19 +95,16 @@ export function ConceptTimelineSection() {
     <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="grid items-end gap-10 lg:grid-cols-[645px_1fr] lg:gap-16">
-          <div className="order-1 space-y-3">
-            <div className="relative aspect-[645/482] w-full overflow-hidden rounded-lg">
+          <div className="order-1 lg:h-full">
+            <div className="relative aspect-[645/482] w-full overflow-hidden rounded-lg lg:aspect-auto lg:h-full">
               <Image
-                src="/images/mydhli/concept-design-scribble.png"
-                alt="1st scribble of myDHLi from 2019"
+                src="/images/mydhli/Dashboard-collage.png"
+                alt="myDHLi Dashboard shown on iMac, iPad, and iPhone demonstrating responsive design"
                 fill
-                className="object-contain"
+                className="object-contain object-center"
                 sizes="(max-width: 768px) 100vw, 55vw"
               />
             </div>
-            <p className="text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              1st scribble of myDHLi from 2019
-            </p>
           </div>
 
           <div className="order-2 max-w-[820px] space-y-5">

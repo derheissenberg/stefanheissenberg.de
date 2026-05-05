@@ -309,19 +309,6 @@ export default function DHLCaseStudyPage() {
               Three to five times more projects with roughly the same team size. That's what the infrastructure was built to do.
             </p>
           </div>
-          
-          {/* Detailpage Mockup */}
-          <div className="mt-12 flex justify-center">
-            <div className="relative aspect-[864/733] w-full max-w-4xl overflow-hidden">
-              <Image
-                src="/images/mydhli/detailpage-mockup.png"
-                alt="myDHLi detail page mockup"
-                fill
-                className="object-contain"
-                sizes="(max-width: 1024px) 100vw, 864px"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -476,19 +463,66 @@ export default function DHLCaseStudyPage() {
                 ready to take the shot.
               </p>
               </div>
+
+              <div className="pt-6">
+                <div className="relative aspect-[2000/1703] w-full overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/mydhli/welcome-ipad.png"
+                    alt="myDHLi Welcome screen on iPad"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 820px"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="relative mx-auto mt-12 max-w-[904px] px-0 sm:mt-14">
-          <div className="relative aspect-[2000/1703] w-full overflow-hidden rounded-lg">
-            <Image
-              src="/images/mydhli/welcome-ipad.png"
-              alt="myDHLi Welcome screen on iPad"
-              fill
-              className="object-contain"
-              sizes="(max-width: 1024px) 100vw, 820px"
-            />
+      <section
+        className="bg-[var(--background)] px-5 py-20 pb-24 lg:px-12 lg:py-[120px] lg:pb-[140px]"
+        aria-label="More on request"
+      >
+        <div className="mx-auto max-w-[820px] text-center">
+          <p
+            className="mb-[22px] text-[13px] uppercase text-white/60 sm:text-[15px]"
+            style={{
+              fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+              fontWeight: 500,
+              letterSpacing: "0.32em",
+            }}
+          >
+            GET IN TOUCH
+          </p>
+
+          <h2
+            className="text-[38px] font-bold leading-[1.05] tracking-[-0.02em] text-white sm:text-5xl lg:text-[56px]"
+            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+          >
+            Want the{" "}
+            <em
+              className="gradient-text-safe inline italic font-bold"
+              style={{ backgroundSize: "300%", paddingRight: "0.06em" }}
+            >
+              full story?
+            </em>
+          </h2>
+
+          <p
+            className="mx-auto mt-[22px] max-w-[56ch] text-[18px] leading-[1.6] text-white/[0.72]"
+            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 400 }}
+          >
+            Happy to walk you through the strategy, decisions, and outcomes in detail.
+          </p>
+
+          <div className="mt-9 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap sm:justify-center">
+            <Button variant="primary" href="mailto:hallo@stefanheissenberg.de" className="w-full justify-center sm:w-auto">
+              Get in touch
+            </Button>
+            <Button variant="outline" href="/design-portfolio-sh/saloodo" className="w-full justify-center sm:w-auto">
+              Next case · Saloodo →
+            </Button>
           </div>
         </div>
       </section>

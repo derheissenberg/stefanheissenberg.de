@@ -16,7 +16,7 @@ const railItems: RailItem[] = [
     step: "Step 01 · Late 2018",
     caption: "1st scribble of myDHLi from 2019.",
     src: "/images/mydhli/concept-design-scribble.png",
-    alt: "1st scribble of myDHLi from 2019",
+    alt: "1st scribble of myDHLi",
   },
   {
     step: "Step 02 · 2019",
@@ -38,18 +38,18 @@ const railItems: RailItem[] = [
   },
   {
     step: "Step 05 · 2019",
-    caption: "Initial myDHLi kick-off/stakeholder workshops with Saloodo-Team in Bonn",
+    caption: "Initial myDHLi Kick-Off/Stakeholder Workshops with Saloodo-Team in Bonn",
     src: "/images/mydhli/kick-off-workshop-stakeholder.png",
     alt: "Initial myDHLi kick-off/stakeholder workshops with Saloodo-Team in Bonn",
   },
   {
-    step: "Step 06 · 2019",
-    caption: "UX-research & analytics training",
+    step: "Step 06",
+    caption: "UX-Research & Analytics Training",
     src: "/images/mydhli/analytics-coaching-stefanheissenberg.png",
-    alt: "UX-research & analytics training",
+    alt: "UX-Research & Analytics Training",
   },
   {
-    step: "Step 07 · 2019",
+    step: "Step 07",
     caption: "IT-Workshops in Prague",
     src: "/images/mydhli/it-workshops.png",
     alt: "IT-Workshops in Prague",
@@ -139,7 +139,7 @@ export function ConceptTimelineSection() {
             className="text-[11px] font-medium uppercase tracking-[0.14em] text-white/55 sm:text-xs"
             style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
           >
-            From sketch to system · 2018 — 2019
+            From sketch to system
           </p>
           <div className="flex items-center gap-2">
             <button

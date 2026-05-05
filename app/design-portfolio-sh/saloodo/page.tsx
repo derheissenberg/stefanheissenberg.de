@@ -79,6 +79,13 @@ const analyticsLogos = [
   { src: "/images/saloodo/ux-roi/power-bi.svg", alt: "Power BI", width: 45, height: 60 },
 ];
 
+/** Matches SaloodoCaseStudyHero badge (Kode Mono); cyan palette for in-page case study card */
+const saloodoCaseStudyInPageBadgeStyle = {
+  fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+  fontWeight: 500,
+  letterSpacing: "0.24em",
+} as const;
+
 const saloodoArticleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -121,7 +128,7 @@ export default function SaloodoCaseStudyPage() {
             Refactoring for Scale
           </CaseStudySectionHeading>
 
-          <div className="mt-10 space-y-6 lg:mt-12">
+          <div className="mx-auto max-w-[820px] mt-10 space-y-6 lg:mt-12">
             <div className="space-y-4">
               <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                 Design System
@@ -180,7 +187,7 @@ export default function SaloodoCaseStudyPage() {
 
       {/* Data-Driven Disrupter Section */}
       <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <CaseStudySectionHeading
             align="center"
             numberDash="02—"
@@ -290,19 +297,6 @@ export default function SaloodoCaseStudyPage() {
             </p>
           </div>
 
-          {/* Payment Flow Screenshot */}
-          <div className="mx-auto mt-10 max-w-5xl sm:mt-12">
-            <div className="relative aspect-[2000/1695] w-full overflow-hidden">
-              <Image
-                src="/images/saloodo/complete-payment.png"
-                alt="Saloodo complete payment flow"
-                fill
-                className="object-contain"
-                sizes="100vw"
-              />
-            </div>
-          </div>
-
           {/* Analytics Logos */}
           <div className="border-y border-white/[0.08] mt-10 sm:mt-12">
             <p
@@ -316,178 +310,246 @@ export default function SaloodoCaseStudyPage() {
             </p>
             <ul className="flex list-none flex-wrap items-center justify-center gap-x-5 gap-y-6 px-4 pb-8 pt-5 sm:gap-x-7 sm:gap-y-7 sm:pb-10 sm:pt-6 md:gap-x-9">
               {analyticsLogos.map((logo) => (
-                <li key={logo.alt} className="relative" style={{ width: logo.width, height: logo.height }}>
+                <li key={logo.alt} className="flex items-center justify-center">
                   <Image
                     src={logo.src}
                     alt={logo.alt}
                     width={logo.width}
                     height={logo.height}
-                    className="object-contain opacity-80 transition-opacity hover:opacity-100"
+                    sizes="(max-width: 640px) 80px, 100px"
+                    className="h-5 w-auto max-h-5 object-contain opacity-[0.42] grayscale transition-all duration-300 ease-out sm:h-6 sm:max-h-6 sm:max-w-[100px] md:h-7 md:max-h-7 md:max-w-[118px] hover:scale-[1.04] hover:opacity-100 hover:grayscale-0"
                   />
                 </li>
               ))}
             </ul>
           </div>
+
+          {/* Payment Flow Screenshot */}
+          <div className="mx-auto mt-10 max-w-5xl sm:mt-12">
+            <div className="relative aspect-[2000/1695] w-full overflow-hidden">
+              <Image
+                src="/images/saloodo/complete-payment.png"
+                alt="Saloodo complete payment flow"
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Case Study: MEA Expansion */}
+      {/* Case Study: MEA Expansion — card + glow; gradients match MetricCard blue (Tailwind + animate-gradient) */}
       <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-5xl">
-          {/* Section Header */}
-          <div className="mx-auto mb-8 max-w-[820px] text-center">
-            <p className="mb-2 text-2xl text-[#1ed0f3] sm:text-3xl" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 600 }}>
-              Case Study
-            </p>
-            <h2
-              className="text-2xl text-white sm:text-3xl lg:text-4xl"
-              style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                fontWeight: 600,
-                lineHeight: "160%",
-              }}
-            >
-              MEA Expansion – From Pilot to 9 Countries in 6 Months
-            </h2>
-          </div>
-
-          <div className="mx-auto max-w-[820px] space-y-8">
-            {/* The Challenge */}
-            <div className="space-y-4">
-              <h3
-                className="text-xl text-white sm:text-2xl"
+        <div className="relative mx-auto max-w-[904px] overflow-hidden rounded-2xl border border-neutral-800/90 bg-neutral-950/85 px-6 py-12 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] backdrop-blur-[6px] sm:px-10 sm:py-14 md:px-12 md:py-16 lg:rounded-3xl lg:py-20">
+          {/* Orange radial wash behind headline */}
+          <div
+            className="pointer-events-none absolute -top-24 left-1/2 aspect-[5/4] w-[min(120%,760px)] -translate-x-1/2 rounded-full opacity-90 blur-3xl"
+            style={{
+              background:
+                "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(251,146,60,0.32) 0%, rgba(234,88,12,0.12) 38%, transparent 72%)",
+            }}
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute -top-8 right-[-10%] h-64 w-64 rounded-full opacity-35 blur-[64px]"
+            style={{
+              background: "radial-gradient(circle at center, rgba(251,146,60,0.28) 0%, transparent 65%)",
+            }}
+            aria-hidden
+          />
+          <div className="relative z-10">
+            <header className="mb-14 text-left sm:mb-16">
+              <p
+                className="mb-7 inline-block rounded-full border border-orange-400/45 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-orange-400"
+                style={saloodoCaseStudyInPageBadgeStyle}
+              >
+                Case study
+              </p>
+              <h2
+                className="w-full max-w-none text-left text-white"
                 style={{
                   fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                  fontSize: "clamp(40px, 6vw, 72px)",
+                  lineHeight: 1.05,
+                  letterSpacing: "-0.025em",
                   fontWeight: 600,
-                  lineHeight: "160%",
                 }}
               >
-                The Challenge
-              </h3>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                By early 2019, Saloodo! had proven itself in Europe. DHL saw an opportunity in Middle East & Africa, but the business model needed fundamental adaptation. MEA had different dynamics — high smartphone penetration but lower trust in purely digital platforms, different logistics infrastructure, different payment norms, different regulations.
-              </p>
-            </div>
+                <span className="block text-[rgba(255,255,255,0.96)]">
+                  MEA Expansion – From Pilot to{" "}
+                  <span
+                    className="inline bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text font-bold text-transparent animate-gradient"
+                    style={{ backgroundSize: "300%" }}
+                  >
+                    9 Countries
+                  </span>{" "}
+                  in 6 Months
+                </span>
+              </h2>
+            </header>
 
-            {/* The Question */}
-            <div className="space-y-4">
-              <h3
-                className="text-xl text-white sm:text-2xl"
-                style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                  fontWeight: 600,
-                  lineHeight: "160%",
-                }}
-              >
-                The Question
-              </h3>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Could we scale Saloodo! globally while adapting to radically different markets? Or did every region need a forked codebase, a separate team, and endless customisation?
-              </p>
-            </div>
-
-            {/* Design Thinking Workshops */}
-            <div className="space-y-4">
-              <h3
-                className="text-xl text-white sm:text-2xl"
-                style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                  fontWeight: 600,
-                  lineHeight: "160%",
-                }}
-              >
-                Design Thinking Workshops in Dubai
-              </h3>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                I went to Dubai to run stakeholder workshops with local DHL teams, potential customers, and carrier partners. Design Thinking methods helped us figure out what actually needed to change versus what could stay the same.
-              </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The workshops surfaced the critical insights. MEA customers needed local DHL entity contracts, not just marketplace transactions, to build trust. WhatsApp was the business platform — SMS and email weren't enough. Some markets needed convoy shipments for high-value goods because of security concerns. And most importantly: some markets needed a pure marketplace model, while others needed a DHL-backed forwarder hybrid.
-              </p>
-            </div>
-
-            {/* The Solution with WhatsApp Mockup */}
-            <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_300px] lg:gap-12">
-              <div className="order-2 space-y-4 lg:order-1">
-                <h3
-                  className="text-xl text-white sm:text-2xl"
-                  style={{
-                    fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                    fontWeight: 600,
-                    lineHeight: "160%",
-                  }}
+            <div className="space-y-12 sm:space-y-14">
+              {/* The Challenge */}
+              <div className="space-y-4">
+                <p
+                  className="text-case-study-label text-xs font-bold uppercase tracking-[0.16em] sm:text-sm"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", color: "rgb(251,146,60)" }}
                 >
-                  The Solution: Scalable Multi-Tenant Architecture
-                </h3>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  From the insights, we designed UX flows, sitemaps, and a multi-tenant platform that could serve multiple DHL business units with separate branding, workflows, and margin structures. Two distinct business models on one infrastructure.
+                  The challenge
                 </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Regional customisations — WhatsApp integration, local payment methods, convoy services — ran without rebuilding the core.
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  By early 2019, Saloodo! had proven itself in Europe. DHL saw an opportunity in Middle East &amp; Africa,
+                  but the business model needed fundamental adaptation. MEA had different dynamics — high smartphone
+                  penetration but lower trust in purely digital platforms, different logistics infrastructure, different
+                  payment norms, different regulations.
+                </p>
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  Could we scale Saloodo! globally while adapting to radically different markets? Or did every region
+                  need a forked codebase, a separate team, and endless customisation?
                 </p>
               </div>
-              
-              {/* WhatsApp Mockup */}
-              <div className="order-1 lg:order-2">
-                <div className="relative mx-auto aspect-[297/590] w-full max-w-[297px] overflow-hidden">
-                  <Image
-                    src="/images/saloodo/android-mockup-whattsapp 1.png"
-                    alt="WhatsApp integration for Africa"
-                    fill
-                    className="object-contain"
-                    sizes="300px"
-                  />
+
+              {/* The Approach */}
+              <div className="space-y-4">
+                <p
+                  className="text-case-study-label text-xs font-bold uppercase tracking-[0.16em] sm:text-sm"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", color: "rgb(251,146,60)" }}
+                >
+                  The approach
+                </p>
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  I went to Dubai to run stakeholder workshops with local DHL teams, potential customers, and carrier
+                  partners. Design Thinking methods helped us figure out what actually needed to change versus what could
+                  stay the same.
+                </p>
+                {/* The Solution with WhatsApp Mockup — all 3 approach paragraphs in left column */}
+                <div className="flex flex-col gap-10 pt-2 lg:grid lg:grid-cols-[1fr_280px] lg:items-start lg:gap-12">
+                  <div className="order-2 space-y-4 lg:order-1">
+                    <p
+                      className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                      style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                    >
+                      The workshops surfaced the critical insights. MEA customers needed local DHL entity contracts, not just
+                      marketplace transactions, to build trust. WhatsApp was the business platform — SMS and email
+                      weren&apos;t enough. Some markets needed convoy shipments for high-value goods because of security
+                      concerns. And most importantly: some markets needed a pure marketplace model, while others needed a
+                      DHL-backed forwarder hybrid.
+                    </p>
+                    <p
+                      className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                      style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                    >
+                      From the insights, we designed UX flows, sitemaps, and a multi-tenant platform that could serve
+                      multiple DHL business units with separate branding, workflows, and margin structures. Two distinct
+                      business models on one infrastructure.
+                    </p>
+                    <p
+                      className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                      style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                    >
+                      Regional customisations — WhatsApp integration, local payment methods, convoy services — ran
+                      without rebuilding the core.
+                    </p>
+                  </div>
+
+                  {/* WhatsApp Mockup */}
+                  <div className="order-1 lg:order-2">
+                    <div className="relative mx-auto aspect-[297/590] w-full max-w-[240px] overflow-hidden lg:max-w-[280px]">
+                      <Image
+                        src="/images/saloodo/android-mockup-whattsapp 1.png"
+                        alt="WhatsApp integration for Africa"
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 1024px) 240px, 280px"
+                      />
+                    </div>
+                    <p
+                      className="mt-3 text-center text-xs text-[var(--foreground)]/60"
+                      style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                    >
+                      WhatsApp integration for Africa
+                    </p>
+                  </div>
                 </div>
-                <p className="mt-3 text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  WhatsApp integration for Africa
+              </div>
+
+              {/* Go-to-Market */}
+              <div className="space-y-4">
+                <p
+                  className="text-case-study-label text-xs font-bold uppercase tracking-[0.16em] sm:text-sm"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", color: "rgb(251,146,60)" }}
+                >
+                  Go-to-market
+                </p>
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  The rollout moved fast. UAE launched with Dubai as regional headquarters, then all six GCC countries
+                  within six weeks. Egypt and Jordan followed, with 238 people at the Cairo kickoff. By November we
+                  launched in South Africa — the first international digital freight platform on the continent, with over
+                  150 at the Sandton event.
+                </p>
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  The numbers told the story. Nine countries in six months, faster than any European expansion. MEA alone
+                  drove growth from 18,000 to 30,000 shippers.
+                </p>
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  Each additional country took days, not months, because the tenant architecture solved most of the
+                  complexity once. Regional teams customised what mattered locally while core platform logic stayed
+                  shared. One codebase. One design system. Multiple markets.
                 </p>
               </div>
-            </div>
 
-            {/* Go-to-Market Execution */}
-            <div className="space-y-4">
-              <h3
-                className="text-xl text-white sm:text-2xl"
-                style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                  fontWeight: 600,
-                  lineHeight: "160%",
-                }}
-              >
-                Go-to-Market Execution: Speed as Competitive Advantage
-              </h3>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The rollout moved fast. UAE launched with Dubai as regional headquarters, then all six GCC countries within six weeks. Egypt and Jordan followed, with 238 people at the Cairo kickoff. By November we launched in South Africa — the first international digital freight platform on the continent, with over 150 at the Sandton event.
-              </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The numbers told the story. Nine countries in six months, faster than any European expansion. MEA alone drove growth from 18,000 to 30,000 shippers.
-              </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Each additional country took days, not months, because the tenant architecture solved most of the complexity once. Regional teams customised what mattered locally while core platform logic stayed shared. One codebase. One design system. Multiple markets.
-              </p>
-            </div>
-
-            {/* The Strategic Impact */}
-            <div className="space-y-4">
-              <h3
-                className="text-xl text-white sm:text-2xl"
-                style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                  fontWeight: 600,
-                  lineHeight: "160%",
-                }}
-              >
-                The Strategic Impact
-              </h3>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                MEA validated the global strategy. It proved Saloodo! could adapt to radically different markets without breaking. By the time I transitioned to myDHLi in April 2020, the platform was running on four continents — and the foundation we'd built in those Dubai workshops was what made that possible.
-              </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The MEA rollout taught me something I've taken into every role since. Scale isn't about shipping the same product to more places. It's about designing infrastructure flexible enough to meet each market on its own terms — trust dynamics, payment habits, communication channels — without forking the codebase or breaking the team.
-              </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                That's the work I want to keep doing. Building platforms that meet people where they actually are, backed by the research and data that tell you where that is.
-              </p>
+              {/* The Result */}
+              <div className="space-y-4">
+                <p
+                  className="text-case-study-label text-xs font-bold uppercase tracking-[0.16em] sm:text-sm"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", color: "rgb(251,146,60)" }}
+                >
+                  The result
+                </p>
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  MEA validated the global strategy. It proved Saloodo! could adapt to radically different markets
+                  without breaking. By the time I transitioned to myDHLi in April 2020, the platform was running on four
+                  continents — and the foundation we&apos;d built in those Dubai workshops was what made that possible.
+                </p>
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  The MEA rollout taught me something I&apos;ve taken into every role since. Scale isn&apos;t about
+                  shipping the same product to more places. It&apos;s about designing infrastructure flexible enough to
+                  meet each market on its own terms — trust dynamics, payment habits, communication channels — without
+                  forking the codebase or breaking the team.
+                </p>
+                <p
+                  className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
+                  style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                >
+                  That&apos;s the work I want to keep doing. Building platforms that meet people where they actually are,
+                  backed by the research and data that tell you where that is.
+                </p>
+              </div>
             </div>
           </div>
         </div>

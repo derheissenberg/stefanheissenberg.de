@@ -53,6 +53,31 @@ body {
   font-family: var(--font-outfit, system-ui), sans-serif;
 }
 
+/**
+ * TYPOGRAPHY TOKEN: .cs-body
+ * PURPOSE: Standard body paragraph style for all case studies.
+ *
+ * KEY CONCEPTS:
+ * - Encodes the full set of repeated body-text declarations so every case study
+ *   paragraph stays consistent without copy-pasting Tailwind class strings.
+ * - Responsive font size: 1rem (16 px) on mobile → 1.125 rem (18 px) on lg screens.
+ * - 160% line-height keeps long prose comfortable to read.
+ * - color-mix() replicates Tailwind's /90 opacity modifier against --foreground.
+ * - font-family mirrors the inline style previously on every <p> tag.
+ */
+.cs-body {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1rem; /* text-base */
+  line-height: 160%;
+  color: color-mix(in srgb, var(--foreground) 90%, transparent);
+}
+
+@media (min-width: 1024px) {
+  .cs-body {
+    font-size: 1.125rem; /* text-lg */
+  }
+}
+
 /* LEARNING: Section heading h2 style - matches "82 Customers" heading */
 /* Used consistently across all section headings for visual harmony */
 /* Responsive sizing: 1.5rem (24px) on mobile, 1.875rem (30px) on tablet+ */

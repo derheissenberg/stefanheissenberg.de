@@ -1,92 +1,94 @@
 /**
  * COMPONENT: SaloodoCaseStudyHero
- * PURPOSE: Hero section for Saloodo case study page with logo, title, intro text, and statistics
+ * PURPOSE: Hero for Saloodo case study — lead headline, intro, project meta, statistics
  *
- * KEY CONCEPTS:
- * - Centered layout with max-width container matching DHL case study
- * - Harmonized typography using Outfit font family
- * - Statistics grid using MetricCard component (responsive: 3-col desktop, 2-col tablet, 1-col mobile)
- *
- * TYPOGRAPHY:
- * - Main title: Outfit, extra light (200), responsive sizing
- * - Subtitle: Outfit, regular weight
- * - Intro text: Outfit, regular, line-height 140%
- * - Statistics: MetricCard component with animated gradients
+ * - Left-aligned editorial column in max-w-6xl (matches DHL case study structure)
+ * - Outfit for titles/body; Kode Mono for meta labels (muted caps)
+ * - h1 mirrors DHL pattern: three rows with block spans and gradient-text-safe on last line
  */
 
-import Image from "next/image";
+import { CaseStudyLeadText } from "@/components/case-studies/CaseStudyLeadText";
 import { MetricCard } from "@/components/ui/MetricCard";
 
-// LEARNING: Saloodo KPIs from the Figma design
 const statistics = [
   { value: "200%", label: "Shipper Growth", color: "blue" as const },
   { value: "50+", label: "Countries by 2020", color: "yellow" as const },
   { value: "108%", label: "Annual Growth", color: "blue" as const },
 ];
 
+const metaRows = [
+  { label: "Company", value: "Saloodo! (DHL Venture)" },
+  { label: "ROLE", value: "Founding Designer" },
+  { label: "YEARS", value: "2018 — 2020" },
+  { label: "SCOPE", value: "UX/UI · Growth Design · Rapid Experimentation" },
+] as const;
+
+const labelStyle = {
+  fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+  fontWeight: 500,
+  letterSpacing: "0.24em",
+} as const;
+
 export function SaloodoCaseStudyHero() {
   return (
-    <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20" aria-label="Saloodo Case Study Hero">
-      <div className="mx-auto max-w-6xl">
-        {/* Saloodo Logo */}
-        {/* LEARNING: Logo centered above the title, similar to DHL case study */}
-        <div className="mb-6 flex justify-center">
-          <div className="relative h-[52px] w-[144px]">
-            <Image
-              src="/images/saloodo/saloodo-logo-white.svg"
-              alt="Saloodo Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Main Title */}
-        {/* LEARNING: Uses h1 with extra light (200) weight - matches DHL case study pattern */}
+    <section
+      className="bg-[var(--background)] px-6 pb-16 pt-3 md:pt-4 lg:px-12 lg:pb-20 lg:pt-5"
+      aria-label="Saloodo Case Study Hero"
+    >
+      <div className="mx-auto w-full max-w-6xl text-left xl:max-w-7xl">
         <h1
-          className="mx-auto mb-2 max-w-[820px] text-center text-2xl text-white sm:text-3xl lg:text-4xl"
+          className="mb-7 w-full max-w-none text-left text-white"
           style={{
             fontFamily: "var(--font-outfit), system-ui, sans-serif",
-            fontWeight: 200,
-            lineHeight: "150%",
+            fontSize: "clamp(40px, 6vw, 72px)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+            fontWeight: 600,
           }}
         >
-          From Zero to One
+          <span
+            className="!block font-bold italic"
+            style={{ paddingRight: "0.1em" }}
+          >
+            From{" "}
+            <span
+              className="gradient-text-safe font-bold italic"
+              style={{ backgroundSize: "300%", paddingRight: "0.1em" }}
+            >
+              Zero to One
+            </span>
+          </span>
+          <span className="mt-[0.06em] block text-white">Building A Digital Marketplace.</span>
         </h1>
-        
-        {/* Subtitle */}
-        <h2
-          className="mx-auto mb-8 max-w-[820px] text-center text-xl text-white sm:text-2xl lg:text-3xl"
-          style={{
-            fontFamily: "var(--font-outfit), system-ui, sans-serif",
-            fontWeight: 400,
-            lineHeight: "160%",
-          }}
-        >
-          Building A Digital Marketplace
-        </h2>
 
-        {/* Intro Text */}
-        <p
-          className="mx-auto mb-12 max-w-[820px] text-center text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg"
-          style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
-        >
-          I joined Saloodo! in May 2018 as the first in-house designer. Until then, DHL had relied on agencies and freelancers to get the startup off the ground. We'd proven the concept, but the platform needed a complete relaunch to scale.
-        </p>
+        <CaseStudyLeadText className="mt-8 mb-10">
+          I joined Saloodo! in May 2018 as the first in-house designer. Until then, DHL had relied on
+          agencies and freelancers to get the startup off the ground. We&apos;d proven the concept, but
+          the platform needed a complete relaunch to scale.
+        </CaseStudyLeadText>
 
-        {/* Statistics Grid */}
-        {/* LEARNING: Responsive grid - 3 columns on desktop, 2 on tablet, 1 on mobile */}
-        {/* LEARNING: Synchronized animation - all cards animate simultaneously (no delay) */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+        <dl className="grid grid-cols-1 gap-8 border-t border-white/15 pt-10 sm:grid-cols-2 md:grid-cols-4 md:gap-x-10">
+          {metaRows.map((row) => (
+            <div key={row.label}>
+              <dt
+                className="text-[11px] uppercase text-white/50"
+                style={labelStyle}
+              >
+                {row.label}
+              </dt>
+              <dd
+                className="mt-2 text-[15px] leading-snug text-white lg:text-base"
+                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 500 }}
+              >
+                {row.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <div className="grid grid-cols-1 gap-4 pt-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {statistics.map((stat, index) => (
-            <MetricCard 
-              key={index} 
-              value={stat.value} 
-              label={stat.label} 
-              color={stat.color}
-              delay={0} // LEARNING: No delay - all cards animate together
-            />
+            <MetricCard key={index} value={stat.value} label={stat.label} color={stat.color} delay={0} />
           ))}
         </div>
       </div>

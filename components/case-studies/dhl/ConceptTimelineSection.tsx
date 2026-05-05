@@ -115,19 +115,19 @@ export function ConceptTimelineSection() {
               <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                 Late 2018
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 While I was still at Saloodo!, DHL Global Forwarding asked me to sketch what a unified B2B portal could look like — one place to replace the dozens of disconnected apps customers were navigating.
               </p>
               <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                 The Vision
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 One platform. 360° shipment visibility across air, ocean, road, and rail. Available 24/7 anywhere in the world.
               </p>
               <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                 The Reality
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 Not really a design problem. An organisational one. Decoupling legacy systems. Introducing agile to teams that had only ever shipped waterfall. Convincing stakeholders that dozens of apps had to become one customer experience — and meaning it.
               </p>
             </div>

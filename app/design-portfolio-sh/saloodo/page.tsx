@@ -22,6 +22,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Footer } from "@/components/layout/Footer";
 import { SaloodoCaseStudyHero } from "@/components/case-studies/saloodo/SaloodoCaseStudyHero";
+import { CaseStudySectionHeading } from "@/components/case-studies/CaseStudySectionHeading";
+import { CaseStudyLogoStack } from "@/components/case-studies/CaseStudyLogoStack";
 
 const baseUrl = "https://www.stefanheissenberg.de";
 const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
@@ -107,64 +109,24 @@ export default function SaloodoCaseStudyPage() {
       {/* Hero Section */}
       <SaloodoCaseStudyHero />
 
-      {/* Startup Growth - Refactoring for Scale */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
+      {/* Startup Growth / Refactoring for Scale */}
+      <section className="bg-[var(--background)] px-6 pt-8 pb-16 lg:px-12 lg:pt-10 lg:pb-20">
         <div className="mx-auto max-w-6xl">
-          {/* Image + Text Layout */}
-          <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-16">
-            {/* Image */}
-            <div className="order-1">
-              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/images/saloodo/hero-image-startup.png"
-                  alt="Saloodo team workshop"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-            </div>
-            
-            {/* Text Content */}
-            <div className="order-2 space-y-4">
-              <p className="max-w-[820px] text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Over two years, we built the design team, established a user-centred design culture, and took the marketplace from European pilot to global platform across three continents.
-              </p>
-              <p className="max-w-[820px] text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                That chapter taught me more than any job before or since — how to move at startup speed, measure everything that mattered, and build infrastructure that would hold across 50+ countries without breaking.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+          <CaseStudySectionHeading
+            align="center"
+            numberDash="01—"
+            category="STARTUP GROWTH"
+            detail="DESIGN SYSTEM & PLATFORM"
+          >
+            Refactoring for Scale
+          </CaseStudySectionHeading>
 
-      {/* Startup Growth Section Header */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-5xl">
-          {/* Section Header with emoji */}
-          <div className="mx-auto mb-8 max-w-[820px] text-center">
-            <p className="mb-2 text-2xl text-[#b3b3b3] sm:text-3xl" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 600 }}>
-              🚀 Startup Growth
-            </p>
-            <h2
-              className="text-2xl text-white sm:text-3xl lg:text-4xl"
-              style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                fontWeight: 600,
-                lineHeight: "160%",
-              }}
-            >
-              Refactoring for Scale
-            </h2>
-          </div>
-
-          {/* Content */}
-          <div className="mx-auto max-w-[820px] space-y-6">
+          <div className="mt-10 space-y-6 lg:mt-12">
             <div className="space-y-4">
               <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                 Design System
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 We built a new design system from scratch — atomic principles, reusable components that could adapt market to market without redesigns, tokens wired directly into React so changes propagated automatically. The goal was infrastructure for geographic expansion, not a visual refresh.
               </p>
             </div>
@@ -173,7 +135,7 @@ export default function SaloodoCaseStudyPage() {
               <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                 Frontend Refactor
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 With engineering, we rebuilt the entire frontend in React/Redux. Not a coat of paint — systematic removal of technical debt, and a foundation that could hold the growth we needed.
               </p>
             </div>
@@ -182,7 +144,7 @@ export default function SaloodoCaseStudyPage() {
               <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                 The Result
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 We launched across multiple European markets in rapid succession — Netherlands, Italy, Poland, Austria, Denmark — each rollout running in weeks because the infrastructure was already there. The refactored platform handled regional variations in language, currency, and regulation without forking the codebase.
               </p>
             </div>
@@ -191,32 +153,19 @@ export default function SaloodoCaseStudyPage() {
               <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
                 Business Impact
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 DHL's backing plus our own conversion data gave us unit economics that justified real marketing spend. Customers came back because the thing worked.
               </p>
             </div>
           </div>
 
-          {/* Tech Stack Logos */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-8">
-            {techStackLogos.map((logo) => (
-              <div key={logo.alt} className="relative" style={{ width: logo.width, height: logo.height }}>
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  className="object-contain opacity-80 transition-opacity hover:opacity-100"
-                />
-              </div>
-            ))}
-          </div>
+          <CaseStudyLogoStack className="mt-10 sm:mt-12" label="Tech stack" logos={techStackLogos} />
         </div>
       </section>
 
-      {/* Component Example MacBook Image */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-5xl">
+      {/* MacBook Component Library Image */}
+      <section className="bg-[var(--background)] px-5 pb-16 md:px-8 lg:px-12 lg:pb-20">
+        <div className="mx-auto max-w-6xl">
           <div className="relative aspect-[2166/1564] w-full overflow-hidden">
             <Image
               src="/images/saloodo/Component-example-macbook 1.png"
@@ -232,36 +181,70 @@ export default function SaloodoCaseStudyPage() {
       {/* Data-Driven Disrupter Section */}
       <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
         <div className="mx-auto max-w-5xl">
-          {/* Section Header */}
-          <div className="mx-auto mb-8 max-w-[820px] text-center">
-            <p className="mb-2 text-2xl text-[#b3b3b3] sm:text-3xl" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 600 }}>
-              Data-Driven Disrupter
-            </p>
-            <h2
-              className="text-2xl text-white sm:text-3xl lg:text-4xl"
-              style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                fontWeight: 600,
-                lineHeight: "160%",
-              }}
-            >
-              Learning & Experimentation
-            </h2>
-          </div>
+          <CaseStudySectionHeading
+            align="center"
+            numberDash="02—"
+            category="DATA-DRIVEN DISRUPTER"
+            detail=""
+          >
+            Learning & Experimentation
+          </CaseStudySectionHeading>
 
           {/* Content */}
           <div className="mx-auto max-w-[820px] space-y-4">
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               Saloodo! had one advantage nobody else in the space had: access to DHL's decades of freight data. The data science team used it to experiment with machine learning that was genuinely new for logistics — dynamic pricing, load optimisation, carrier recommendations.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               I worked closely with the data science team, translating algorithms into interfaces users could trust. The most interesting work was our PTL (Part Truckload) optimisation engine. We tracked carriers' booked routes and available capacity, then recommended compatible shipments along the routes they were already driving.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               The marketplace efficiency was real. Carriers filled partially empty trucks with shipments they'd have driven past anyway. Empty miles went down. Utilisation went up. Shippers got better rates because marginal cost was low. Both sides came out ahead.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              What that collaboration taught me: how ML models actually work, what data they need, and how to design experiences that make complex algorithms trustworthy. More importantly — how smart algorithms create marketplace value instead of just automating processes.
+          </div>
+        </div>
+      </section>
+
+      {/* THE LEARNING — centered manifesto (matches DHL shift marker pattern) */}
+      <section className="bg-[var(--background)] py-[120px] max-[900px]:py-[84px]">
+        <div className="mx-auto max-w-[1160px] px-6 lg:px-8">
+          <div className="py-6 text-center sm:py-8">
+            <p
+              className="text-[13px] uppercase text-cyan-300"
+              style={{
+                fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+                fontWeight: 500,
+                letterSpacing: "0.24em",
+              }}
+            >
+              — THE LEARNING —
+            </p>
+            <blockquote
+              className="mx-auto mt-8 max-w-[980px] text-white max-[900px]:text-[36px] sm:mt-10 md:mt-12"
+              style={{
+                fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                fontWeight: 300,
+                fontSize: "clamp(26px, 4vw, 54px)",
+                lineHeight: 1.15,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              &ldquo;Smart algorithms create <em
+                className="gradient-text-safe"
+                style={{
+                  fontStyle: "italic",
+                  fontWeight: 700,
+                  paddingRight: "0.08em",
+                  marginRight: "0.01em",
+                  backgroundSize: "300%",
+                }}
+              >marketplace value</em> — not just automated processes.&rdquo;
+            </blockquote>
+            <p
+              className="mx-auto mt-10 max-w-[620px] text-[15px] leading-[1.65] text-white/65 sm:mt-12 lg:mt-14"
+              style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+            >
+              SALOODO! · DATA SCIENCE COLLABORATION
             </p>
           </div>
         </div>
@@ -285,87 +268,65 @@ export default function SaloodoCaseStudyPage() {
       {/* UX ROI Section */}
       <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
         <div className="mx-auto max-w-5xl">
-          {/* Section Header */}
-          <div className="mx-auto mb-8 max-w-[820px] text-center">
-            <p className="mb-2 text-2xl text-[#b3b3b3] sm:text-3xl" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 600 }}>
-              UX ROI
-            </p>
-            <h2
-              className="text-2xl text-white sm:text-3xl lg:text-4xl"
-              style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                fontWeight: 600,
-                lineHeight: "160%",
-              }}
-            >
-              Measuring What Matters
-            </h2>
-          </div>
+          <CaseStudySectionHeading
+            align="center"
+            numberDash="03—"
+            category="UX ROI"
+            detail="MEASURING WHAT MATTERS"
+          >
+            Measuring What Matters
+          </CaseStudySectionHeading>
 
           {/* Content */}
           <div className="mx-auto max-w-[820px] space-y-4">
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              In a startup, you build what drives customer lifetime value and measurable return — not what stakeholders request, not what's cool. We built reporting frameworks that connected design decisions directly to business outcomes.
+            <p className="cs-body">
+              In a startup, you build what drives customer lifetime value and measurable return. Not what stakeholders request. Not what&apos;s cool. Every major feature shipped with defined success metrics — conversion lift, retention, cost reduction — and qualitative tests sat next to the analytics. Friction points showed up. Evidence got presented.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              Performance marketing and product shared the same tracking infrastructure. Bi-weekly product performance reviews ran across functions.
+            <p className="cs-body">
+              We rebuilt the shipment creation flow on what the data was telling us. Time-to-first-shipment for new users dropped by over 40%.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              We looked at what actually mattered — CAC trends, LTV:CAC ratios, payback periods, funnel drop-offs, unit economics — and the team built a shared understanding of goals and ROI.
+            <p className="cs-body">
+              Without quantified evidence — business value, user value, ideally both — features didn&apos;t make the roadmap. We changed the platform with confidence because we had the data and had learned to ask the right questions. That&apos;s how we experimented, measured, and iterated faster than traditional logistics companies could schedule a meeting.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              Every major feature shipped with defined success metrics: conversion lift, retention improvement, cost reduction. Qualitative tests and hard analytics lived in the same conversation — task completion, session recordings, conversion data. Friction points showed up. Evidence got presented. Shipment creation time for first-time users dropped by over 40%.
-            </p>
+          </div>
+
+          {/* Payment Flow Screenshot */}
+          <div className="mx-auto mt-10 max-w-5xl sm:mt-12">
+            <div className="relative aspect-[2000/1695] w-full overflow-hidden">
+              <Image
+                src="/images/saloodo/complete-payment.png"
+                alt="Saloodo complete payment flow"
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
           </div>
 
           {/* Analytics Logos */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-6 py-8 md:gap-8">
-            {analyticsLogos.map((logo) => (
-              <div key={logo.alt} className="relative" style={{ width: logo.width, height: logo.height }}>
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  className="object-contain opacity-80 transition-opacity hover:opacity-100"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Use Case Prioritization Subsection */}
-          <div className="mx-auto mt-8 max-w-[820px] space-y-4">
-            <h3
-              className="text-xl text-white sm:text-2xl"
+          <div className="border-y border-white/[0.08] mt-10 sm:mt-12">
+            <p
+              className="px-4 pt-8 text-center text-[10px] font-medium uppercase text-white/40 sm:pt-10 sm:text-[11px]"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                fontWeight: 600,
-                lineHeight: "160%",
+                fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
+                letterSpacing: "0.18em",
               }}
             >
-              Use Case Prioritization
-            </h3>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              Every potential feature got scored on business value (revenue impact, cost savings, strategic importance) and user value. Without quantified evidence from at least one dimension, features didn't even make it onto the roadmap.
+              TECH STACK
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-              We changed the platform with confidence because we had the data we needed and had learned to ask the right questions. That way we could experiment, measure, and iterate faster than traditional logistics companies could schedule a meeting.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Detail Page Funnel Image */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="relative aspect-[2000/1695] w-full overflow-hidden">
-            <Image
-              src="/images/saloodo/complete-payment.png"
-              alt="Saloodo complete payment flow"
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
+            <ul className="flex list-none flex-wrap items-center justify-center gap-x-5 gap-y-6 px-4 pb-8 pt-5 sm:gap-x-7 sm:gap-y-7 sm:pb-10 sm:pt-6 md:gap-x-9">
+              {analyticsLogos.map((logo) => (
+                <li key={logo.alt} className="relative" style={{ width: logo.width, height: logo.height }}>
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    className="object-contain opacity-80 transition-opacity hover:opacity-100"
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

@@ -97,10 +97,7 @@ export default function OBINextCaseStudyPage() {
           </h1>
           
           {/* Subtitle */}
-          <p
-            className="mx-auto mb-8 max-w-[820px] text-center text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg"
-            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
-          >
+          <p className="cs-body mx-auto mb-8 max-w-[820px] text-center">
             30 days from concept to MVP. The bathroom planner that reshaped how a €8.2B retailer serves its customers.
           </p>
 
@@ -121,12 +118,12 @@ export default function OBINextCaseStudyPage() {
       {/* Intro Text Section */}
       <section className="bg-[var(--background)] px-5 py-8 md:px-8 lg:px-12">
         <div className="mx-auto max-w-[820px] space-y-4">
-          <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+          <p className="cs-body">
             <span className="font-bold text-white">MVP</span>
             <br />
             In 2017, OBI Group spun up OBI Next to prove corporate could move at startup speed. I came in from sunzinet as Senior UX Consultant to launch the bathroom planner (BadPlaner) — the digital service that would become the blueprint for OBI's complete transformation.
           </p>
-          <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+          <p className="cs-body">
             <span className="font-bold text-white">Today</span>
             <br />
             Today, the service runs across 640+ stores in 10 countries and serves 9+ million heyOBI users. The methodology we built became OBI's standard for digital innovation and has rolled out across Europe.
@@ -165,7 +162,7 @@ export default function OBINextCaseStudyPage() {
               >
                 War Room: 30 Days to MVP
               </h2>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 We set up in an empty loft close to our agency, assembling IKEA furniture while planning strategy. I ran design thinking workshops with stakeholders across OBI, pulling customer pain points, market research, and business goals into something we could act on. The key insight: customers needed inspiration first, not complex planning tools.
               </p>
             </div>
@@ -213,13 +210,13 @@ export default function OBINextCaseStudyPage() {
             
             {/* Right: Development Text */}
             <div className="order-2 space-y-4 lg:pt-0">
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 By week two, concept and design were ready. I was sitting with our developers and product manager, coding frontend implementations at 2am.
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 I did whatever removed blockers — UX/UI, HTML/CSS/JavaScript, legal content, measurement frameworks.
               </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+              <p className="cs-body">
                 Day 30: we launched. Customers could browse and customise complete bathroom looks, schedule in-store consultations, and receive planning documents. We didn't ship and hope. We analysed every click and recorded sessions from day one.
               </p>
             </div>
@@ -244,13 +241,13 @@ export default function OBINextCaseStudyPage() {
           
           {/* Content - Centered text block */}
           <div className="mx-auto max-w-[820px] space-y-4">
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               We recruited participants who'd recently renovated bathrooms and ran moderated sessions combining task-based testing, five-second tests, and unscripted exploration. The research showed us exactly where the experience broke down and what customers actually needed.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               We adapted immediately. Questions moved earlier in the journey. Inspiration filters were stripped back to the essentials. Planning documents personalised based on selections. Budget ranges recalibrated to match realistic project scopes.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               Version 2 launched weeks later. The numbers validated everything — conversion rates improved and consultation appointment bookings increased.
             </p>
           </div>
@@ -275,16 +272,16 @@ export default function OBINextCaseStudyPage() {
         <div className="mx-auto max-w-6xl">
           {/* Content with bullet list */}
           <div className="mx-auto max-w-[820px] space-y-4">
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               Every change was A/B tested, so we could see exactly what improved performance. When OBI started directing organic traffic from their main website to our landing pages, the numbers held. We were ready to scale, and onboarded new teams with everything we'd learned:
             </p>
-            <ul className="list-disc space-y-2 pl-6 text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <ul className="cs-body list-disc space-y-2 pl-6">
               <li>3D-configurator architecture</li>
               <li>Lead magnet strategy</li>
               <li>Remarketing campaigns</li>
               <li>Validation framework</li>
             </ul>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               The Kitchen Planner team had a proven blueprint. They didn't need to figure out what worked — they started from our validated approach and adapted it for their domain.
             </p>
           </div>
@@ -321,14 +318,14 @@ export default function OBINextCaseStudyPage() {
           
           {/* Content */}
           <div className="mx-auto max-w-[820px] space-y-4">
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               What started as a 6-month pilot became the methodology for OBI's digital future. It proved corporate could move at startup speed — and that proof changed everything.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               Within 18 months, OBI Next launched the Kitchen Planner and Garden Planner on the same methodology. The bathroom planner expanded from Austria to Germany, then across Europe, backed by{" "}
-              <a 
-                href="https://www.baumarktmanager.de/obi-startet-grossangelegte-badplaner-kampagne-05082019" 
-                target="_blank" 
+              <a
+                href="https://www.baumarktmanager.de/obi-startet-grossangelegte-badplaner-kampagne-05082019"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white underline hover:text-[#1ed0f3] transition-colors"
               >
@@ -336,13 +333,13 @@ export default function OBINextCaseStudyPage() {
               </a>
               . All three services now run 14 configurators across 300+ stores.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               Today, OBI Group generates €8.2 billion in revenue across 640+ stores in 10 countries. Half of German customers visit the website before walking into a store. Project experiences — not just product sales — serve 9+ million users and define the brand.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               The transformation is still compounding.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               This project showed me where I belong — product-side, building systems that change how companies innovate, not just delivering agency projects that end when the interesting journey starts.
             </p>
           </div>

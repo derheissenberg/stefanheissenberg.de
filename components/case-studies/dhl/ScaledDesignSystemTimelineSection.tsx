@@ -106,7 +106,7 @@ export function ScaledDesignSystemTimelineSection() {
             >
               The Fragmented Landscape
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               DHL had fragments. Guidelines updated every few years. Libraries that competed across divisions — myDHLi, dhl.com, legacy portals — with no shared technical base. Every team rebuilt the same buttons from scratch.
             </p>
           </div>
@@ -118,22 +118,22 @@ export function ScaledDesignSystemTimelineSection() {
           >
             The 5-Year Build (2020–2025)
           </p>
-          <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+          <p className="cs-body">
             We started with an audit. Every component, every use case, every portal. Then a choice — replace everything, or build the foundation underneath what already existed. We built the foundation. The myDHLi library aligned with existing tech stacks while creating space to harmonise the design.
           </p>
-          <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+          <p className="cs-body">
             Then dhl.com came in. Cross-division collaboration merged our library with the primary system. We survived three tool transitions — Abstract → Sketch Cloud → Figma — without losing consistency.
           </p>
-          <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+          <p className="cs-body">
             I represented multiple business units on a DHL Group-wide committee, helping define the standards for what came next.
           </p>
           </div>
 
           <div className="space-y-4">
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               Underneath, the library runs on Stencil. One set of web components compiles into React, Vue, and Angular — the same button shipped to teams running different stacks, no forking. Lerna manages the monorepo. Storybook drives component development in isolation. TypeScript, Jest, and Puppeteer keep it tested. Docusaurus generates the docs. Azure runs the CI/CD. Most design systems live as files in Figma. This one runs as code in production — and the Figma libraries stay connected to it.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               Every component moves through the same path. Creation → quality check → design review → publish. Validation criteria at each gate so the system stays clean as it scales.
             </p>
           </div>
@@ -145,10 +145,10 @@ export function ScaledDesignSystemTimelineSection() {
             >
               The Shift
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               We reversed the model. Guidelines used to describe components. Now the components are the guideline — living frontend with connected Figma libraries as the source of truth. No more PDFs.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body">
               A scaled design system across leading business units inside DHL. Faster development. Consistent experiences. The foundation everything new gets built on.
             </p>
           </div>

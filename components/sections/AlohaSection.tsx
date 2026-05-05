@@ -24,7 +24,7 @@ export function AlohaSection() {
   const wavingHandCursor = { cursor: "url('/cursors/waving-hand.svg') 16 8, pointer" } as const;
 
   return (
-    <section className="relative bg-[var(--background)] px-6 pt-16 pb-[100px] lg:px-12 lg:pt-20" aria-label="About me">
+    <section className="relative bg-[var(--background)] px-6 py-16 lg:px-12 lg:py-20" aria-label="About me">
       <HorizonDrift />
       <div className="relative z-[1]">
         {/* LEARNING: Waving hand cursor on entire content block; links override with cursor-pointer */}

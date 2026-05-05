@@ -515,6 +515,86 @@ body {
   }
   
   [data-phrase-block="xlarge"] {
-    font-size: clamp(2.75rem, 7vw + 2rem, 3.5rem) !important; /* 44px → scales → 56px on small mobile */
+    font-size: clamp(2.75rem, 7vw + 2em, 3.5rem) !important; /* 44px → scales → 56px on small mobile */
+  }
+}
+
+/* ==========================================================================
+ * UTILITY: Parallax helpers
+ * PURPOSE: Reusable CSS-variable-driven parallax shift classes.
+ *
+ * KEY CONCEPTS:
+ * - --parallax-shift: Controls how far the element translates on scroll.
+ *   Override per-element: style="--parallax-shift: 60px"
+ * - Desktop-only: parallax is disabled below 1024 px (mobile/tablet).
+ *   On small screens the transform is always translateY(0) so layout is stable.
+ * - prefers-reduced-motion: Removes transform and transition entirely for
+ *   users who have requested less motion (accessibility & vestibular safety).
+ * - .parallax-layer is the base; .parallax-slow / .parallax-fast are presets.
+ * ========================================================================== */
+
+/* Default shift strength — override inline or in a component stylesheet */
+:root {
+  --parallax-shift: 40px;
+}
+
+/* Base layer: no transform on mobile — avoids performance cost on small devices */
+.parallax-layer {
+  will-change: transform;
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+}
+
+/* LEARNING: Parallax only kicks in on desktop (≥ 1024 px).
+   JS sets --parallax-y (a value in px) on the element; we apply it here. */
+@media (min-width: 1024px) {
+  .parallax-layer {
+    /* LEARNING: var(--parallax-y, 0px) — JS writes --parallax-y on scroll.
+       Fallback is 0px so nothing shifts until JS runs. */
+    transform: translateY(var(--parallax-y, 0px));
+    /* LEARNING: Extend the layer beyond the overflow-hidden container by the
+       shift amount in each direction. The container acts as a viewport window;
+       the larger layer slides within it, revealing real image content at the
+       edges rather than exposing the page background — this is the core parallax
+       mechanic. Without this, the layer is identical in size to the container
+       and any translateY just clips the image or shows a dark sliver. */
+    top: calc(-1 * var(--parallax-shift, 40px));
+    bottom: calc(-1 * var(--parallax-shift, 40px));
+  }
+
+  /* LEARNING: fill images inside a parallax-layer must cover the now-taller
+     layer div. object-contain would letterbox (shrink-to-fit), leaving
+     transparent gaps at top/bottom that expose the background when the
+     layer shifts. object-cover fills the whole layer by cropping ~shift-px
+     off each edge — imperceptible on device mockups. */
+  .parallax-layer img {
+    object-fit: cover;
+  }
+
+  /* Preset: subtle shift — background images and large mockups */
+  .parallax-slow {
+    --parallax-shift: 50px;
+  }
+
+  /* Preset: stronger shift — foreground accent elements */
+  .parallax-fast {
+    --parallax-shift: 80px;
+  }
+}
+
+/* LEARNING: prefers-reduced-motion — respect the OS accessibility setting.
+   Completely disables the transform and the transition so the element
+   stays static. Also resets the negative top/bottom extension added for
+   the parallax window effect — without this the image would be slightly
+   cropped on a static page for reduced-motion users. */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-layer,
+  .parallax-slow,
+  .parallax-fast {
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+    top: 0;
+    bottom: 0;
   }
 }

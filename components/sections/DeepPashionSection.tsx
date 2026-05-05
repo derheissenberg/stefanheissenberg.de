@@ -31,7 +31,7 @@ const principles = [
 
 export function DeepPashionSection() {
   return (
-    <section className="relative bg-[var(--background)] px-6 py-20 lg:px-12 lg:py-28" aria-label="Core principles">
+    <section className="relative bg-[var(--background)] px-6 py-20 lg:px-12 lg:py-[120px]" aria-label="Core principles">
       <AuroraAmber />
       <div className="relative z-[1]">
         <div className="mx-auto max-w-6xl">

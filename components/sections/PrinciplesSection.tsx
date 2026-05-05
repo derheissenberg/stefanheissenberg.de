@@ -9,7 +9,7 @@ function SectionRule() {
 
 export function PrinciplesSection() {
   return (
-    <section className="bg-[var(--background)] py-[110px] max-[900px]:py-[70px]" aria-label="How I work">
+    <section className="bg-[var(--background)] py-[120px] max-[900px]:py-[84px]" aria-label="How I work">
       <div className="mx-auto max-w-[1160px] px-6 lg:px-8">
         <div className="mb-16 grid grid-cols-[1fr_2fr] items-end gap-10 max-[900px]:mb-10 max-[900px]:grid-cols-1">
           <div className="max-w-[280px] max-[900px]:max-w-none">

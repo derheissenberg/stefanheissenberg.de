@@ -5,6 +5,7 @@ import { PrinciplesSection } from "@/components/sections/PrinciplesSection";
 import { DeepPashionSection } from "@/components/sections/DeepPashionSection";
 import { CustomersSection } from "@/components/sections/CustomersSection";
 import { AlohaSection } from "@/components/sections/AlohaSection";
+import { WantTheFullStoryCTASection } from "@/components/sections/WantTheFullStoryCTASection";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <DeepPashionSection />
       <CustomersSection />
       <AlohaSection />
+      <WantTheFullStoryCTASection />
       <Footer />
     </main>
   );

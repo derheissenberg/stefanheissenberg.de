@@ -41,7 +41,7 @@ const customerLogos = [
 
 export function CustomersSection() {
   return (
-    <section className="bg-[var(--background)] px-6 py-20 lg:px-12 lg:py-28" aria-label="Customers">
+    <section className="bg-[var(--background)] px-6 py-20 lg:px-12 lg:py-[120px]" aria-label="Customers">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center lg:mb-20">
           <p

@@ -24,6 +24,8 @@ import { Footer } from "@/components/layout/Footer";
 import { SaloodoCaseStudyHero } from "@/components/case-studies/saloodo/SaloodoCaseStudyHero";
 import { CaseStudySectionHeading } from "@/components/case-studies/CaseStudySectionHeading";
 import { CaseStudyLogoStack } from "@/components/case-studies/CaseStudyLogoStack";
+import { WantTheFullStoryCTASection } from "@/components/sections/WantTheFullStoryCTASection";
+import { ParallaxInitializer } from "@/components/ui/ParallaxInitializer";
 
 const baseUrl = "https://www.stefanheissenberg.de";
 const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
@@ -117,7 +119,7 @@ export default function SaloodoCaseStudyPage() {
       <SaloodoCaseStudyHero />
 
       {/* Startup Growth / Refactoring for Scale */}
-      <section className="bg-[var(--background)] px-6 pt-8 pb-16 lg:px-12 lg:pt-10 lg:pb-20">
+      <section className="bg-[var(--background)] px-6 pt-8 pb-12 lg:px-12 lg:pt-10 lg:pb-16">
         <div className="mx-auto max-w-6xl">
           <CaseStudySectionHeading
             align="center"
@@ -171,22 +173,27 @@ export default function SaloodoCaseStudyPage() {
       </section>
 
       {/* MacBook Component Library Image */}
-      <section className="bg-[var(--background)] px-5 pb-16 md:px-8 lg:px-12 lg:pb-20">
+      <section className="bg-[var(--background)] px-5 pb-12 md:px-8 lg:px-12 lg:pb-16">
         <div className="mx-auto max-w-6xl">
+          {/* LEARNING: relative parent = stacking context / clip boundary.
+              Inner parallax-layer sits at z-0; if overlaid content were added
+              it would live at z-10+, keeping it above the image on scroll. */}
           <div className="relative aspect-[2166/1564] w-full overflow-hidden">
-            <Image
-              src="/images/saloodo/Component-example-macbook 1.png"
-              alt="Saloodo component library example on MacBook"
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
+            <div className="parallax-layer parallax-slow absolute inset-0">
+              <Image
+                src="/images/saloodo/Component-example-macbook 1.png"
+                alt="Saloodo component library example on MacBook"
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Data-Driven Disrupter Section */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
+      <section className="bg-[var(--background)] px-5 py-12 md:px-8 lg:px-12 lg:py-16">
         <div className="mx-auto max-w-6xl">
           <CaseStudySectionHeading
             align="center"
@@ -213,7 +220,7 @@ export default function SaloodoCaseStudyPage() {
       </section>
 
       {/* THE LEARNING — centered manifesto (matches DHL shift marker pattern) */}
-      <section className="bg-[var(--background)] py-[120px] max-[900px]:py-[84px]">
+      <section className="bg-[var(--background)] py-[84px] max-[900px]:py-[60px]">
         <div className="mx-auto max-w-[1160px] px-6 lg:px-8">
           <div className="py-6 text-center sm:py-8">
             <p
@@ -258,22 +265,24 @@ export default function SaloodoCaseStudyPage() {
       </section>
 
       {/* App Screens Collage */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
+      <section className="bg-[var(--background)] px-5 py-12 md:px-8 lg:px-12 lg:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="relative aspect-[1600/1240] w-full overflow-hidden">
-            <Image
-              src="/images/saloodo/app-screens.png"
-              alt="Saloodo app screens showing various platform features"
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
+            <div className="parallax-layer parallax-slow absolute inset-0">
+              <Image
+                src="/images/saloodo/app-screens.png"
+                alt="Saloodo app screens showing various platform features"
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* UX ROI Section */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
+      <section className="bg-[var(--background)] px-5 py-12 md:px-8 lg:px-12 lg:py-16">
         <div className="mx-auto max-w-5xl">
           <CaseStudySectionHeading
             align="center"
@@ -324,23 +333,27 @@ export default function SaloodoCaseStudyPage() {
             </ul>
           </div>
 
-          {/* Payment Flow Screenshot */}
-          <div className="mx-auto mt-10 max-w-5xl sm:mt-12">
+          {/* Payment Flow Screenshot — no parallax: object-contain cannot bleed into the
+              extended top/bottom offsets that parallax-layer adds for object-cover images,
+              so we use a static wrapper to prevent translateY clipping at the edges. */}
+          <div className="mx-auto mt-12 max-w-5xl sm:mt-16">
             <div className="relative aspect-[2000/1695] w-full overflow-hidden">
-              <Image
-                src="/images/saloodo/complete-payment.png"
-                alt="Saloodo complete payment flow"
-                fill
-                className="object-contain"
-                sizes="100vw"
-              />
+              <div className="absolute inset-0">
+                <Image
+                  src="/images/saloodo/complete-payment.png"
+                  alt="Saloodo complete payment flow"
+                  fill
+                  className="object-contain"
+                  sizes="100vw"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Case Study: MEA Expansion — card + glow; gradients match MetricCard blue (Tailwind + animate-gradient) */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
+      <section className="bg-[var(--background)] px-5 py-12 md:px-8 lg:px-12 lg:py-16">
         <div className="relative mx-auto max-w-[904px] overflow-hidden rounded-2xl border border-neutral-800/90 bg-neutral-950/85 px-6 py-12 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] backdrop-blur-[6px] sm:px-10 sm:py-14 md:px-12 md:py-16 lg:rounded-3xl lg:py-20">
           {/* Orange radial wash behind headline */}
           <div
@@ -556,19 +569,35 @@ export default function SaloodoCaseStudyPage() {
       </section>
 
       {/* iPad Shipment List Image */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
+      <section className="bg-[var(--background)] px-5 pt-8 pb-12 md:px-8 lg:px-12 lg:pt-10 lg:pb-16">
         <div className="mx-auto max-w-6xl">
           <div className="relative aspect-[1920/1280] w-full overflow-hidden">
-            <Image
-              src="/images/saloodo/ipad-shipmentlist.png"
-              alt="Saloodo iPad shipment list view"
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
+            <div className="parallax-layer parallax-slow absolute inset-0">
+              <Image
+                src="/images/saloodo/ipad-shipmentlist.png"
+                alt="Saloodo iPad shipment list view"
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
           </div>
         </div>
       </section>
+
+      {/* CTA Section - leads to next case study */}
+      <WantTheFullStoryCTASection
+        nextCaseLabel="Next case · OBI Next →"
+        nextCaseHref="/design-portfolio-sh/obinext"
+      />
+
+      {/* LEARNING: ParallaxInitializer is a "use client" island that wires up the
+          scroll listener driving --parallax-y on .parallax-layer elements.
+          It runs inside useEffect — after hydration — so the server and client
+          both render the .parallax-layer divs with no inline style, eliminating
+          the hydration mismatch caused by the old inline <script> approach. */}
+      <ParallaxInitializer />
+
       <Footer />
     </main>
   );

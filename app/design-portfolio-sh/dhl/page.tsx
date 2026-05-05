@@ -26,6 +26,8 @@ import { Button } from "@/components/ui/Button";
 import { Footer } from "@/components/layout/Footer";
 import { DHLCaseStudyHero } from "@/components/case-studies/dhl/DHLCaseStudyHero";
 import { DHLCaseStudySection } from "@/components/case-studies/dhl/DHLCaseStudySection";
+import { ConceptTimelineSection } from "@/components/case-studies/dhl/ConceptTimelineSection";
+import { ScaledDesignSystemTimelineSection } from "@/components/case-studies/dhl/ScaledDesignSystemTimelineSection";
 
 const baseUrl = "https://www.stefanheissenberg.de";
 const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
@@ -174,180 +176,19 @@ export default function DHLCaseStudyPage() {
         </div>
       </section>
 
-      {/* Architecting myDHLi from Concept to Global Platform */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-6xl">
-          {/* LEARNING: Desktop shows images left, text right. Tablet/Mobile stacks. */}
-          <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[645px_1fr] lg:gap-16">
-            {/* Scribble Image with Caption */}
-            <div className="order-1 space-y-3">
-              <div className="relative aspect-[645/482] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/images/mydhli/concept-design-scribble.png"
-                  alt="1st scribble of myDHLi from 2019"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, 55vw"
-                />
-              </div>
-              <p className="text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                1st scribble of myDHLi from 2019
-              </p>
-            </div>
-            
-            {/* Text Content */}
-            <div className="order-2 max-w-[820px] space-y-5 lg:pt-5">
-              <CaseStudySectionHeading
-                align="left"
-                numberDash="02—"
-                category="CONCEPT"
-                detail="Late 2018"
-              >
-                From Concept to Global Platform
-              </CaseStudySectionHeading>
-              <div className="space-y-4">
-                <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Late 2018
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                While I was still at Saloodo!, DHL Global Forwarding asked me to sketch what a unified B2B portal could look like — one place to replace the dozens of disconnected apps customers were navigating.
-                </p>
-                <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  The Vision
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                One platform. 360° shipment visibility across air, ocean, road, and rail. Available 24/7 anywhere in the world.
-                </p>
-                <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  The Reality
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Not really a design problem. An organisational one. Decoupling legacy systems. Introducing agile to teams that had only ever shipped waterfall. Convincing stakeholders that dozens of apps had to become one customer experience — and meaning it.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Concept Images Grid */}
-          {/* LEARNING: Desktop: 3 columns, Tablet: 3 columns, Mobile: 1 column */}
-          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <div className="space-y-2">
-              <div className="relative aspect-video overflow-hidden rounded-l-xl sm:rounded-l-xl sm:rounded-r-none">
-                <Image
-                  src="/images/mydhli/concept-low-fidelity-wireframe.png"
-                  alt="1st Axure prototype for customer interviews and stakeholder workshops"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                1st Axure prototype for customer interviews and stakeholder workshops.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <div className="relative aspect-video overflow-hidden rounded-lg sm:rounded-none">
-                <Image
-                  src="/images/mydhli/flowcharts-uxflow-architecture-design.png"
-                  alt="Early flow chart for system discovery"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Early flow chart for system discovery, and basis for self-registration.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <div className="relative aspect-video overflow-hidden rounded-r-xl sm:rounded-l-none sm:rounded-r-xl">
-                <Image
-                  src="/images/mydhli/architecture-hands-on-concepts.png"
-                  alt="Early DHL landscape and architecture brainstorming session"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Early DHL landscape and architecture brainstorming session.
-              </p>
-            </div>
-          </div>
-          
-          {/* Workshop Images Grid */}
-          {/* LEARNING: Desktop: 3 columns, Tablet: 3 columns, Mobile: 1 column */}
-          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <div className="space-y-2">
-              <div className="relative aspect-video overflow-hidden rounded-l-xl sm:rounded-l-xl sm:rounded-r-none">
-                <Image
-                  src="/images/mydhli/kick-off-workshop-stakeholder.png"
-                  alt="Initial myDHLi kick-off/stakeholder workshops with Saloodo-Team in Bonn"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Initial myDHLi kick-off/stakeholder workshops with Saloodo-Team in Bonn
-              </p>
-            </div>
-            <div className="space-y-2">
-              <div className="relative aspect-video overflow-hidden rounded-lg sm:rounded-none">
-                <Image
-                  src="/images/mydhli/analytics-coaching-stefanheissenberg.png"
-                  alt="UX-research & analytics training"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                UX-research & analytics training
-              </p>
-            </div>
-            <div className="space-y-2">
-              <div className="relative aspect-video overflow-hidden rounded-r-xl sm:rounded-l-none sm:rounded-r-xl">
-                <Image
-                  src="/images/mydhli/it-workshops.png"
-                  alt="IT-Workshops in Prague"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-xs text-[var(--foreground)]/60" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                IT-Workshops in Prague
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ConceptTimelineSection />
 
       {/* May 2020: Global Launch — collage first, then heading + narrative + customer stack */}
       <section className="bg-[var(--background)] px-6 pt-8 pb-16 lg:px-12 lg:pt-10 lg:pb-20">
         <div className="mx-auto max-w-6xl">
-          <div className="relative aspect-[1280/720] w-full overflow-hidden">
-            <Image
-              src="/images/mydhli/Dashboard-collage.png"
-              alt="myDHLi Dashboard shown on iMac, iPad, and iPhone demonstrating responsive design"
-              fill
-              className="object-contain"
-              sizes="(max-width: 1152px) 100vw, 1152px"
-              priority
-            />
-          </div>
-
-          <div className="mt-6 sm:mt-8">
-            <CaseStudySectionHeading
-              align="center"
-              numberDash="03—"
-              category="LAUNCH"
-              detail="MAY 2020"
-            >
-              Shipped in four weeks — across five continents
-            </CaseStudySectionHeading>
-          </div>
+          <CaseStudySectionHeading
+            align="center"
+            numberDash="03—"
+            category="LAUNCH"
+            detail="MAY 2020"
+          >
+            Shipped in four weeks — across five continents
+          </CaseStudySectionHeading>
 
           {/* Text content: centered column, block (left-aligned) body */}
           <p className="mx-auto max-w-[820px] text-left text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
@@ -356,6 +197,22 @@ export default function DHLCaseStudyPage() {
           </p>
           
           <CaseStudyLogoStack className="mt-10 sm:mt-12" label="Enterprise customers" logos={customerLogos} />
+        </div>
+      </section>
+
+      {/* Launch collage between section 03 and 04 */}
+      <section className="bg-[var(--background)] px-6 pb-8 lg:px-12 lg:pb-10">
+        <div className="mx-auto max-w-6xl">
+          <div className="relative aspect-[1280/720] w-full overflow-hidden">
+            <Image
+              src="/images/mydhli/Dashboard-collage.png"
+              alt="myDHLi Dashboard shown on iMac, iPad, and iPhone demonstrating responsive design"
+              fill
+              className="object-contain object-top"
+              sizes="(max-width: 1152px) 100vw, 1152px"
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -375,14 +232,15 @@ export default function DHLCaseStudyPage() {
           <div className="mx-auto max-w-[820px] space-y-4 text-left">
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
             When I arrived at myDHLi, the research infrastructure didn't exist. Decisions were intuition-led. Stakeholders had strong opinions and we had no way to test them.
-So I built the foundation — UserTesting, Hotjar, Adobe and Google Analytics, custom KPI dashboards wired into the product teams. Then I put research rhythms inside the sprint cycle, so the work stayed close to the evidence.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-            The shift was tangible. We stopped building what stakeholders requested and started building what data and users actually pointed to. Stakeholder collaboration changed with it. Discussions now ran on facts and results were measurable.
-            We added more channels to the real voice of the customer — NPS, regular interviews, frequent user tests — reported the findings openly, and trained teams to read research and interpret data themselves. The work became a shared conversation instead of a negotiation.
+            So I built the foundation. UserTesting, Hotjar, Adobe and Google Analytics, custom KPI dashboards wired into the product teams. Then I put research rhythms inside the sprint cycle, so the work stayed close to the evidence.
             </p>
             <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-            We added more channels to the real voice of the customer — NPS, regular interviews, frequent user tests — reported the findings openly, and trained teams to read research and interpret data themselves. The work became a shared conversation instead of a negotiation.
+            The team changed with it. Designers embedded in cross-functional squads. We blocked major releases on user testing. A shared research repository made findings accessible across teams. Workshops on research methods and data interpretation kept the muscle alive across product, engineering, and business.
+            </p>
+            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            Stakeholder collaboration changed too. Discussions ran on facts. Results were measurable. The work became a shared conversation instead of a negotiation. User-centred thinking became the default starting point for decisions — not the checkpoint near the end.
             </p>
           </div>
           
@@ -435,128 +293,14 @@ So I built the foundation — UserTesting, Hotjar, Adobe and Google Analytics, c
         </div>
       </section>
 
-      {/* User-Centered Design Culture */}
+      {/* Holding block (out of page flow): User-Centered Design Culture section with floating devices visual
+         Stefan can re-place this later if needed.
       <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-6xl">
-          <CaseStudySectionHeading
-            align="center"
-            titleSize="large"
-            numberDash="05—"
-            category="CULTURE"
-            detail="USER-CENTERED DESIGN CULTURE"
-          >
-            Making the user the starting point
-          </CaseStudySectionHeading>
-          
-          {/* LEARNING: Desktop shows image left, text right. Reverses on Tablet/Mobile. */}
-          <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_360px] lg:gap-16">
-            {/* User-Centered Design Visual */}
-            <div className="order-2 lg:order-1">
-              <div className="relative aspect-[891/891] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/images/mydhli/user-centered-design-visual.png"
-                  alt="User-centered design process visualization"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                />
-              </div>
-            </div>
-            
-            {/* Text Content */}
-            <div className="order-1 max-w-[820px] space-y-4 lg:order-2">
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                Infrastructure was only half of it. The product culture had grown stakeholder-first, not customer-first — teams optimised for internal requests because that's what got rewarded.
-              </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                So we made the user the starting point. Designers embedded in cross-functional squads. User testing became standard before major releases. A shared repository made research findings accessible to anyone who needed them. And the workshops — research methods, data interpretation — kept the muscle alive across product, engineering, and business teams.
-              </p>
-              <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                The shift was tangible. Inside the product org I work with, user-centred thinking became the default starting point for decisions — not the checkpoint near the end.
-              </p>
-            </div>
-          </div>
-        </div>
+        ...
       </section>
+      */}
 
-      {/* DHL Group's 1st Scaled Design System */}
-      <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-5xl">
-          <CaseStudySectionHeading
-            align="center"
-            titleSize="large"
-            numberDash="06—"
-            category="SYSTEM"
-            detail="2019 — 2024 · DHL Group&apos;s 1st Scaled Design System"
-          >
-            <span className="block">When the components became the guideline</span>
-          </CaseStudySectionHeading>
-          
-          {/* LEARNING: Text left, tall design system image right. Breaks at md (768px) for longer side-by-side */}
-          <div className="flex flex-col gap-10 md:grid md:grid-cols-[1fr_320px] md:gap-12 lg:gap-16">
-            {/* Text Content */}
-            <div className="order-2 max-w-[820px] space-y-6 md:order-1">
-              <div className="space-y-4">
-                <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  The Challenge
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  DHL had fragments. Guidelines updated every few years, libraries that competed across divisions (myDHLi, dhl.com, legacy portals), no shared technical base. Every team rebuilt the same buttons from scratch.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  5-Year Strategic Journey (2019-2024)
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  We audited the major portals, documenting components and use cases. Rather than replacing everything, we built the foundation — aligning the myDHLi library with existing tech stacks while creating space to harmonise the design.
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Cross-division collaboration merged our library with the primary system on dhl.com. We survived three tool transitions (Abstract → Sketch Cloud → Figma) without losing consistency. React components got wired to design tokens, so the system was actually alive — not a PDF.
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  Representing multiple business units on a DHL Group-wide committee, we helped define the standards for what came next.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  The Shift
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  We reversed the model. Guidelines used to describe components. Now the components are the guideline — living frontend with connected Figma libraries as the source of truth. No more PDFs.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <p className="text-sm font-bold uppercase tracking-wider text-white" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  The Impact
-                </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
-                  A scaled design system established across leading business units inside DHL. Faster development. Consistent experiences. The foundation everything new gets built on.
-                </p>
-              </div>
-              <Button
-                variant="ghost"
-                href="https://www.dpdhl-brands.com/en/dhl"
-              >
-                Check our Brand Hub →
-              </Button>
-            </div>
-            
-            {/* Design System Image - full width on mobile, 320px column width on md+ */}
-            <div className="order-1 md:order-2">
-              <div className="relative aspect-[560/2232] w-full overflow-hidden rounded-lg md:aspect-auto md:h-full">
-                <Image
-                  src="/images/mydhli/scaled-design-system.png"
-                  alt="DHL Scaled Design System components"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 100vw, 320px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ScaledDesignSystemTimelineSection />
 
       {/* Design Ops */}
       <section className="bg-[var(--background)] px-5 py-16 md:px-8 lg:px-12 lg:py-20">
@@ -564,7 +308,7 @@ So I built the foundation — UserTesting, Hotjar, Adobe and Google Analytics, c
           <CaseStudySectionHeading
             align="center"
             titleSize="large"
-            numberDash="07—"
+            numberDash="06—"
             category="Team"
             detail="Design OPS"
           >

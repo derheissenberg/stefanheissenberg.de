@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/post-edit-lint.sh",
+        "timeout": 30000
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/pre-commit-check.sh",
+        "timeout": 60000
+      }
+    ],
+    "sessionStart": [],
+    "sessionEnd": [],
+    "stop": []
+  }
+}

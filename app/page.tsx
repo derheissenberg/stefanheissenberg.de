@@ -18,7 +18,6 @@ export default function Home() {
       <DeepPashionSection />
       <CustomersSection />
       <AlohaSection />
-      <WantTheFullStoryCTASection />
       <Footer />
     </main>
   );

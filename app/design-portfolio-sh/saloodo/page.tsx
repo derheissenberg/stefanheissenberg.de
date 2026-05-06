@@ -24,8 +24,8 @@ import { Footer } from "@/components/layout/Footer";
 import { SaloodoCaseStudyHero } from "@/components/case-studies/saloodo/SaloodoCaseStudyHero";
 import { CaseStudySectionHeading } from "@/components/case-studies/CaseStudySectionHeading";
 import { CaseStudyLogoStack } from "@/components/case-studies/CaseStudyLogoStack";
-import { WantTheFullStoryCTASection } from "@/components/sections/WantTheFullStoryCTASection";
 import { ParallaxInitializer } from "@/components/ui/ParallaxInitializer";
+import { WantTheFullStoryCTASection } from "@/components/sections/WantTheFullStoryCTASection";
 
 const baseUrl = "https://www.stefanheissenberg.de";
 const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
@@ -585,11 +585,7 @@ export default function SaloodoCaseStudyPage() {
         </div>
       </section>
 
-      {/* CTA Section - leads to next case study */}
-      <WantTheFullStoryCTASection
-        nextCaseLabel="Next case · OBI Next →"
-        nextCaseHref="/design-portfolio-sh/obinext"
-      />
+      <WantTheFullStoryCTASection nextCaseLabel="Next case · OBI Next →" nextCaseHref="/design-portfolio-sh/obinext" />
 
       {/* LEARNING: ParallaxInitializer is a "use client" island that wires up the
           scroll listener driving --parallax-y on .parallax-layer elements.

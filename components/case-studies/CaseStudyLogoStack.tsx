@@ -6,7 +6,10 @@
  * - `size="large"`: taller caps vs default (homepage awards); pair with `itemClassName` + `!max-w-*` on wide marks so landscape SVGs do not scale like square PNGs
  * - `kickerVariant="keyCreator"`: matches KeyCreatorIdentifiersSection h2 mono treatment
  * - `kickerTop="flush"`: minimal padding under top rule (tight stack under hero)
- * - Optional `href` per item: wraps the mark in `<a target="_blank">` (e.g. certificate PDFs under `/public`)
+ * - Optional `href` per item: wraps the mark in `<a target="_blank">` (e.g. certificate PDF or external URL)
+ * - Optional `showKicker` (default true): set false for a border-only logo row (e.g. `TrustBar`)
+ * - Optional `showBottomBorder` (default true): set false when a parent (e.g. footer) already provides the lower rule
+ * - Optional `showTopBorder` (default true): set false for a borderless row (e.g. `TrustBar` under “More on request” on /design-portfolio-sh)
  */
 
 import Image from "next/image";
@@ -32,6 +35,12 @@ type CaseStudyLogoStackProps = {
   kickerVariant?: "default" | "keyCreator";
   /** Default: comfortable top padding. flush: tight under top border (e.g. below hero) */
   kickerTop?: "default" | "flush";
+  /** When false, the mono kicker is omitted; only the bordered logo row renders */
+  showKicker?: boolean;
+  /** When false, only a top rule is drawn (e.g. above footer that already has `border-t`) */
+  showBottomBorder?: boolean;
+  /** When false, no top rule — pairs with `showBottomBorder` for `border-b` only or fully borderless */
+  showTopBorder?: boolean;
 };
 
 const kickerStyleDefault = {
@@ -65,6 +74,9 @@ export function CaseStudyLogoStack({
   size = "default",
   kickerVariant = "default",
   kickerTop = "default",
+  showKicker = true,
+  showBottomBorder = true,
+  showTopBorder = true,
 }: CaseStudyLogoStackProps) {
   const kickerPadding =
     kickerTop === "flush" ? "px-4 pt-10 text-center" : "px-4 pt-8 text-center sm:pt-10";
@@ -90,11 +102,24 @@ export function CaseStudyLogoStack({
       ? "gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-9 md:gap-x-10"
       : "gap-x-5 gap-y-6 sm:gap-x-7 sm:gap-y-7 md:gap-x-9";
 
-  const ulPaddingTop = kickerVariant === "keyCreator" ? "pt-0" : "pt-5 sm:pt-6";
+  const ulPaddingTop = !showKicker
+    ? "pt-6 sm:pt-8"
+    : kickerVariant === "keyCreator"
+      ? "pt-0"
+      : "pt-5 sm:pt-6";
+
+  const borderRuleClass =
+    showTopBorder && showBottomBorder
+      ? "border-y border-white/[0.08]"
+      : showTopBorder && !showBottomBorder
+        ? "border-t border-white/[0.08]"
+        : !showTopBorder && showBottomBorder
+          ? "border-b border-white/[0.08]"
+          : "";
 
   return (
-    <div className={`border-y border-white/[0.08] ${className}`}>
-      {kickerEl}
+    <div className={`${borderRuleClass} ${className}`}>
+      {showKicker ? kickerEl : null}
       <ul
         className={`flex list-none flex-wrap items-center justify-center px-4 pb-8 sm:pb-10 ${ulGapClass} ${ulPaddingTop}`}
       >

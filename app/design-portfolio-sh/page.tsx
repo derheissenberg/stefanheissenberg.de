@@ -12,6 +12,7 @@
  * - Hero section with portfolio introduction (matches landing page layout)
  * - Case study teasers (DHL, Saloodo, OBI Next)
  * - Customers section with placeholders for DHL and OBI Next
+ * - Awards trust bar (compact, no heading) before footer
  */
 
 import type { Metadata } from "next";
@@ -21,6 +22,7 @@ import { SaloodoCaseStudyTeaser } from "@/components/portfolio/SaloodoCaseStudyT
 import { OBINextCaseStudyTeaser } from "@/components/portfolio/OBINextCaseStudyTeaser";
 import { CustomersSection } from "@/components/sections/CustomersSection";
 import { WantToSeeMoreSection } from "@/components/sections/WantToSeeMoreSection";
+import { TrustBar } from "@/components/sections/TrustBar";
 import { Footer } from "@/components/layout/Footer";
 
 const baseUrl = "https://www.stefanheissenberg.de";
@@ -79,6 +81,7 @@ export default function DesignPortfolioPage() {
       {/* Want to See More Section - Call-to-action encouraging visitors to reach out */}
       {/* LEARNING: New section with content from Figma, using harmonized typography and primary CTA button */}
       <WantToSeeMoreSection />
+      <TrustBar />
       <Footer />
     </main>
   );

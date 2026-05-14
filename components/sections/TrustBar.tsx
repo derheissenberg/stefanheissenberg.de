@@ -1,13 +1,10 @@
 /**
- * COMPONENT: AwardBadgesSection
- * PURPOSE: Homepage trust strip — awards and certifications in the same visual system as case-study logo rails
+ * COMPONENT: TrustBar
+ * PURPOSE: Compact trust strip — same award marks and links as `AwardBadgesSection`, without the mono kicker heading
  *
  * KEY CONCEPTS:
- * - Reuses `CaseStudyLogoStack`: border-y rules, Kode Mono kicker, flex-wrap row of marks with grayscale + hover reveal
- * - Container matches myDHLi-style strip: `max-w-6xl` + horizontal padding aligned to portfolio sections
- * - Each item is an `<Image>` in an `<li>` (or `<a target="_blank">` + Image when `href` is set — PDFs or external award sites)
- * - Wide landscape SVGs use `itemClassName` + `!max-w-*` so they stay near prior width while square PNGs use the taller `size="large"` caps (readability)
- * - `CaseStudyLogoStack` props: large marks, Key Creator–style h2 kicker, flush kicker padding; stack sits flush under the hero (no extra top margin on the bordered block)
+ * - Reuses `CaseStudyLogoStack` with `showKicker={false}`, `showBottomBorder={false}`, and `showTopBorder={false}` (no rules: “More on request” flows into marks; footer `border-t` still separates from legal row)
+ * - Same `max-w-6xl` container as the homepage awards strip for alignment with portfolio sections
  */
 
 import {
@@ -15,7 +12,7 @@ import {
   type CaseStudyLogoStackItem,
 } from "@/components/case-studies/CaseStudyLogoStack";
 
-const awardLogos: CaseStudyLogoStackItem[] = [
+const trustBarLogos: CaseStudyLogoStackItem[] = [
   {
     src: "/images/trustbadges/comprix-design-award.png",
     alt: "Com Prix Design Award",
@@ -55,16 +52,19 @@ const awardLogos: CaseStudyLogoStackItem[] = [
   },
 ];
 
-export function AwardBadgesSection() {
+export function TrustBar() {
   return (
     <section className="relative z-20 bg-[var(--background)] pt-0 pb-0" aria-label="Awards and certifications">
       <div className="mx-auto max-w-6xl px-6 lg:px-12">
         <CaseStudyLogoStack
-          label="Awards & Certifications"
-          logos={awardLogos}
+          label=""
+          logos={trustBarLogos}
           size="large"
           kickerVariant="keyCreator"
           kickerTop="flush"
+          showKicker={false}
+          showBottomBorder={false}
+          showTopBorder={false}
         />
       </div>
     </section>

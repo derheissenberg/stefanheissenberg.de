@@ -3,9 +3,10 @@
  * PURPOSE: Partner / tool / award marks — thin rules, mono kicker, monochrome row + hover colour
  *
  * KEY CONCEPTS:
- * - `size="large"`: ~2× display height caps vs default (homepage awards readability)
+ * - `size="large"`: taller caps vs default (homepage awards); pair with `itemClassName` + `!max-w-*` on wide marks so landscape SVGs do not scale like square PNGs
  * - `kickerVariant="keyCreator"`: matches KeyCreatorIdentifiersSection h2 mono treatment
  * - `kickerTop="flush"`: minimal padding under top rule (tight stack under hero)
+ * - Optional `href` per item: wraps the mark in `<a target="_blank">` (e.g. certificate PDFs under `/public`)
  */
 
 import Image from "next/image";
@@ -15,8 +16,10 @@ export type CaseStudyLogoStackItem = {
   alt: string;
   width: number;
   height: number;
-  /** Optional per-item width cap (e.g. square PNG with wide mark inside) */
+  /** Optional per-item classes (e.g. `!max-w-*` to cap wide SVGs; `!` needed to override responsive `max-w` on the row) */
   itemClassName?: string;
+  /** If set, opens in a new tab (e.g. certificate PDF or external URL) */
+  href?: string;
 };
 
 type CaseStudyLogoStackProps = {
@@ -47,12 +50,12 @@ const imageSizeClasses: Record<"default" | "large", string> = {
   default:
     "h-5 w-auto max-h-5 object-contain opacity-[0.42] grayscale transition-all duration-300 ease-out sm:h-6 sm:max-h-6 sm:max-w-[100px] md:h-7 md:max-h-7 md:max-w-[118px] hover:scale-[1.04] hover:opacity-100 hover:grayscale-0",
   large:
-    "h-10 w-auto max-h-10 object-contain opacity-[0.42] grayscale transition-all duration-300 ease-out sm:h-12 sm:max-h-12 sm:max-w-[200px] md:h-14 md:max-h-14 md:max-w-[236px] hover:scale-[1.04] hover:opacity-100 hover:grayscale-0",
+    "h-12 w-auto max-h-12 object-contain opacity-[0.42] grayscale transition-all duration-300 ease-out sm:h-16 sm:max-h-16 sm:max-w-[260px] md:h-20 md:max-h-20 md:max-w-[300px] hover:scale-[1.04] hover:opacity-100 hover:grayscale-0",
 };
 
 const imageSizesAttr: Record<"default" | "large", string> = {
   default: "(max-width: 640px) 80px, 100px",
-  large: "(max-width: 640px) 160px, 200px",
+  large: "(max-width: 640px) 200px, 280px",
 };
 
 export function CaseStudyLogoStack({
@@ -95,8 +98,8 @@ export function CaseStudyLogoStack({
       <ul
         className={`flex list-none flex-wrap items-center justify-center px-4 pb-8 sm:pb-10 ${ulGapClass} ${ulPaddingTop}`}
       >
-        {logos.map((logo) => (
-          <li key={logo.alt} className="flex items-center justify-center">
+        {logos.map((logo) => {
+          const image = (
             <Image
               src={logo.src}
               alt={logo.alt}
@@ -105,8 +108,25 @@ export function CaseStudyLogoStack({
               sizes={imageSizesAttr[size]}
               className={`${imageSizeClasses[size]} ${logo.itemClassName ?? ""}`}
             />
-          </li>
-        ))}
+          );
+
+          return (
+            <li key={logo.alt} className="flex items-center justify-center">
+              {logo.href ? (
+                <a
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex rounded-sm outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/50"
+                >
+                  {image}
+                </a>
+              ) : (
+                image
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

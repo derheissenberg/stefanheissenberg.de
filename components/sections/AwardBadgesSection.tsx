@@ -1,76 +1,63 @@
 /**
  * COMPONENT: AwardBadgesSection
- * PURPOSE: Displays three achievement badges: Award Winning Design, UX Master, Scrum Master
+ * PURPOSE: Homepage trust strip — awards and certifications in the same visual system as case-study logo rails
  *
  * KEY CONCEPTS:
- * - Figma specs: 1160px width container, 3-column grid layout
- * - Gap: 30px horizontal, 16px vertical (between icon and label)
- * - Labels aligned in single row at bottom (all labels at same vertical position)
- * - Each badge group: icon(s) on top, label below
- * - Uses flex-grow to push labels to bottom for alignment
- * - Consistent badge sizing and proportions
+ * - Reuses `CaseStudyLogoStack`: border-y rules, Kode Mono kicker, flex-wrap row of marks with grayscale + hover reveal
+ * - Container matches myDHLi-style strip: `max-w-6xl` + horizontal padding aligned to portfolio sections
+ * - Each item is an `<Image>` in an `<li>` — no per-mark caption (same pattern as “Enterprise customers”)
+ * - `CaseStudyLogoStack` props: large marks (~2×), Key Creator–style h2 kicker, flush kicker padding; stack sits flush under the hero (no extra top margin on the bordered block)
  */
 
-import Image from "next/image";
+import {
+  CaseStudyLogoStack,
+  type CaseStudyLogoStackItem,
+} from "@/components/case-studies/CaseStudyLogoStack";
 
-const badges = [
+const awardLogos: CaseStudyLogoStackItem[] = [
   {
     src: "/images/trustbadges/comprix-design-award.png",
     alt: "Com Prix Design Award",
-    label: "Comprix Award",
-    width: 80,
-    height: 80,
+    width: 160,
+    height: 160,
   },
   {
     src: "/images/trustbadges/design-ward-winning-design.svg",
     alt: "German Design Award",
-    label: "German Design Award",
-    width: 136,
-    height: 62,
+    width: 272,
+    height: 124,
+  },
+  {
+    src: "/images/trustbadges/german-brand-award-winner.svg",
+    alt: "German Brand Award Winner",
+    width: 272,
+    height: 124,
   },
   {
     src: "/images/trustbadges/ux-master-design-stefan-heissenberg-certified-nng.png",
     alt: "Nielsen Norman Group UX Master Certification",
-    label: "NN/g UX Master",
-    width: 88,
-    height: 88,
+    width: 176,
+    height: 176,
   },
   {
     src: "/images/trustbadges/scrum-master-professional-stefan-heissenberg-psm-i.png",
     alt: "Scrum.org Professional Scrum Master PSM I",
-    label: "Scrum PSM I",
-    width: 80,
-    height: 80,
+    width: 160,
+    height: 160,
   },
 ];
 
 export function AwardBadgesSection() {
   return (
-    <section className="bg-[var(--background)] pt-0 pb-8 lg:pb-14" aria-label="Awards and certifications">
-      <div className="mx-auto max-w-[1160px] px-6 lg:px-0">
-        <div className="mb-8 h-px w-full bg-white/10 lg:mb-10" />
-        <div className="grid grid-cols-2 gap-[30px] lg:grid-cols-4">
-          {badges.map((badge) => (
-            <div key={badge.label} className="flex flex-col items-center px-[20px] py-[14px]">
-              <div className="flex h-[104px] w-full items-center justify-center">
-                <Image
-                  src={badge.src}
-                  alt={badge.alt}
-                  width={badge.width}
-                  height={badge.height}
-                  className="h-auto w-auto object-contain"
-                  sizes="(max-width: 900px) 42vw, 220px"
-                />
-              </div>
-              <p
-                className="mt-[18px] text-center text-[16px] text-white"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 500 }}
-              >
-                {badge.label}
-              </p>
-            </div>
-          ))}
-        </div>
+    <section className="relative z-20 bg-[var(--background)] pt-0 pb-8 lg:pb-14" aria-label="Awards and certifications">
+      <div className="mx-auto max-w-6xl px-6 lg:px-12">
+        <CaseStudyLogoStack
+          label="Awards & Certifications"
+          logos={awardLogos}
+          size="large"
+          kickerVariant="keyCreator"
+          kickerTop="flush"
+        />
       </div>
     </section>
   );

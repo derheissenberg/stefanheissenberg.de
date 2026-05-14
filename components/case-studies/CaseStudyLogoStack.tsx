@@ -64,7 +64,7 @@ export function CaseStudyLogoStack({
   kickerTop = "default",
 }: CaseStudyLogoStackProps) {
   const kickerPadding =
-    kickerTop === "flush" ? "px-4 pt-2 text-center sm:pt-3" : "px-4 pt-8 text-center sm:pt-10";
+    kickerTop === "flush" ? "px-4 pt-10 text-center" : "px-4 pt-8 text-center sm:pt-10";
 
   const kickerTextClasses =
     kickerVariant === "keyCreator"

@@ -1,13 +1,60 @@
+# Default — everything allowed
 User-agent: *
 Allow: /
 
+# Search engines (explicit allows for clarity)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# OpenAI / ChatGPT
+# GPTBot = training crawler
+# OAI-SearchBot = ChatGPT search index
+# ChatGPT-User = fetched when a user clicks a citation in ChatGPT
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+# Perplexity
+# PerplexityBot = search index
+# Perplexity-User = fetched when a user clicks a citation in Perplexity
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic / Claude
+# ClaudeBot = primary crawler
+# anthropic-ai = legacy user agent (still in use)
+# Claude-Web = fetched on behalf of users in Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google Gemini training
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence training
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
 Sitemap: https://www.stefanheissenberg.de/sitemap.xml
+Host: https://www.stefanheissenberg.de

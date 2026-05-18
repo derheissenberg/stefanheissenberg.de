@@ -43,18 +43,6 @@ type CaseStudyLogoStackProps = {
   showTopBorder?: boolean;
 };
 
-const kickerStyleDefault = {
-  fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
-  fontWeight: 500,
-  letterSpacing: "0.24em",
-} as const;
-
-const kickerStyleKeyCreator = {
-  fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
-  fontWeight: 500,
-  letterSpacing: "0.32em",
-} as const;
-
 const imageSizeClasses: Record<"default" | "large", string> = {
   default:
     "h-5 w-auto max-h-5 object-contain opacity-[0.42] grayscale transition-all duration-300 ease-out sm:h-6 sm:max-h-6 sm:max-w-[100px] md:h-7 md:max-h-7 md:max-w-[118px] hover:scale-[1.04] hover:opacity-100 hover:grayscale-0",
@@ -88,11 +76,11 @@ export function CaseStudyLogoStack({
 
   const kickerEl =
     kickerVariant === "keyCreator" ? (
-      <h2 className={`${kickerPadding} ${kickerTextClasses}`} style={kickerStyleKeyCreator}>
+      <h2 className={`type-kicker-wide ${kickerPadding} ${kickerTextClasses}`}>
         {label}
       </h2>
     ) : (
-      <p className={`${kickerPadding} ${kickerTextClasses}`} style={kickerStyleDefault}>
+      <p className={`type-kicker ${kickerPadding} ${kickerTextClasses}`}>
         {label}
       </p>
     );

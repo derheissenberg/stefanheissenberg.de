@@ -56,10 +56,7 @@ export function CaseStudySectionHeading({
         <span className={LABEL_MUTE_CLASS}>{category}</span>
         <span className={LABEL_ACCENT_CLASS}>{detail}</span>
       </p>
-      <h2
-        className={`${titleScale} font-semibold leading-[1.28] text-white`}
-        style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 600 }}
-      >
+      <h2 className={`font-outfit ${titleScale} font-semibold leading-[1.28] text-white`}>
         {children}
       </h2>
     </div>

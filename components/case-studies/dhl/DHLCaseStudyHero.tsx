@@ -27,12 +27,6 @@ const metaRows = [
   { label: "SCOPE", value: "Strategy · Research · Design System" },
 ] as const;
 
-const labelStyle = {
-  fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
-  fontWeight: 500,
-  letterSpacing: "0.24em",
-} as const;
-
 export function DHLCaseStudyHero() {
   return (
     <section
@@ -71,16 +65,10 @@ export function DHLCaseStudyHero() {
         <dl className="grid grid-cols-1 gap-8 border-t border-white/15 pt-10 sm:grid-cols-2 md:grid-cols-4 md:gap-x-10">
           {metaRows.map((row) => (
             <div key={row.label}>
-              <dt
-                className="text-[11px] uppercase text-white/50"
-                style={labelStyle}
-              >
+              <dt className="type-kicker text-[11px] uppercase text-white/50">
                 {row.label}
               </dt>
-              <dd
-                className="mt-2 text-[15px] leading-snug text-white lg:text-base"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 500 }}
-              >
+              <dd className="font-outfit mt-2 text-[15px] font-medium leading-snug text-white lg:text-base">
                 {row.value}
               </dd>
             </div>

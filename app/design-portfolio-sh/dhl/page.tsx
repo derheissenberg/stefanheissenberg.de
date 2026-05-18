@@ -33,12 +33,6 @@ const baseUrl = "https://www.stefanheissenberg.de";
 const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
 
 /** Matches DHLCaseStudyHero badge (Kode Mono); orange palette for in-page case study card */
-const dhlCaseStudyInPageBadgeStyle = {
-  fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
-  fontWeight: 500,
-  letterSpacing: "0.24em",
-} as const;
-
 export const metadata: Metadata = {
   title: "DHL UX Case Study | myDHLi | Design Portfolio | Stefan Heißenberg",
   description: "UX Strategy case study: Driving DHL's digital transformation. UX research, design systems, UI design for global logistics platform myDHLi.",
@@ -144,16 +138,16 @@ export default function DHLCaseStudyPage() {
                 The startup chapter inside a logistics giant
               </CaseStudySectionHeading>
               <div className="space-y-4">
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+                <p className="cs-body-140">
                 I joined DHL through Saloodo!, a digital marketplace startup — independent, DHL-funded, not a department inside the group. I came in as the founding designer.
                 </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+                <p className="cs-body-140">
                 The team treated logistics like a tech product — rapid experimentation, ML-powered recommendations, and an honest focus on conversion metrics.
                 </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+                <p className="cs-body-140">
                 We were DHL's "digital speedboat" — small enough to move fast, protected enough to take risks. That positioning mattered when DHL Global Forwarding needed to reimagine its B2B customer experience.
                 </p>
-                <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+                <p className="cs-body-140">
                 Outside our walls the market was moving fast. Flexport raised $1B. Amazon Freight cut prices by 30%. Uber Freight scaled globally. The $800B logistics industry was being digitised — and DHL needed to be in the race.
                 </p>
               </div>
@@ -191,7 +185,7 @@ export default function DHLCaseStudyPage() {
           </CaseStudySectionHeading>
 
           {/* Text content: centered column, block (left-aligned) body */}
-          <p className="mx-auto max-w-[820px] text-left text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+          <p className="cs-body-140 mx-auto max-w-[820px] text-left">
           April 2020 I took over as Head of Experience Design for myDHLi. Four weeks later we shipped to production — Quote + Book, Follow + Share, real-time tracking, analytics dashboards, single sign-on — across five continents while the world was locked down.
           COVID didn't stop the rollout. It made the case for it. Customers who had relied on phone calls and emails suddenly needed a self-service portal that worked. We had one ready.
           </p>
@@ -214,16 +208,16 @@ export default function DHLCaseStudyPage() {
             Building the research foundation from scratch
           </CaseStudySectionHeading>
           <div className="mx-auto max-w-[820px] space-y-4 text-left">
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body-140">
             When I arrived at myDHLi, the research infrastructure didn't exist. Decisions were intuition-led. Stakeholders had strong opinions and we had no way to test them.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body-140">
             So I built the foundation. UserTesting, Hotjar, Adobe and Google Analytics, custom KPI dashboards wired into the product teams. Then I put research rhythms inside the sprint cycle, so the work stayed close to the evidence.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body-140">
             The team changed with it. Designers embedded in cross-functional squads. We blocked major releases on user testing. A shared research repository made findings accessible across teams. Workshops on research methods and data interpretation kept the muscle alive across product, engineering, and business.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body-140">
             Stakeholder collaboration changed too. Discussions ran on facts. Results were measurable. The work became a shared conversation instead of a negotiation. User-centred thinking became the default starting point for decisions — not the checkpoint near the end.
             </p>
           </div>
@@ -237,15 +231,13 @@ export default function DHLCaseStudyPage() {
         <div className="mx-auto max-w-[1160px] px-6 lg:px-8">
           <div className="py-6 text-center sm:py-8">
             <p
-              className="text-[13px] uppercase text-cyan-300"
-              style={dhlCaseStudyInPageBadgeStyle}
+              className="type-kicker text-[13px] uppercase text-cyan-300"
             >
               — THE SHIFT —
             </p>
             <blockquote
-              className="mx-auto mt-8 max-w-[980px] text-white max-[900px]:text-[36px] sm:mt-10 md:mt-12"
+              className="font-outfit mx-auto mt-8 max-w-[980px] text-white max-[900px]:text-[36px] sm:mt-10 md:mt-12"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
                 fontWeight: 300,
                 fontSize: "clamp(26px, 4vw, 54px)",
                 lineHeight: 1.15,
@@ -268,8 +260,7 @@ export default function DHLCaseStudyPage() {
               actually pointed to.&rdquo;
             </blockquote>
             <p
-              className="mx-auto mt-10 max-w-[620px] text-[15px] leading-[1.65] text-white/65 sm:mt-12 lg:mt-14"
-              style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+              className="font-outfit mx-auto mt-10 max-w-[620px] text-[15px] leading-[1.65] text-white/65 sm:mt-12 lg:mt-14"
             >
               MYDHLI · UX RESEARCH &amp; ANALYTICS
             </p>
@@ -299,13 +290,13 @@ export default function DHLCaseStudyPage() {
             Three to five times more projects with roughly the same team
           </CaseStudySectionHeading>
           <div className="mx-auto max-w-[820px] space-y-4 text-left">
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body-140">
               myDHLi grew. 22,000+ enterprise customers, more product tracks, more stakeholders. The design organisation had to grow with it without breaking what made it good. Headcount was the easy part. The harder part was building the frameworks around it: documentation as the default, async-first across EMEA time zones, dual-track agile so discovery and delivery ran in parallel, and governance that let designers from other divisions contribute to the system without breaking it.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body-140">
               The Figma move was the turning point. It became the home for the design system and the open playground for sharing — the invitation other teams needed to contribute. The internal design community started talking across divisions in a way that wasn't possible before.
             </p>
-            <p className="text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
+            <p className="cs-body-140">
               Three to five times more projects with roughly the same team size. That's what the infrastructure was built to do.
             </p>
           </div>
@@ -334,15 +325,13 @@ export default function DHLCaseStudyPage() {
           <div className="relative z-10">
             <header className="mb-14 text-left sm:mb-16">
               <p
-                className="mb-7 inline-block rounded-full border border-orange-400/45 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-orange-400"
-                style={dhlCaseStudyInPageBadgeStyle}
+                className="type-kicker mb-7 inline-block rounded-full border border-orange-400/45 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-orange-400"
               >
                 Case study
               </p>
               <h2
-                className="w-full max-w-none text-left text-white"
+                className="font-outfit w-full max-w-none text-left text-white"
                 style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
                   fontSize: "clamp(40px, 6vw, 72px)",
                   lineHeight: 1.05,
                   letterSpacing: "-0.025em",
@@ -365,13 +354,11 @@ export default function DHLCaseStudyPage() {
               <div className="space-y-4">
               <p
                 className="text-case-study-label text-xs font-bold uppercase tracking-[0.16em] sm:text-sm"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
               >
                 The challenge
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 The portal had always meant to serve the smaller customers. The economics had never allowed it.
                 Operational costs made one-time shipments unprofitable, and a 10–12 day onboarding process was too
@@ -384,29 +371,25 @@ export default function DHLCaseStudyPage() {
               <div className="space-y-4">
               <p
                 className="text-case-study-label text-xs font-bold uppercase tracking-[0.16em] sm:text-sm"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
               >
                 The project
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 A cross-functional initiative for the US market opened the window. I came in as lead designer to
                 rebuild the online sales experience — remove friction, accelerate onboarding, and make smaller accounts
                 economically viable.
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 Process mapping surfaced the real bottleneck. It wasn&apos;t compliance itself — it was the layers of
                 review and approval between departments that compliance had been blamed for. That insight reframed the
                 project.
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 Workshops with operations and sales rebuilt the workflow. Decision-making consolidated. Redundant
                 approvals removed. Clear data-driven criteria replacing subjective gates. Onboarding dropped from 10–12
@@ -418,19 +401,16 @@ export default function DHLCaseStudyPage() {
               <div className="space-y-4">
               <p
                 className="text-case-study-label text-xs font-bold uppercase tracking-[0.16em] sm:text-sm"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
               >
                 The result
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 Full digital enablement brought setup times to under 24 hours.
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 A self-registration concept had been sitting in my drawer for years — instant booking access,
                 automated account creation, compliance running in the background. It hadn&apos;t moved because the
@@ -439,24 +419,21 @@ export default function DHLCaseStudyPage() {
                 same project.
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 Senior leadership adopted the new process as the blueprint for other DHL markets. A $2.5 billion
                 segment we had never properly served opened up. The smaller customers landed on the roadmap with the
                 same weight as the enterprise ones.
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 What I&apos;m proud of in this one isn&apos;t the 91%. It&apos;s that the small shippers — the founders,
                 the teams without an account manager on speed dial — finally got the same digital service the enterprise
                 accounts took for granted. That&apos;s the work I&apos;m really passionate about.
               </p>
               <p
-                className="text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
-                style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+                className="font-outfit text-lg leading-[160%] text-[var(--foreground)]/90 lg:text-xl"
               >
                 Standing in for the users without a stakeholder voice, and backing them with the research and data that
                 give them weight in the room. Building momentum patiently enough that when the window opens, the team is
@@ -485,21 +462,11 @@ export default function DHLCaseStudyPage() {
         aria-label="More on request"
       >
         <div className="mx-auto max-w-[820px] text-center">
-          <p
-            className="mb-[22px] text-[13px] uppercase text-white/60 sm:text-[15px]"
-            style={{
-              fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
-              fontWeight: 500,
-              letterSpacing: "0.32em",
-            }}
-          >
+          <p className="type-kicker-wide mb-[22px] text-[13px] uppercase text-white/60 sm:text-[15px]">
             GET IN TOUCH
           </p>
 
-          <h2
-            className="text-[38px] font-bold leading-[1.05] tracking-[-0.02em] text-white sm:text-5xl lg:text-[56px]"
-            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
-          >
+          <h2 className="font-outfit text-[38px] font-bold leading-[1.05] tracking-[-0.02em] text-white sm:text-5xl lg:text-[56px]">
             Want the{" "}
             <em
               className="gradient-text-safe inline italic font-bold"
@@ -509,10 +476,7 @@ export default function DHLCaseStudyPage() {
             </em>
           </h2>
 
-          <p
-            className="mx-auto mt-[22px] max-w-[56ch] text-[18px] leading-[1.6] text-white/[0.72]"
-            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 400 }}
-          >
+          <p className="font-outfit mx-auto mt-[22px] max-w-[56ch] text-[18px] leading-[1.6] text-white/[0.72]">
             Happy to walk you through the strategy, decisions, and outcomes in detail.
           </p>
 

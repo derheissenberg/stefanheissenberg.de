@@ -78,6 +78,51 @@ body {
   }
 }
 
+/**
+ * TYPOGRAPHY TOKEN: .cs-body-140
+ * PURPOSE: Case study body copy at 140% line-height (DHL page pattern).
+ * Matches: text-base leading-[140%] text-[var(--foreground)]/90 lg:text-lg + Outfit font.
+ */
+.cs-body-140 {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 140%;
+  color: color-mix(in srgb, var(--foreground) 90%, transparent);
+}
+
+@media (min-width: 1024px) {
+  .cs-body-140 {
+    font-size: 1.125rem;
+  }
+}
+
+/** Font family utilities — replace inline fontFamily styles */
+.font-outfit {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+}
+
+.font-kode-mono {
+  font-family: var(--font-kode-mono), ui-monospace, monospace;
+}
+
+.font-cherry-bomb {
+  font-family: var(--font-cherry-bomb), system-ui, sans-serif;
+}
+
+/** Kicker / meta label — matches CaseStudyLogoStack default + hero meta labels */
+.type-kicker {
+  font-family: var(--font-kode-mono), ui-monospace, monospace;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+}
+
+/** Wide kicker — Key Creator identifiers + AwardBadgesSection heading */
+.type-kicker-wide {
+  font-family: var(--font-kode-mono), ui-monospace, monospace;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+}
+
 /* LEARNING: Section heading h2 style - matches "82 Customers" heading */
 /* Used consistently across all section headings for visual harmony */
 /* Responsive sizing: 1.5rem (24px) on mobile, 1.875rem (30px) on tablet+ */

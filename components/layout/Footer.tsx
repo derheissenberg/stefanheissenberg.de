@@ -15,10 +15,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/15 bg-[var(--background)] py-7" aria-label="Footer">
       <div className="mx-auto flex w-full max-w-[1160px] flex-col items-start justify-between gap-4 px-6 lg:flex-row lg:items-center lg:px-8">
-        <p
-          className="text-[14px] text-white/55"
-          style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 400 }}
-        >
+        <p className="font-outfit text-[14px] font-normal text-white/55">
           © 2026 Stefan Heißenberg · Cologne, DE
         </p>
         <nav aria-label="Social links" className="flex flex-wrap items-center gap-x-6 gap-y-2">
@@ -28,12 +25,7 @@ export function Footer() {
               href={item.href}
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="text-[11px] uppercase text-white/55 transition-colors hover:text-cyan-300"
-              style={{
-                fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
-                fontWeight: 500,
-                letterSpacing: "0.24em",
-              }}
+              className="type-kicker text-[11px] uppercase text-white/55 transition-colors hover:text-cyan-300"
             >
               {item.label}
             </a>

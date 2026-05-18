@@ -53,16 +53,12 @@ export function PortfolioHeroSection({ ctaHref = "mailto:hallo@stefanheissenberg
       <div className="relative z-10 mx-auto flex min-h-[760px] w-full max-w-[1600px] items-center px-10 lg:min-h-0 lg:h-full lg:px-16">
         <div className="w-full max-w-[640px] text-left">
           <h1 className="overflow-visible leading-[0.92] tracking-[-0.045em]">
-            <span
-              className="block text-[64px] font-[200] text-white sm:text-[84px] lg:text-[128px]"
-              style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
-            >
+            <span className="font-outfit block text-[64px] font-[200] text-white sm:text-[84px] lg:text-[128px]">
               Selected
             </span>
             <span
-              className="gradient-text-safe block text-[64px] font-[700] italic sm:text-[84px] lg:text-[128px]"
+              className="font-outfit gradient-text-safe block text-[64px] font-[700] italic sm:text-[84px] lg:text-[128px]"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
                 lineHeight: 0.98,
                 paddingRight: "0.14em",
               }}
@@ -71,23 +67,13 @@ export function PortfolioHeroSection({ ctaHref = "mailto:hallo@stefanheissenberg
             </span>
           </h1>
 
-          <p
-            className="mt-4 text-[13px] uppercase sm:text-[15px]"
-            style={{
-              fontFamily: "var(--font-kode-mono), ui-monospace, monospace",
-              fontWeight: 500,
-              letterSpacing: "0.32em",
-            }}
-          >
+          <p className="type-kicker-wide mt-4 text-[13px] uppercase sm:text-[15px]">
             <span className="gradient-text-safe" style={{ backgroundSize: "300%" }}>
               BY STEFAN HEISSENBERG
             </span>
           </p>
 
-          <p
-            className="mt-7 max-w-[520px] text-[18px] leading-[1.55] text-white/80"
-            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 400 }}
-          >
+          <p className="font-outfit mt-7 max-w-[520px] text-[18px] font-normal leading-[1.55] text-white/80">
             Fifteen years designing digital products across agencies, consulting, startups, and enterprise. These three case studies cover the chapters that shaped me most.
           </p>
 

@@ -20,6 +20,9 @@
 # production
 /build
 
+# cursor hook cache
+.cursor/hooks/.last-typecheck
+
 # misc
 .DS_Store
 *.pem

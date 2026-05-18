@@ -90,7 +90,7 @@ Plan (Sokka) → Explore (Toph) → Execute (Aang/Katara/Appa) → Done
 
 ## Verification & Failure
 
-- **Executors self-verify**: Aang, Katara, and Appa run lints, tests, and build checks BEFORE reporting success. Root does NOT delegate separate verification agents.
+- **Executors self-verify**: Aang, Katara, and Appa run `npm run validate` (or typecheck + build) BEFORE reporting success. The `stop` hook also runs validate and auto-continues the agent if it fails. Root does NOT delegate separate verification agents.
 - On failure: resume the SAME agent with error context. After 3 failures → fire `aang` with full history. Still failing → ask user.
 
 ## Task Management

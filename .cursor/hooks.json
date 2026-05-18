@@ -3,8 +3,8 @@
   "hooks": {
     "afterFileEdit": [
       {
-        "command": ".cursor/hooks/post-edit-lint.sh",
-        "timeout": 30000
+        "command": ".cursor/hooks/post-edit-check.sh",
+        "timeout": 90000
       }
     ],
     "beforeShellExecution": [
@@ -13,8 +13,14 @@
         "timeout": 60000
       }
     ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/post-agent-validate.sh",
+        "timeout": 180000,
+        "loop_limit": 3
+      }
+    ],
     "sessionStart": [],
-    "sessionEnd": [],
-    "stop": []
+    "sessionEnd": []
   }
 }

@@ -173,17 +173,23 @@ Executors own their output quality: they lint, test, and confirm before reportin
 
 Hooks are shell scripts that run automatically at specific points in the agent workflow. They provide system-level enforcement that doesn't rely on agents remembering to check.
 
-### `afterFileEdit` → `post-edit-lint.sh`
+### `afterFileEdit` → `post-edit-check.sh`
 
-**Trigger:** After any agent edits a file.
+**Trigger:** After any agent edits a file (reads `file_path` from hook JSON on stdin).
 
-**What it does:** Runs the appropriate linter based on file extension:
-- `.ts`, `.tsx`, `.js`, `.jsx` → ESLint via `npx`
-- `.py` → Ruff or Flake8
-- `.rs` → Clippy
-- `.go` → golangci-lint
+**What it does:**
+- ESLint on the edited `.ts` / `.tsx` / `.js` / `.jsx` file (fails the hook if lint errors)
+- `tsc --noEmit` at most once every 15 seconds (project-wide typecheck)
 
-**Why:** Surfaces lint errors immediately rather than relying on agents to manually invoke `ReadLints`.
+**Why:** Catch broken types and lint issues right after each edit, not only at the end.
+
+### `stop` → `post-agent-validate.sh`
+
+**Trigger:** When the agent tries to finish (`loop_limit: 3`).
+
+**What it does:** Runs `npm run validate` (typecheck → smoke tests → production build). On failure, returns a `followup_message` so the agent **must fix errors and continue** before stopping.
+
+**Manual equivalent:** `npm run validate` from the project root.
 
 ### `beforeShellExecution` → `pre-commit-check.sh`
 

@@ -6,7 +6,11 @@
     "dev": "next dev -H 127.0.0.1 -p 3003",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:check": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "validate": "npm run typecheck && npm run test && npm run build"
   },
   "dependencies": {
     "framer-motion": "^12.29.0",

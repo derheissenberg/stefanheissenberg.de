@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     description: "UX Strategy case study: Building a digital freight marketplace. UX design, UI design, design systems, and UX ROI from zero to scale.",
     siteName: "Stefan Heißenberg",
     locale: "en_US",
-    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Experience Design" }],
+    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Design" }],
   },
   twitter: {
     card: "summary_large_image",

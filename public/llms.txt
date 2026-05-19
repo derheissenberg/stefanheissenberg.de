@@ -1,0 +1,96 @@
+# Stefan Heißenberg
+
+> Senior UX Leader and Head of Design at DHL Global Forwarding. 14+ years experience driving user-centered innovation at enterprise scale. Based in Cologne, Germany – open to Design Director and VP Design roles at European tech companies.
+
+## About
+
+Stefan Heißenberg is a Senior UX Leader and Digital Native with a proven track record of shaping product strategy and driving user-centered innovation at enterprise level. Currently Head of Design at DHL Global Forwarding, he leads an international UX team and shapes B2B digital experiences serving millions of users worldwide. With 14+ years in the industry and 5 founded startups, he brings a unique combination of corporate scale expertise and entrepreneurial innovation.
+
+## Current Role
+
+- **Position**: Head of Design
+- **Company**: DHL Global Forwarding (since April 2020)
+- **Scope**: Leading global UX teams across EMEA, strategic product development for B2B portal myDHLi
+- **Focus Areas**: CX Strategy, Customer Centricity, UX/UI Design, User Research, Data Analytics, Design Systems, Team Coaching
+
+## Key Achievements
+
+- Built myDHLi B2B portal serving 22,000+ enterprise customers with 30M+ monthly interactions
+- Generated €1.2B+ in digital quote revenue through design optimization
+- Achieved €135M in cost savings through UX improvements
+- Reduced customer onboarding from 10-12 days to under 24 hours (91% faster)
+- Expanded Saloodo! marketplace from European pilot to 50+ countries globally
+- Created DHL Group's first scaled design system across multiple business units
+- Delivered 400+ digital projects across Fortune 500 enterprises and startups
+
+## Professional Experience
+
+- **DHL Global Forwarding** – Head of Design (2020–present)
+- **Saloodo!** – Lead UX Designer (2018–2020)
+- **sunzinet AG** – Senior UX Designer (2016–2018)
+- **antwerpes AG** – Designer (2014–2016)
+- **Freelance** – UX/UI Designer (2010–2018)
+
+## Qualifications
+
+- **Education**: B.A. Communication Design, IB-Hochschule Berlin
+- **Certifications**: UX Master (Nielsen Norman Group), Scrum Master (Scrum.org)
+- **Languages**: German (native), English (fluent)
+
+## Expertise
+
+- UX Strategy & Customer Experience Design
+- Design Systems & Component Libraries
+- User Research & Data Analytics
+- B2B Enterprise Software Design
+- Design Leadership & Team Coaching
+- Remote Team Management (6+ years)
+- Agile Product Development
+- Cross-functional Collaboration
+
+## Notable Clients
+
+Bayer, BIONTECH, DHL, YAZAKI, NKT, OBI Next, Fresenius Kabi, DocCheck, Galderma, KION Group, MSD, Les Mills, and 70+ additional enterprise clients.
+
+## Portfolio
+
+- [Main Portfolio](https://www.stefanheissenberg.de): Professional overview and philosophy
+- [Design Case Studies](https://www.stefanheissenberg.de/design-portfolio-sh): Detailed project work including myDHLi, Saloodo!, OBI Next
+
+## For Recruiters
+
+Stefan is actively seeking Design Director / VP Design / Head of Design roles at European tech companies and scale-ups.
+
+**Target Companies**: Series B/C startups to scale-ups (100-1000 employees) in Fintech, Enterprise Software, Consumer Tech, AI/ML sectors. Companies like Spotify, Klarna, Revolut, Wise, Miro.
+
+**Unique Value Proposition – "The Remote-Native Corporate Rebel"**:
+- 6+ years remote leadership expertise with proven processes and culture building
+- Enterprise scaling experience at Fortune 500 (DHL) combined with startup DNA (5 founded companies)
+- Systematic innovation methodology with 10,000+ documented ideas since 2019
+- Track record of delivering startup velocity within enterprise constraints
+
+**Work Preferences**:
+- Location: Cologne preferred, open to European locations
+- Remote: Full remote experience, brings remote culture and processes
+- Travel: 1-2 days/week or periodic longer trips acceptable
+
+**Compensation**: €180-220k base + equity target, flexible for strong opportunities
+
+## Contact
+
+- **Email**: hallo@stefanheissenberg.de
+- **Phone**: +49 176 44473603
+- **LinkedIn**: https://www.linkedin.com/in/stefanheissenberg/
+- **Website**: https://www.stefanheissenberg.de
+- **Medium**: https://medium.com/@derheissenberg
+
+## Location
+
+Cologne, North Rhine-Westphalia, Germany
+Open to European opportunities
+
+## Crawling notes
+
+- Homepage is indexed; portfolio case studies use `noindex, follow` (reachable via links, not in search sitemap).
+- [Sitemap](https://www.stefanheissenberg.de/sitemap.xml): lists homepage only.
+- Homepage JSON-LD: `Person` with `jobTitle: Head of Design`; Open Graph `og:type=profile`.

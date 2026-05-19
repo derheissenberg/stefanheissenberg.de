@@ -39,9 +39,9 @@ const siteFirstPublishedIso = "2012-11-22T00:00:00.000Z";
 /** Last meaningful content or build refresh (ISO 8601). */
 const siteLastModifiedIso = "2026-04-24T00:00:00.000Z";
 
-const pageTitle = "Stefan Heißenberg — Head of Experience Design | Product & Design Leadership";
+const pageTitle = "Stefan Heißenberg — Head of Design | Product & Design Leadership";
 const pageDescription =
-  "Head of Experience Design. 15 years building digital products from startup to enterprise. Product and design leadership across EMEA.";
+  "Head of Design. 15 years building digital products from startup to enterprise. Product and design leadership across EMEA.";
 
 /** Portrait used in page UI and Person structured data (representative photo). */
 const heroImagePath = "/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png";
@@ -54,7 +54,7 @@ const ogImageWidth = 1200;
 const ogImageHeight = 630;
 
 const keywordsList =
-  "Head of Experience Design, Head of Product, Head of Design, VP Design, VP Product, Director of Design, Director of Product, Principal Product Designer, Staff Product Designer, UX Strategy, UX Leadership, Product Leadership, Design Leadership, Design Systems, Product Discovery, UX Research, AI in Design, Distributed Teams, Remote Design Leadership, B2B SaaS, Enterprise UX, Logistics Tech, Fintech, Cologne, Germany, NRW, Stefan Heißenberg, stefanheissenberg";
+  "Head of Design, Head of Product, VP Design, VP Product, Director of Design, Director of Product, Principal Product Designer, Staff Product Designer, UX Strategy, UX Leadership, Product Leadership, Design Leadership, Design Systems, Product Discovery, UX Research, AI in Design, Distributed Teams, Remote Design Leadership, B2B SaaS, Enterprise UX, Logistics Tech, Fintech, Cologne, Germany, NRW, Stefan Heißenberg, stefanheissenberg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
         url: ogImagePath,
         width: ogImageWidth,
         height: ogImageHeight,
-        alt: "Stefan Heißenberg — Head of Experience Design | Portfolio preview",
+        alt: "Stefan Heißenberg — Head of Design | Portfolio preview",
       },
     ],
   },
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
         url: ogImagePath,
         width: ogImageWidth,
         height: ogImageHeight,
-        alt: "Stefan Heißenberg — Head of Experience Design | Portfolio preview",
+        alt: "Stefan Heißenberg — Head of Design | Portfolio preview",
       },
     ],
   },
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
     "geo.placename": "Cologne",
     "geo.position": "50.9375;6.9603",
     ICBM: "50.9375, 6.9603",
-    subject: "Head of Experience Design | Product and design leadership portfolio",
+    subject: "Head of Design | Product and design leadership portfolio",
     classification: "Professional Portfolio",
     category: "UX, Product Design, Design Leadership, Technology",
   },
@@ -129,9 +129,9 @@ const personJsonLd = {
   familyName: "Heißenberg",
   url: baseUrl,
   image: `${baseUrl}${heroImagePath}`,
-  jobTitle: "Head of Experience Design",
+  jobTitle: "Head of Design",
   description:
-    "Product and design leadership across fifteen years — from startup to enterprise. Currently Head of Experience Design at DHL Global Forwarding, reporting to the VP of Product.",
+    "Product and design leadership across fifteen years — from startup to enterprise. Currently Head of Design at DHL Global Forwarding, reporting to the VP of Product.",
   worksFor: {
     "@type": "Organization",
     name: "DHL Global Forwarding",
@@ -172,7 +172,7 @@ const personJsonLd = {
     "@type": "Demand",
     name: "Senior product and design leadership roles",
     description:
-      "Head of Experience Design, Head of Product, Head of Design, Director/VP of Design or Product, Principal or Staff Product Designer roles in Europe.",
+      "Head of Design, Head of Product, Director/VP of Design or Product, Principal or Staff Product Designer roles in Europe.",
   },
 };
 
@@ -200,7 +200,7 @@ const faqJsonLd = {
       name: "Who is Stefan Heißenberg?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Stefan Heißenberg is Head of Experience Design at DHL Global Forwarding, based in Cologne, Germany. He has fifteen years of experience building digital products across agencies, consulting, startups, and enterprise. He reports to the VP of Product and leads a distributed design team across EMEA.",
+        text: "Stefan Heißenberg is Head of Design at DHL Global Forwarding, based in Cologne, Germany. He has fifteen years of experience building digital products across agencies, consulting, startups, and enterprise. He reports to the VP of Product and leads a distributed design team across EMEA.",
       },
     },
     {
@@ -224,7 +224,7 @@ const faqJsonLd = {
       name: "What roles is Stefan Heißenberg looking for?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Stefan is open to senior leadership roles in product and design: Head of Experience Design, Head of Product, Head of Design, Director or VP of Design or Product, and Principal or Staff Product Designer positions. He is based in Cologne and open to remote or hybrid roles across Europe.",
+        text: "Stefan is open to senior leadership roles in product and design: Head of Design, Head of Product, Director or VP of Design or Product, and Principal or Staff Product Designer positions. He is based in Cologne and open to remote or hybrid roles across Europe.",
       },
     },
     {

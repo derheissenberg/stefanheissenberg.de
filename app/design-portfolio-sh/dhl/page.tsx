@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description: "UX Strategy case study: Driving DHL's digital transformation. UX research, design systems, UI design for global logistics platform myDHLi.",
     siteName: "Stefan Heißenberg",
     locale: "en_US",
-    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Experience Design" }],
+    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Design" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -186,7 +186,7 @@ export default function DHLCaseStudyPage() {
 
           {/* Text content: centered column, block (left-aligned) body */}
           <p className="cs-body-140 mx-auto max-w-[820px] text-left">
-          April 2020 I took over as Head of Experience Design for myDHLi. Four weeks later we shipped to production — Quote + Book, Follow + Share, real-time tracking, analytics dashboards, single sign-on — across five continents while the world was locked down.
+          April 2020 I took over as Head of Design for myDHLi. Four weeks later we shipped to production — Quote + Book, Follow + Share, real-time tracking, analytics dashboards, single sign-on — across five continents while the world was locked down.
           COVID didn't stop the rollout. It made the case for it. Customers who had relied on phone calls and emails suddenly needed a self-service portal that worked. We had one ready.
           </p>
           

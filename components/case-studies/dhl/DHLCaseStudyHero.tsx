@@ -22,7 +22,7 @@ const statistics = [
 
 const metaRows = [
   { label: "CLIENT", value: "DHL Global Forwarding" },
-  { label: "ROLE", value: "Head of Experience Design" },
+  { label: "ROLE", value: "Head of Design" },
   { label: "YEARS", value: "2018 — present" },
   { label: "SCOPE", value: "Strategy · Research · Design System" },
 ] as const;

@@ -58,3 +58,7 @@ Allow: /
 
 Sitemap: https://www.stefanheissenberg.de/sitemap.xml
 Host: https://www.stefanheissenberg.de
+
+# LLM / AI crawlers — concise site summary
+# https://llmstxt.org/
+# https://www.stefanheissenberg.de/llms.txt

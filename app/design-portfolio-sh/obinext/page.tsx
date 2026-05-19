@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: "UX Strategy case study: 30 days from concept to MVP. UX and UI design for the bathroom planner that transformed how a €8.2B retailer serves customers.",
     siteName: "Stefan Heißenberg",
     locale: "en_US",
-    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Experience Design" }],
+    images: [{ url: ogImage, width: 1200, height: 630, alt: "Stefan Heißenberg - Head of Design" }],
   },
   twitter: {
     card: "summary_large_image",

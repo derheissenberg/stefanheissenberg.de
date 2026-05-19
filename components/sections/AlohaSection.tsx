@@ -93,7 +93,7 @@ export function AlohaSection() {
           </p>
           <p>
             From there I designed the initial concept for myDHLi. What started as a concept became the platform
-            I&apos;ve shaped for six years as Head of Experience Design, reporting to the VP of Product, owning product
+            I&apos;ve shaped for six years as Head of Design, reporting to the VP of Product, owning product
             tracks alongside leading the distributed design team across EMEA.
           </p>
         </div>

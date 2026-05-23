@@ -10,13 +10,13 @@
  *   git log -1 --format=%cI -- app/page.tsx
  *
  * POLICY (aligned with robots metadata):
- *   - Only URLs with index: true belong here (currently homepage only).
- *   - Portfolio + case studies use robots: { index: false, follow: true } — crawlable
- *     via links, not listed in sitemap, not intended for search results.
+ *   - Only the homepage is listed here (index: true, authoritative entry point).
+ *   - /design-portfolio-sh has index: true and is crawlable via links, but is
+ *     intentionally omitted from this sitemap (unlisted but indexable policy).
+ *     It surfaces only when Google discovers it through internal links.
+ *   - Case studies (dhl, saloodo, obinext) remain noindex — crawlable via links,
+ *     not listed in sitemap, not intended for search results.
  *   - No third-party URLs (Google ignores them in site sitemaps).
- *
- * OMITTED (noindex — add back when index: true):
- *   /design-portfolio-sh, /design-portfolio-sh/dhl, /saloodo, /obinext
  */
 
 import type { MetadataRoute } from "next";

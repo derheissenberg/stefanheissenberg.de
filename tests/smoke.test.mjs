@@ -10,21 +10,30 @@ import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
 
-test("sitemap lists homepage only (noindex portfolio omitted)", () => {
+test("sitemap lists homepage only (unlisted-but-indexable policy)", () => {
   const sitemap = readFileSync(join(root, "app/sitemap.ts"), "utf8");
   const urlEntries = [...sitemap.matchAll(/url:\s*(`[^`]+`|baseUrl)/g)].map((m) => m[0]);
   assert.equal(urlEntries.length, 1, `expected one sitemap entry, got: ${urlEntries.join(", ")}`);
   assert.match(urlEntries[0], /baseUrl/);
-  assert.doesNotMatch(sitemap, /url:\s*[`'"]https?:\/\/[^`'"]*design-portfolio-sh/);
+  assert.doesNotMatch(sitemap, /url:\s*[`'"][^`'"]*design-portfolio-sh/);
   assert.doesNotMatch(sitemap, /url:\s*[`'"]https?:\/\/[^`'"]*linkedin/i);
 });
 
-test("portfolio pages keep noindex metadata", () => {
+test("portfolio landing page has index:true metadata", () => {
   const portfolioPage = readFileSync(
     join(root, "app/design-portfolio-sh/page.tsx"),
     "utf8",
   );
-  assert.match(portfolioPage, /index:\s*false/);
+  assert.match(portfolioPage, /index:\s*true/);
+});
+
+test("case study pages have noindex metadata", () => {
+  // DHL case study should remain noindex
+  const dhlPage = readFileSync(
+    join(root, "app/design-portfolio-sh/dhl/page.tsx"),
+    "utf8",
+  );
+  assert.match(dhlPage, /index:\s*false/);
 });
 
 test("shared trust badge data exists", () => {

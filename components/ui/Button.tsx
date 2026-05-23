@@ -14,15 +14,28 @@
 "use client";
 
 import { useRef, type MouseEvent, type ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "secondary-gradient" | "ghost" | "outline";
+type ButtonVariant = "primary" | "secondary" | "secondary-gradient" | "ghost" | "outline" | "icon";
 
-type ButtonProps = {
-  variant: ButtonVariant;
+type ButtonLinkProps = {
+  variant: "primary" | "secondary" | "secondary-gradient" | "ghost" | "outline";
   children: ReactNode;
   href: string;
   className?: string;
 };
+
+type ButtonIconProps = {
+  variant: "icon";
+  children: ReactNode;
+  className?: string;
+  disabled?: boolean;
+  "aria-label": string;
+  onClick?: () => void;
+  type?: "button" | "submit";
+};
+
+type ButtonProps = ButtonLinkProps | ButtonIconProps;
 
 /** Handoff `.btn-primary` — Kode Mono, 13px, 700, 0.18em, uppercase */
 const typoPrimary =
@@ -35,7 +48,7 @@ const typoSmall =
 
 const flexAnchor = "inline-flex items-center justify-center gap-[10px]";
 
-const variantStyles: Record<ButtonVariant, string> = {
+const variantStyles: Record<Exclude<ButtonVariant, "icon">, string> = {
   primary: `${flexAnchor} rounded-[10px] text-white transition-all duration-200 py-[14px] px-[22px] button-gradient-animated button-primary-hover ${typoPrimary}`,
   secondary: `${flexAnchor} rounded-[10px] border border-[var(--accent-cyan)] bg-transparent py-[14px] px-[22px] text-white button-glow ${typoPrimary}`,
   "secondary-gradient": `${flexAnchor} button-secondary-gradient button-glow button-primary-hover`,
@@ -43,7 +56,37 @@ const variantStyles: Record<ButtonVariant, string> = {
   outline: `${flexAnchor} rounded-[10px] border border-white/20 bg-transparent py-[12px] px-[20px] text-white transition-[background-color,border-color] duration-200 hover:border-white/40 hover:bg-white/[0.06] ${typoSmall}`,
 };
 
-export function Button({ variant, children, href, className = "" }: ButtonProps) {
+export function Button(props: ButtonProps) {
+  // Handle icon variant (button element, not anchor)
+  if (props.variant === "icon") {
+    const {
+      children,
+      className,
+      disabled,
+      onClick,
+      type = "button",
+      "aria-label": ariaLabel,
+    } = props;
+    return (
+      <button
+        type={type}
+        aria-label={ariaLabel}
+        disabled={disabled}
+        onClick={onClick}
+        className={cn(
+          "inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-white button-gradient-animated",
+          disabled && "opacity-50",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50",
+          className
+        )}
+      >
+        {children}
+      </button>
+    );
+  }
+
+  // From here on, we know it's a link variant (has href)
+  const { variant, children, href, className = "" } = props;
   const base = variantStyles[variant];
   const isPrimary = variant === "primary";
   const isOutline = variant === "outline";
@@ -150,5 +193,24 @@ export function Button({ variant, children, href, className = "" }: ButtonProps)
     >
       {children}
     </a>
+  );
+}
+
+export function SendIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5"
+      aria-hidden
+    >
+      <path d="M12 19V5" />
+      <path d="m5 12 7-7 7 7" />
+    </svg>
   );
 }

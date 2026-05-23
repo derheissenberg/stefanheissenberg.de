@@ -16,7 +16,7 @@
  */
 
 import type { Metadata } from "next";
-import { PortfolioHeroSection } from "@/components/sections/PortfolioHeroSection";
+import { ChatPortfolioHero } from "@/components/chat/ChatPortfolioHero";
 import { DHLCaseStudyTeaser } from "@/components/portfolio/DHLCaseStudyTeaser";
 import { SaloodoCaseStudyTeaser } from "@/components/portfolio/SaloodoCaseStudyTeaser";
 import { OBINextCaseStudyTeaser } from "@/components/portfolio/OBINextCaseStudyTeaser";
@@ -28,6 +28,16 @@ import { Footer } from "@/components/layout/Footer";
 const baseUrl = "https://www.stefanheissenberg.de";
 const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
 
+/**
+ * ARCHITECTURE NOTE: Robots policy change (2026-05-23)
+ *
+ * Changed from { index: false, follow: true } to { index: true, follow: true }
+ * because the portfolio page now contains unique, valuable content (AI-powered
+ * interactive hero) that should be discoverable via search engines.
+ *
+ * Case studies (dhl, saloodo, obinext) remain noindex as they duplicate content
+ * from the portfolio landing. This page is the canonical entry point.
+ */
 export const metadata: Metadata = {
   title: "UX Design Portfolio | Stefan Heißenberg | UX Strategy & Case Studies",
   description: "UX and UI design portfolio. Selected UX Strategy projects and design case studies from Stefan Heißenberg, UX Design Director.",
@@ -35,8 +45,8 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/design-portfolio-sh`,
   },
   robots: {
-    index: false, // LEARNING: Exclude this page from search engine indexing
-    follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+    index: true, // INDEX: Portfolio page with AI chat hero is canonical entry point
+    follow: true,
   },
   openGraph: {
     url: `${baseUrl}/design-portfolio-sh`,
@@ -63,9 +73,8 @@ export const metadata: Metadata = {
 export default function DesignPortfolioPage() {
   return (
     <main>
-      {/* Portfolio Hero Section - Identical layout to landing page HeroSection */}
-      {/* LEARNING: Uses PortfolioHeroSection component with same structure as HeroSection.tsx */}
-      <PortfolioHeroSection />
+      {/* Chat Portfolio Hero - AI-powered interactive hero with portrait background */}
+      <ChatPortfolioHero />
 
       {/* Case Study Teasers - Matching Figma designs */}
       {/* LEARNING: Each case study has its own teaser section with image and text */}

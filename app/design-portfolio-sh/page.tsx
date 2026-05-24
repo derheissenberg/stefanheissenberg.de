@@ -16,7 +16,8 @@
  */
 
 import type { Metadata } from "next";
-import { ChatPortfolioHero } from "@/components/chat/ChatPortfolioHero";
+import type { CSSProperties } from "react";
+import { Chat } from "@/components/chat/Chat";
 import { DHLCaseStudyTeaser } from "@/components/portfolio/DHLCaseStudyTeaser";
 import { SaloodoCaseStudyTeaser } from "@/components/portfolio/SaloodoCaseStudyTeaser";
 import { OBINextCaseStudyTeaser } from "@/components/portfolio/OBINextCaseStudyTeaser";
@@ -70,11 +71,16 @@ export const metadata: Metadata = {
   },
 };
 
+const portraitVars = {
+  "--chat-portrait-desktop": "url('/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png')",
+  "--chat-portrait-mobile": "url('/images/hero-portrait-strategic-ux-design-stefan_heissenberg-mobile.jpg')",
+} as CSSProperties;
+
 export default function DesignPortfolioPage() {
   return (
-    <main>
-      {/* Chat Portfolio Hero - AI-powered interactive hero with portrait background */}
-      <ChatPortfolioHero />
+    <main className="relative w-full bg-[var(--chat-page-bg)]" style={portraitVars}>
+      {/* Chat Hero - AI-powered interactive hero with portrait background */}
+      <Chat theme="stefan-portfolio" />
 
       {/* Case Study Teasers - Matching Figma designs */}
       {/* LEARNING: Each case study has its own teaser section with image and text */}

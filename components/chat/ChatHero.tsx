@@ -51,7 +51,7 @@ export function ChatHero({
   return (
     <div
       className={cn(
-        "relative flex w-full flex-col items-center justify-center px-5 py-20 lg:px-12 lg:py-[120px]",
+        "chat-hero-min-height relative flex w-full flex-col items-center justify-center px-5 py-20 lg:px-12 lg:py-[120px]",
         "transition-[opacity,transform] duration-300 ease-out",
         isHidden
           ? "pointer-events-none -translate-y-5 opacity-0"
@@ -72,12 +72,18 @@ export function ChatHero({
         className="chat-portrait chat-portrait-overlay pointer-events-none"
       />
       <div className="relative z-10 mx-auto w-full max-w-[var(--chat-hero-max-width)] text-center">
-        {/* Pass theme colors via class overrides using CSS variables */}
-        <Kicker className="text-[var(--chat-hero-kicker-fg)]">
+        {/* Pass theme colors via style/class overrides */}
+        <Kicker
+          className="text-[var(--chat-hero-kicker-fg)]"
+          style={{ color: "var(--chat-hero-kicker-fg)" }}
+        >
           By Stefan Heißenberg
         </Kicker>
 
-        <HeroTitle className="text-[var(--chat-hero-title-fg)]">
+        <HeroTitle
+          className="text-[var(--chat-hero-title-fg)]"
+          style={{ color: "var(--chat-hero-title-fg)" }}
+        >
           Get to know me{" "}
           <em
             className={cn(
@@ -88,7 +94,10 @@ export function ChatHero({
           </em>
         </HeroTitle>
 
-        <HeroDescription className="text-[var(--chat-hero-description-fg)]">
+        <HeroDescription
+          className="text-[var(--chat-hero-description-fg)]"
+          style={{ color: "var(--chat-hero-description-fg)" }}
+        >
           Fifteen years designing digital products across agencies, consulting,
           startups, and enterprise. Ask question and find out directly what you
           need to know.

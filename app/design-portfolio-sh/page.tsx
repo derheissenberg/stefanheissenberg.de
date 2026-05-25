@@ -80,7 +80,7 @@ export default function DesignPortfolioPage() {
   return (
     <main className="relative w-full bg-[var(--chat-page-bg)]" style={portraitVars}>
       {/* Chat Hero - AI-powered interactive hero with portrait background */}
-      <Chat theme="stefan-portfolio" />
+      <Chat theme="stefan-portfolio" assistantLabel="Stefan's Assistant" />
 
       {/* Case Study Teasers - Matching Figma designs */}
       {/* LEARNING: Each case study has its own teaser section with image and text */}

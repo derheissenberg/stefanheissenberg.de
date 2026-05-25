@@ -11,9 +11,10 @@ type ChatInputRowProps = {
   onFocus: () => void;
   onBlur: () => void;
   className?: string;
+  inputRef?: React.RefObject<HTMLInputElement | null>;
 };
 
-import { Button, SendIcon } from "@/components/ui/Button";
+import { SendIcon } from "@/components/ui/Button";
 
 export function ChatInputRow({
   input,
@@ -26,6 +27,7 @@ export function ChatInputRow({
   onFocus,
   onBlur,
   className,
+  inputRef,
 }: ChatInputRowProps) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
@@ -38,20 +40,26 @@ export function ChatInputRow({
     <div
       className={`mx-auto w-full max-w-[var(--chat-input-max-width)] text-left ${className ?? "mt-9"}`}
     >
-      <div className="flex w-full items-center gap-2">
+      <div className="flex w-full items-center gap-[0.625rem]">
         <div className="chat-input-shell relative">
           {showRotatingPlaceholder && !input && (
             <span
-              className={`pointer-events-none absolute left-4 right-4 top-1/2 -translate-y-1/2 truncate text-left font-outfit text-sm transition-opacity duration-300 ease-out sm:text-base ${
+              className={`pointer-events-none absolute top-1/2 z-[1] -translate-y-1/2 truncate text-left font-outfit transition-opacity duration-300 ease-out ${
                 placeholderVisible ? "opacity-100" : "opacity-0"
               }`}
-              style={{ color: "var(--chat-input-placeholder-fg)" }}
+              style={{
+                color: "var(--chat-input-placeholder-fg)",
+                left: "var(--chat-input-padding-x)",
+                right: "var(--chat-input-padding-x)",
+                fontSize: "var(--chat-input-font-size)",
+              }}
               aria-hidden
             >
               {placeholderText}
             </span>
           )}
           <input
+            ref={inputRef}
             type="text"
             value={input}
             onChange={(e) => onInputChange(e.target.value)}
@@ -62,15 +70,15 @@ export function ChatInputRow({
             className="chat-input-field text-left"
           />
         </div>
-        <Button
-          variant="icon"
+        <button
           type="button"
           aria-label="Send message"
           disabled={sendDisabled}
           onClick={onSend}
+          className="chat-send-btn inline-flex items-center justify-center"
         >
           <SendIcon />
-        </Button>
+        </button>
       </div>
     </div>
   );

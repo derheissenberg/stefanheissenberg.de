@@ -186,7 +186,7 @@
   --chat-overlay-exit-duration: 280ms;
 
   /* Hero layout */
-  --chat-hero-min-height-desktop: 750px;
+  --chat-hero-min-height-desktop: 450px;
   --chat-hero-min-height-mobile: 100dvh;
 
   /* Portrait (defaults to none, override via inline styles) */

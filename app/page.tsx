@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <AwardBadgesSection />
       <section
         aria-label="ApplicAIton"
-        className="min-h-[500px] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-desktop:auto] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-mobile:100dvh]"
+        className="min-h-[500px] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-desktop:500px] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-mobile:500px]"
       >
         <Chat theme="dark-tokyo" />
       </section>
-      <AwardBadgesSection />
       <KeyCreatorIdentifiersSection />
       <PrinciplesSection />
       <DeepPashionSection />

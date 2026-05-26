@@ -33,7 +33,7 @@ export function ChatHero({
   return (
     <div
       className={cn(
-        "chat-hero-min-height relative flex w-full flex-col items-center justify-center px-5 py-20 lg:px-12 lg:py-[120px]",
+        "chat-hero-min-height relative flex w-full flex-col items-center justify-center px-5 py-0 lg:px-12 lg:py-0",
         "transition-[opacity,transform] duration-300 ease-out",
         isHidden
           ? "pointer-events-none -translate-y-5 opacity-0"

@@ -94,8 +94,8 @@
   --chat-overlay-exit-duration: 280ms;
 
   /* Hero layout */
-  --chat-hero-min-height-desktop: 100dvh;
-  --chat-hero-min-height-mobile: 100dvh;
+  --chat-hero-min-height-desktop: 500px;
+  --chat-hero-min-height-mobile: 500px;
 
   /* Portrait (defaults to none for dark-tokyo) */
   --chat-portrait-desktop: none;
@@ -186,8 +186,8 @@
   --chat-overlay-exit-duration: 280ms;
 
   /* Hero layout */
-  --chat-hero-min-height-desktop: 750px;
-  --chat-hero-min-height-mobile: 100dvh;
+  --chat-hero-min-height-desktop: 500px;
+  --chat-hero-min-height-mobile: 500px;
 
   /* Portrait (defaults to none, override via inline styles) */
   --chat-portrait-desktop: inherit;

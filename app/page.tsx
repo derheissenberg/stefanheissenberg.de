@@ -1,3 +1,4 @@
+import { Chat } from "@/components/chat/Chat";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AwardBadgesSection } from "@/components/sections/AwardBadgesSection";
 import { KeyCreatorIdentifiersSection } from "@/components/sections/KeyCreatorIdentifiersSection";
@@ -12,6 +13,12 @@ export default function Home() {
     <main>
       <HeroSection />
       <AwardBadgesSection />
+      <section
+        aria-label="ApplicAIton"
+        className="homepage-chat-section [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-desktop:auto] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-mobile:100dvh]"
+      >
+        <Chat theme="dark-tokyo" />
+      </section>
       <KeyCreatorIdentifiersSection />
       <PrinciplesSection />
       <DeepPashionSection />

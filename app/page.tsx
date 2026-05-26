@@ -15,7 +15,7 @@ export default function Home() {
       <AwardBadgesSection />
       <section
         aria-label="ApplicAIton"
-        className="min-h-[500px] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-desktop:500px] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-mobile:500px]"
+        className="min-h-[500px] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-desktop:500px] [&_.chat-root[data-theme=dark-tokyo]]:[--chat-hero-min-height-mobile:100dvh]"
       >
         <Chat theme="dark-tokyo" />
       </section>

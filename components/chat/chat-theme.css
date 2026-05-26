@@ -95,7 +95,7 @@
 
   /* Hero layout */
   --chat-hero-min-height-desktop: 500px;
-  --chat-hero-min-height-mobile: 500px;
+  --chat-hero-min-height-mobile: 100dvh;
 
   /* Portrait (defaults to none for dark-tokyo) */
   --chat-portrait-desktop: none;
@@ -187,7 +187,7 @@
 
   /* Hero layout */
   --chat-hero-min-height-desktop: 500px;
-  --chat-hero-min-height-mobile: 500px;
+  --chat-hero-min-height-mobile: 100dvh;
 
   /* Portrait (defaults to none, override via inline styles) */
   --chat-portrait-desktop: inherit;

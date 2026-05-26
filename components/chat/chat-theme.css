@@ -4,7 +4,6 @@
    Chat Root Variables (mobile scroll polish)
    ========================================================= */
 .chat-root {
-  --chat-keyboard-offset: 0px;
   --chat-scroll-at-bottom-threshold: 8px;
   width: 100%;
   max-width: 100%;
@@ -46,7 +45,8 @@
   --chat-input-radius: 10px;
   --chat-input-padding-y: 0.875rem;
   --chat-input-padding-x: 1.125rem;
-  --chat-input-font-size: 0.9375rem;
+  /* 16px minimum — prevents iOS Safari auto-zoom on input focus */
+  --chat-input-font-size: 1rem;
   --chat-input-min-height: 52px;
   --chat-input-transition-duration: 180ms;
 
@@ -135,7 +135,8 @@
   --chat-input-radius: 0.875rem;
   --chat-input-padding-y: 0.875rem;
   --chat-input-padding-x: 1.125rem;
-  --chat-input-font-size: 0.9375rem;
+  /* 16px minimum — prevents iOS Safari auto-zoom on input focus */
+  --chat-input-font-size: 1rem;
   --chat-input-min-height: 52px;
   --chat-input-transition-duration: 180ms;
 
@@ -230,8 +231,10 @@
    ========================================================= */
 .chat-conversation-surface {
   position: fixed;
-  inset: 0;
-  width: 100%;
+  top: var(--chat-vv-offset-top, 0);
+  left: var(--chat-vv-offset-left, 0);
+  width: var(--chat-vv-width, 100%);
+  height: var(--chat-vv-height, 100%);
   max-width: 100%;
   z-index: var(--chat-overlay-z);
   background-color: var(--chat-page-bg);
@@ -296,6 +299,7 @@
   min-width: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
   scrollbar-width: thin;
   scrollbar-color: oklch(1 0 0 / 0.1) transparent;
 }
@@ -310,7 +314,7 @@
 
 .chat-column {
   width: 100%;
-  max-width: var(--chat-conversation-max-width);
+  max-width: min(var(--chat-conversation-max-width), 100%);
   min-width: 0;
   box-sizing: border-box;
   margin: 0 auto;
@@ -391,6 +395,14 @@
   font-weight: 400;
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+
+.chat-bubble-assistant-clean :is(p, strong, em, code) {
+  color: inherit;
+}
+
+.chat-bubble-user-bordered :is(p, strong, em, code) {
+  color: inherit;
 }
 
 /* =========================================================
@@ -592,7 +604,7 @@
 .chat-dock {
   position: relative;
   flex: 0 0 auto;
-  padding: 1rem 1.5rem calc(1.75rem + var(--chat-keyboard-offset, 0px));
+  padding: 1rem 1.5rem calc(1.75rem + env(safe-area-inset-bottom, 0px));
   background: linear-gradient(
     to top,
     var(--chat-page-bg) 60%,
@@ -656,7 +668,7 @@
 .chat-dock-inner {
   width: 100%;
   min-width: 0;
-  max-width: var(--chat-input-max-width);
+  max-width: min(var(--chat-input-max-width), 100%);
   margin: 0 auto;
   display: flex;
   align-items: flex-end;
@@ -764,6 +776,8 @@
    Overlay Transitions
    ========================================================= */
 .chat-conversation-overlay {
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   transition:
     opacity var(--chat-overlay-exit-duration) cubic-bezier(0.4, 0, 0.6, 1),
     transform var(--chat-overlay-exit-duration) cubic-bezier(0.4, 0, 0.6, 1);
@@ -832,6 +846,11 @@
   min-width: 0;
   box-sizing: border-box;
   overflow-x: clip;
+  scroll-padding-bottom: 1rem;
+}
+
+.chat-hero-min-height .chat-input-field {
+  scroll-margin-bottom: 12px;
 }
 
 @media (max-width: 767px) {

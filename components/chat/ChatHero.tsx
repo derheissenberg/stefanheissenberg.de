@@ -1,5 +1,6 @@
 "use client";
 
+import type { RefObject } from "react";
 import { cn } from "@/lib/utils";
 import {
   HeroDescription,
@@ -14,6 +15,9 @@ type ChatHeroProps = {
   onSend: () => void;
   sendDisabled: boolean;
   isHidden: boolean;
+  onInputFocus?: () => void;
+  onInputBlur?: () => void;
+  inputRef?: RefObject<HTMLInputElement | null>;
 };
 
 export function ChatHero({
@@ -22,6 +26,9 @@ export function ChatHero({
   onSend,
   sendDisabled,
   isHidden,
+  onInputFocus,
+  onInputBlur,
+  inputRef,
 }: ChatHeroProps) {
   return (
     <div
@@ -46,7 +53,7 @@ export function ChatHero({
         aria-hidden="true"
         className="chat-portrait chat-portrait-overlay pointer-events-none"
       />
-      <div className="relative z-10 mx-auto w-full max-w-[var(--chat-hero-max-width)] text-center">
+      <div className="relative z-10 mx-auto w-full max-w-[var(--chat-hero-max-width)] text-center" data-hero-content="">
         {/* Pass theme colors via style/class overrides */}
         <Kicker
           className="text-[var(--chat-hero-kicker-fg)]"
@@ -84,6 +91,9 @@ export function ChatHero({
           onSend={onSend}
           sendDisabled={sendDisabled}
           showRotatingPlaceholder
+          onFocus={onInputFocus}
+          onBlur={onInputBlur}
+          inputRef={inputRef}
         />
       </div>
     </div>

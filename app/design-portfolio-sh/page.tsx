@@ -74,6 +74,7 @@ export const metadata: Metadata = {
 const portraitVars = {
   "--chat-portrait-desktop": "url('/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png')",
   "--chat-portrait-mobile": "url('/images/hero-portrait-strategic-ux-design-stefan_heissenberg-mobile.jpg')",
+  "--chat-hero-min-height-desktop": "max(100dvh, 750px)",
 } as CSSProperties;
 
 export default function DesignPortfolioPage() {

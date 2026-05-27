@@ -11,7 +11,7 @@ import type { CvCaseStudy } from "@/types/cv";
 
 export const CV_CASE_STUDIES: CvCaseStudy[] = [
   {
-    imageSrc: "/images/mydhli/mydhli-mockup-hero.png",
+    imageSrc: "/images/mydhli/Dashboard-collage.png",
     imageAlt: "myDHLi — DHL Global Forwarding B2B Portal",
     kicker: "DHL Global Forwarding · 2020 — Present",
     title: "Building the ",
@@ -21,7 +21,7 @@ export const CV_CASE_STUDIES: CvCaseStudy[] = [
     href: "/design-portfolio-sh/dhl",
   },
   {
-    imageSrc: "/images/saloodo/saloodo-mockup-hero.png",
+    imageSrc: "/images/saloodo/app-screens.png",
     imageAlt: "Saloodo! — DHL Logistics Marketplace",
     kicker: "Saloodo! · 2018 — 2020",
     title: "Founding designer for a ",
@@ -31,7 +31,7 @@ export const CV_CASE_STUDIES: CvCaseStudy[] = [
     href: "/design-portfolio-sh/saloodo",
   },
   {
-    imageSrc: "/images/obinext/obinext-mockup-hero.png",
+    imageSrc: "/images/obinext/hero-obinext.png",
     imageAlt: "OBI Next — Digital Bathroom Planner",
     kicker: "OBI Next · 2016 — 2017",
     title: "30 days: workshop to ",

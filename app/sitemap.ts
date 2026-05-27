@@ -30,5 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-05-06T16:47:34+02:00"),
       priority: 1,
     },
+    {
+      url: `${baseUrl}/cv`,
+      lastModified: new Date("2026-05-27T00:00:00+02:00"),
+      priority: 0.9,
+    },
   ];
 }

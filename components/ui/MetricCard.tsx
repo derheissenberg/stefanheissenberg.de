@@ -38,9 +38,20 @@ type MetricCardProps = {
   label: string;
   color: "blue" | "yellow";
   delay?: number; // LEARNING: Stagger delay in milliseconds (e.g., index * 100)
+  /**
+   * size="compact" renders an inline gradient number + label with no card border or GlowCard.
+   * Used in the CV timeline ministrip rows.
+   * Default: "default" (full GlowCard with backdrop blur)
+   */
+  size?: "default" | "compact";
+  /**
+   * disableCountUp=true renders the value statically (no animation).
+   * Required for compact ministrip items where animation would be distracting.
+   */
+  disableCountUp?: boolean;
 };
 
-export function MetricCard({ value, label, color, delay = 0 }: MetricCardProps) {
+export function MetricCard({ value, label, color, delay = 0, size = "default", disableCountUp = false }: MetricCardProps) {
   // LEARNING: Intersection Observer hook - triggers animation when card scrolls into view
   // triggerOnce: true = animate only once, not every time it enters viewport
   // threshold: 0.1 = trigger when 10% of card is visible
@@ -127,6 +138,49 @@ export function MetricCard({ value, label, color, delay = 0 }: MetricCardProps) 
 
     return parts.length > 0 ? parts : [{ text: val, isSymbol: false }];
   };
+
+  // LEARNING: Compact variant — inline gradient number + mono label, no card/border/animation.
+  // Used in CV timeline ministrip rows where a full GlowCard would be too heavy visually.
+  if (size === "compact") {
+    return (
+      <div ref={ref} className="flex flex-col gap-[6px]">
+        {/* Value: 26px gradient italic 800 — matches .ministrip .m .v from cv-web.html */}
+        <p
+          className={`${gradientClasses} bg-clip-text text-[26px] font-extrabold italic leading-none tracking-[-0.02em] text-transparent animate-gradient`}
+          style={{ backgroundSize: "300%", fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+        >
+          {disableCountUp || !inView ? (
+            value
+          ) : (
+            <>
+              {prefix && <span style={{ fontSize: "0.8em" }}>{prefix}</span>}
+              <CountUp
+                start={0}
+                end={number}
+                duration={1.5}
+                decimals={decimals}
+                decimal="."
+                separator={decimals > 0 ? "" : ","}
+                delay={delay / 1000}
+                useEasing
+                easingFn={(t, b, c, d) =>
+                  t === d ? b + c : c * (-Math.pow(2, (-10 * t) / d) + 1) + b
+                }
+              />
+              {suffix && <span style={{ fontSize: "0.8em" }}>{suffix}</span>}
+            </>
+          )}
+        </p>
+        {/* Label: 9.5px Kode Mono muted — matches .ministrip .m .k */}
+        <p
+          className="text-[9.5px] uppercase text-[var(--muted)] tracking-[0.2em] leading-none"
+          style={{ fontFamily: "var(--font-kode-mono), ui-monospace, monospace", fontWeight: 500 }}
+        >
+          {label}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <GlowCard

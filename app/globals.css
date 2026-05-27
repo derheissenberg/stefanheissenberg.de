@@ -18,6 +18,14 @@
   --accent-yellow: #FFD600;
   --accent-orange: #FF6B00;
 
+  /* CV Page tokens — added Phase 01 */
+  --background-2: #0e0e0e;
+  --muted: rgba(237, 237, 237, 0.55);
+  --muted-2: rgba(237, 237, 237, 0.32);
+  --rule: rgba(255, 255, 255, 0.08);
+  --rule-strong: rgba(255, 255, 255, 0.16);
+  --accent-cyan-300: #67e8f9;
+
   /* Primary CTA gradient: 4-corner mesh gradient */
   /* LEARNING: CSS doesn't support true mesh gradients, so we approximate with a diagonal gradient */
   /* Top-left: #017cdb, Bottom-left: #016dae, Top-right: #1873db, Bottom-right: #5166db */

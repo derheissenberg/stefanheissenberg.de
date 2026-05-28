@@ -34,7 +34,7 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
       <div className="sticky top-[100px] self-start max-[900px]:static">
         {/* Year range */}
         <div
-          className="leading-[0.95] tracking-[-0.04em] text-white"
+          className="leading-[1.15] tracking-[-0.04em] text-white overflow-visible"
           style={{
             fontFamily: "var(--font-outfit), system-ui, sans-serif",
             fontWeight: 200,
@@ -49,7 +49,9 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
                 fontStyle: "italic",
                 fontWeight: 800,
                 backgroundSize: "300%",
-                display: "inline",
+                display: "inline-block",
+                verticalAlign: "baseline",
+                paddingRight: "0.18em",
               }}
             >
               —{entry.yearEnd}
@@ -85,8 +87,9 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
               fontFamily: "var(--font-outfit), system-ui, sans-serif",
               fontWeight: 400,
               fontSize: "clamp(28px, 3.2vw, 42px)",
-              lineHeight: 1.05,
+              lineHeight: 1.15,
               letterSpacing: "-0.025em",
+              overflow: "visible",
             }}
           >
             {entry.role}
@@ -97,7 +100,9 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
                   fontStyle: "italic",
                   fontWeight: 800,
                   backgroundSize: "300%",
-                  display: "inline",
+                  display: "inline-block",
+                  verticalAlign: "baseline",
+                  paddingRight: "0.18em",
                 }}
               >
                 {entry.roleHighlight}

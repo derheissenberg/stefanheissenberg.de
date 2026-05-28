@@ -117,6 +117,57 @@ body {
   font-family: var(--font-cherry-bomb), system-ui, sans-serif;
 }
 
+/**
+ * CV brand wordmark link — minimal hover treatment.
+ * Semibold Outfit at tight letter-spacing for editorial presence.
+ * Hover: sliding underline (cyan at low opacity) + whisper-soft cyan glow.
+ * Both effects are gated behind prefers-reduced-motion so they vanish for
+ * users who have requested less motion.
+ */
+.cv-brand-link {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+  transition: text-shadow 300ms ease;
+}
+
+/* Sliding underline grows left → right on hover */
+.cv-brand-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-cyan-300);
+  opacity: 0.55;
+  transition: width 280ms ease;
+}
+
+.cv-brand-link:hover::after {
+  width: 100%;
+}
+
+/* Very soft glow — barely perceptible, just enough warmth on hover */
+.cv-brand-link:hover {
+  text-shadow: 0 0 18px rgba(103, 232, 249, 0.22);
+}
+
+/* LEARNING: prefers-reduced-motion — collapse all motion for users who need it */
+@media (prefers-reduced-motion: reduce) {
+  .cv-brand-link {
+    transition: none;
+  }
+  .cv-brand-link::after {
+    display: none;
+  }
+  .cv-brand-link:hover {
+    text-shadow: none;
+  }
+}
+
 /** Kicker / meta label — matches CaseStudyLogoStack default + hero meta labels */
 .type-kicker {
   font-family: var(--font-kode-mono), ui-monospace, monospace;
@@ -190,7 +241,13 @@ body {
 }
 
 /* LEARNING: Gradient text helper used for large display words.
-   Mirrors link gradient technique without spacing hacks/padding. */
+   inline-block + box-decoration-break: clone are both required for reliable
+   bg-clip on italic 800 weight text — the italic slant bleeds past the logical
+   line box when display is plain `inline`, clipping the gradient on the right
+   edge. inline-block forces its own box model so the padded clip region is
+   self-contained. box-decoration-break: clone repaints background/padding on
+   every fragment (needed for multi-line and for Safari's -webkit- prefix).
+   Padding gives the clip box breathing room for the descender and italic overhang. */
 .gradient-text-safe {
   background-image: linear-gradient(to right, rgb(34, 211, 238), rgb(59, 130, 246), rgb(34, 211, 238));
   background-size: 300%;
@@ -201,7 +258,12 @@ body {
   -webkit-text-fill-color: transparent;
   color: transparent;
   animation: gradient 6s ease infinite;
-  display: inline;
+  display: inline-block;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding-right: 0.15em;
+  padding-top: 0.06em;
+  padding-bottom: 0.12em;
   text-rendering: geometricPrecision;
 }
 

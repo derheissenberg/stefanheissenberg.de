@@ -8,6 +8,8 @@
  * - Section anchors link to id anchors on each CV section
  * - Nav links hidden below 860px (mobile-first)
  * - Get in touch CTA on the right — reveals obfuscated email on click
+ * - Brand wordmark: minimal Outfit semibold, tight tracking, hover underline
+ *   + whisper glow via .cv-brand-link CSS class (see globals.css)
  */
 
 "use client";
@@ -16,7 +18,6 @@ const NAV_LINKS = [
   { label: "About", href: "#cv-about" },
   { label: "Experience", href: "#cv-experience" },
   { label: "Case studies", href: "#cv-cases" },
-  { label: "How I work", href: "#cv-principles" },
   { label: "Credentials", href: "#cv-credentials" },
 ];
 
@@ -29,21 +30,13 @@ export function CvTopNav() {
       <div
         className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-8 py-[14px] max-[720px]:px-5 max-[720px]:py-3"
       >
-        {/* Brand */}
+        {/* Brand wordmark */}
         <a
           href="#cv-top"
-          className="flex items-center gap-[10px] text-[14px] font-[500] text-white"
-          style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", letterSpacing: "-0.01em" }}
+          className="cv-brand-link text-white"
+          style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
         >
-          <span
-            className="h-2 w-2 rounded-full"
-            style={{ background: "linear-gradient(135deg, #22d3ee, #3b82f6)" }}
-            aria-hidden
-          />
-          Stefan{" "}
-          <em className="ml-0.5 font-bold italic not-italic text-[var(--accent-cyan-300)]" style={{ fontStyle: "italic", fontWeight: 700 }}>
-            Heißenberg
-          </em>
+          Stefan Heißenberg
         </a>
 
         {/* Section anchors — hidden below 860px */}

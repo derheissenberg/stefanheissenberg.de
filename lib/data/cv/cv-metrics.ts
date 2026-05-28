@@ -12,7 +12,7 @@ import type { CvMetric } from "@/types/cv";
 
 export const CV_METRICS: CvMetric[] = [
   {
-    value: "22k+",
+    value: "22K+",
     label: "Enterprise customers served on myDHLi",
     color: "blue",
   },
@@ -27,8 +27,8 @@ export const CV_METRICS: CvMetric[] = [
     color: "blue",
   },
   {
-    value: "€336B+",
-    label: "Annual cargo value moving through myDHLi",
+    value: "82",
+    label: "Clients served",
     color: "blue",
   },
 ];

@@ -13,7 +13,7 @@ import { MetricCard } from "@/components/ui/MetricCard";
 
 const statistics = [
   { value: "22×", label: "Customer Growth", color: "blue" as const },
-  { value: "30m+", label: "Monthly interactions", color: "yellow" as const },
+  { value: "30M+", label: "Monthly interactions", color: "yellow" as const },
   { value: "€1.2B+", label: "Digital Quote Revenue", color: "blue" as const },
   { value: "€135M", label: "Cost Savings", color: "yellow" as const },
   { value: "€336B+", label: "Yearly Business Volume", color: "blue" as const },

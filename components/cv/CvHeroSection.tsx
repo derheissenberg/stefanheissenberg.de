@@ -1,6 +1,6 @@
 /**
  * COMPONENT: CvHeroSection
- * PURPOSE: Full-height hero section for the CV page with portrait, headline, lede, CTAs, meta-row.
+ * PURPOSE: Full-height hero section for the CV page with portrait, headline, lede, CTAs.
  *
  * KEY CONCEPTS:
  * - Server Component — no client JS needed
@@ -8,7 +8,6 @@
  * - Left-to-right gradient overlay (hero-fade) ensures text legibility over portrait
  * - h1 = Stefan (Outfit 200) + Heißenberg (gradient italic 800)
  * - Role kicker uses .type-kicker-wide + .gradient-text-safe
- * - Meta-row: Kode Mono uppercase — location, languages, availability
  * - Responsive: portrait fades on mobile, text stays readable
  * - min-height 760px desktop, auto on mobile to prevent overflow
  */
@@ -52,30 +51,18 @@ export function CvHeroSection() {
       >
         <div className="w-full max-w-[720px]">
           {/* H1 — two-line: Stefan (light) + Heißenberg (gradient bold) */}
-          <h1
-            style={{ lineHeight: 0.92, letterSpacing: "-0.045em", margin: 0 }}
-          >
-            <span
-              className="block text-white"
-              style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                fontWeight: 200,
-                fontSize: "clamp(64px, 11vw, 144px)",
-              }}
-            >
+          <h1 className="overflow-visible leading-[0.92] tracking-[-0.045em]">
+            <span className="font-outfit block text-[48px] font-[200] text-white sm:text-[64px] md:text-[84px] lg:text-[128px]">
               Stefan
             </span>
             <span
-              className="block gradient-text-safe"
+              className="font-outfit gradient-text-safe block w-fit max-w-full text-[48px] font-[800] italic max-[400px]:text-[42px] sm:text-[64px] md:text-[84px] lg:text-[128px]"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
-                fontWeight: 800,
-                fontStyle: "italic",
-                fontSize: "clamp(64px, 11vw, 144px)",
                 lineHeight: 0.98,
-                paddingRight: "0.12em",
+                paddingRight: "0.14em",
+                paddingTop: "0.04em",
+                paddingBottom: "0.12em",
                 backgroundSize: "300%",
-                display: "block",
               }}
             >
               Heißenberg
@@ -102,15 +89,9 @@ export function CvHeroSection() {
             className="mt-6 max-w-[540px] text-[18px] leading-[1.55] text-white/82"
             style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontWeight: 400 }}
           >
-            Senior product &amp; design leader with{" "}
-            <em className="not-italic font-[500] text-[var(--accent-cyan-300)]">
-              fifteen years
-            </em>{" "}
-            across agency, consulting, startup, and enterprise. Currently Head of Design at DHL Global Forwarding, shaping{" "}
-            <em className="not-italic font-[500] text-[var(--accent-cyan-300)]">
-              myDHLi
-            </em>{" "}
-            — the B2B portal moving €336B in cargo annually.
+            Senior product &amp; design leader with fifteen years across
+            agency, consulting, startup, and enterprise. Currently Head of
+            Design at DHL, shaping myDHLi — our main enterprise B2B portal.
           </p>
 
           {/* CTA row */}
@@ -123,22 +104,6 @@ export function CvHeroSection() {
             </Button>
           </div>
 
-          {/* Meta-row: location · languages · availability */}
-          <div
-            className="mt-9 flex flex-wrap gap-x-9 gap-y-2 text-[11px] uppercase text-[var(--muted)] tracking-[0.22em]"
-            style={{ fontFamily: "var(--font-kode-mono), ui-monospace, monospace", fontWeight: 500 }}
-          >
-            <span>
-              <b className="text-white font-[600]">KÖLN, DE</b>
-            </span>
-            <span>
-              <b className="text-white font-[600]">EN · DE</b>
-            </span>
-            <span>
-              AVAILABLE IN{" "}
-              <b className="text-white font-[600]">10–12 DAYS</b>
-            </span>
-          </div>
         </div>
       </div>
     </section>

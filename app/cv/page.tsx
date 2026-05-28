@@ -19,7 +19,6 @@ import { CvAboutSection } from "@/components/cv/CvAboutSection";
 import { CvExperienceSection } from "@/components/cv/CvExperienceSection";
 import { CvCaseStudyGrid } from "@/components/cv/CvCaseStudyGrid";
 import { CvClientWall } from "@/components/cv/CvClientWall";
-import { CvPrinciplesSection } from "@/components/cv/CvPrinciplesSection";
 import { CvCredentialsSection } from "@/components/cv/CvCredentialsSection";
 import { CvSkillsSection } from "@/components/cv/CvSkillsSection";
 import { WantTheFullStoryCTASection } from "@/components/sections/WantTheFullStoryCTASection";
@@ -181,16 +180,13 @@ export default function CvPage() {
         {/* 06 — Client Wall (15 logos, full-width ruled row) */}
         <CvClientWall />
 
-        {/* 07 — Principles + Manifesto */}
-        <CvPrinciplesSection />
-
-        {/* 08 — Credentials (Awards / Certs / Education) */}
+        {/* 07 — Credentials (Awards / Certs / Education) */}
         <CvCredentialsSection />
 
-        {/* 09 — Skills & Tools */}
+        {/* 08 — Skills & Tools */}
         <CvSkillsSection />
 
-        {/* 10 — Final CTA (reuse site-wide section with CV-specific copy) */}
+        {/* 09 — Final CTA (reuse site-wide section with CV-specific copy) */}
         <WantTheFullStoryCTASection
           nextCaseLabel="View portfolio →"
           nextCaseHref="/design-portfolio-sh"

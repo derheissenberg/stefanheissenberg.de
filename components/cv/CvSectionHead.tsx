@@ -54,8 +54,9 @@ export function CvSectionHead({
           fontFamily: "var(--font-outfit), system-ui, sans-serif",
           fontWeight: 200,
           fontSize: "clamp(48px, 7vw, 96px)",
-          lineHeight: 0.92,
+          lineHeight: 1.08,
           letterSpacing: "-0.045em",
+          overflow: "visible",
         }}
       >
         {title}
@@ -67,7 +68,9 @@ export function CvSectionHead({
               fontWeight: 700,
               display: "inline-block",
               backgroundSize: "300%",
-              paddingRight: "0.04em",
+              paddingRight: "0.12em",
+              paddingTop: "0.04em",
+              paddingBottom: "0.08em",
             }}
           >
             {titleHighlight}

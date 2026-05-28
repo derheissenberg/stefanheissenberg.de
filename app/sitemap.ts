@@ -20,6 +20,7 @@
  */
 
 import type { MetadataRoute } from "next";
+import { CV_LAST_MODIFIED_ISO } from "@/lib/data/cv/cv-meta";
 
 const baseUrl = "https://www.stefanheissenberg.de";
 
@@ -32,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/cv`,
-      lastModified: new Date("2026-05-27T00:00:00+02:00"),
+      lastModified: new Date(CV_LAST_MODIFIED_ISO),
       priority: 0.9,
     },
   ];

@@ -3,11 +3,11 @@
  * PURPOSE: A single experience entry in the CV timeline.
  *
  * KEY CONCEPTS:
- * - Server Component — no interactivity
+ * - Client component — MetricCard uses Framer Motion count-up hooks
  * - Grid: 200px year column | 1fr content column, collapses to 1-col below 900px
  * - Year column is sticky top-[100px] on desktop for scroll context
- * - Year: plain Outfit 200 start + gradient italic 800 end (e.g. "2020" + "—Now")
- * - Role: plain 400 text + gradient italic 800 for highlight (e.g. "Head of" + "Design")
+ * - Semantic markup: <article>, <h3> for role, <time dateTime> for machine-readable dates
+ * - parseExperienceDates shared with JSON-LD helpers (single source of truth)
  * - Ministrip: uses MetricCard size="compact" disableCountUp — inline gradient numbers
  * - Extras: 2-column tag grid with cyan dot separators
  * - Border-top on each row; last row also has border-bottom
@@ -16,6 +16,7 @@
 "use client";
 
 import { MetricCard } from "@/components/ui/MetricCard";
+import { parseExperienceDates } from "@/lib/data/cv/cv-jsonld";
 import type { CvExperienceEntry } from "@/types/cv";
 
 type CvTimelineRowProps = {
@@ -24,8 +25,10 @@ type CvTimelineRowProps = {
 };
 
 export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
+  const { startDate, endDate } = parseExperienceDates(entry);
+
   return (
-    <div
+    <article
       className={`grid grid-cols-[200px_1fr] items-start gap-12 border-t border-[var(--rule)] py-12 max-[900px]:grid-cols-1 max-[900px]:gap-4 max-[900px]:py-8${
         isLast ? " border-b" : ""
       }`}
@@ -41,7 +44,7 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
             fontSize: "clamp(48px, 5vw, 72px)",
           }}
         >
-          {entry.yearStart}
+          <time dateTime={startDate}>{entry.yearStart}</time>
           {entry.yearEnd && (
             <em
               className="gradient-text-safe"
@@ -54,7 +57,12 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
                 paddingRight: "0.18em",
               }}
             >
-              —{entry.yearEnd}
+              —
+              {entry.yearEnd === "Now" ? (
+                entry.yearEnd
+              ) : (
+                <time dateTime={endDate}>{entry.yearEnd}</time>
+              )}
             </em>
           )}
         </div>
@@ -80,8 +88,8 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
       <div>
         {/* Role + Company header */}
         <div className="mb-1.5 flex flex-wrap items-baseline gap-x-3 gap-y-2">
-          {/* Role */}
-          <div
+          {/* Role — h3 for heading hierarchy (h1 hero → h2 section → h3 role) */}
+          <h3
             className="text-white"
             style={{
               fontFamily: "var(--font-outfit), system-ui, sans-serif",
@@ -108,7 +116,7 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
                 {entry.roleHighlight}
               </em>
             )}
-          </div>
+          </h3>
 
           {/* Company badge */}
           <p
@@ -179,6 +187,6 @@ export function CvTimelineRow({ entry, isLast = false }: CvTimelineRowProps) {
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 }

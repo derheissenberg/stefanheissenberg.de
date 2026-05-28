@@ -23,20 +23,30 @@ import { CvCredentialsSection } from "@/components/cv/CvCredentialsSection";
 import { CvSkillsSection } from "@/components/cv/CvSkillsSection";
 import { WantTheFullStoryCTASection } from "@/components/sections/WantTheFullStoryCTASection";
 import { Footer } from "@/components/layout/Footer";
+import { CV_EXPERIENCE } from "@/lib/data/cv/cv-experience";
+import { CV_SKILLS } from "@/lib/data/cv/cv-skills";
+import { CV_CREDENTIALS } from "@/lib/data/cv/cv-credentials";
+import { CV_LAST_MODIFIED_ISO, CV_PAGE_URL } from "@/lib/data/cv/cv-meta";
+import {
+  buildAlumniOf,
+  buildBreadcrumbList,
+  buildHasCredential,
+  buildKnowsAbout,
+  buildOccupations,
+} from "@/lib/data/cv/cv-jsonld";
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
 const cvTitle = "CV — Stefan Heißenberg · Head of Design";
 const cvDescription =
   "Head of Design at DHL Global Forwarding. Senior product & UX design leader with fifteen years across agency, consulting, startup, and enterprise.";
-const cvUrl = "https://www.stefanheissenberg.de/cv";
 const ogImage = "https://www.stefanheissenberg.de/images/og-image-stefan-heissenberg.png";
 
 export const metadata: Metadata = {
   title: cvTitle,
   description: cvDescription,
   alternates: {
-    canonical: cvUrl,
+    canonical: CV_PAGE_URL,
   },
   robots: {
     index: true,
@@ -46,7 +56,7 @@ export const metadata: Metadata = {
     type: "profile",
     title: cvTitle,
     description: cvDescription,
-    url: cvUrl,
+    url: CV_PAGE_URL,
     siteName: "Stefan Heißenberg",
     locale: "en_US",
     firstName: "Stefan",
@@ -56,7 +66,7 @@ export const metadata: Metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "Stefan Heißenberg — Head of Design CV",
+        alt: "Stefan Heißenberg — Head of Design CV, 15 years product & design leadership",
       },
     ],
   },
@@ -76,9 +86,9 @@ const profilePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   name: cvTitle,
-  url: cvUrl,
+  url: CV_PAGE_URL,
   description: cvDescription,
-  dateModified: new Date("2026-05-27").toISOString(),
+  dateModified: CV_LAST_MODIFIED_ISO,
   mainEntity: {
     "@type": "Person",
     "@id": "https://www.stefanheissenberg.de/#stefan-heissenberg",
@@ -108,54 +118,34 @@ const profilePageJsonLd = {
       "https://www.linkedin.com/in/stefanheissenberg/",
       "https://www.stefanheissenberg.de",
     ],
-    knowsAbout: [
-      "UX Strategy",
-      "Product Leadership",
-      "Design Leadership",
-      "Design Systems",
-      "UX Research",
-      "Product Discovery",
+    // LEARNING: hasOccupation = full career history; worksFor above = current employer only
+    hasOccupation: buildOccupations(CV_EXPERIENCE),
+    knowsAbout: buildKnowsAbout(CV_SKILLS, [
       "B2B SaaS",
       "Enterprise UX",
       "Logistics Technology",
-    ],
-    alumniOf: [
-      {
-        "@type": "CollegeOrUniversity",
-        name: "IB-Hochschule Berlin",
-        description: "Communication Design B.A. (2009–2012)",
-      },
-    ],
-    hasCredential: [
-      {
-        "@type": "EducationalOccupationalCredential",
-        name: "UX Master Certification",
-        credentialCategory: "certification",
-        recognizedBy: { "@type": "Organization", name: "Nielsen Norman Group" },
-        validFrom: "2023",
-        validUntil: "2025",
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        name: "Professional Scrum Master I (PSM I)",
-        credentialCategory: "certification",
-        recognizedBy: { "@type": "Organization", name: "Scrum.org" },
-        dateCreated: "2022",
-      },
-    ],
+    ]),
+    alumniOf: buildAlumniOf(CV_CREDENTIALS),
+    hasCredential: buildHasCredential(CV_CREDENTIALS),
   },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbList();
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function CvPage() {
   return (
     <>
-      {/* JSON-LD structured data injected as script tag */}
+      {/* JSON-LD structured data injected as script tags */}
       {/* LEARNING: dangerouslySetInnerHTML with JSON.stringify is the correct Next.js pattern for JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Page-scoped sticky nav with section anchors */}

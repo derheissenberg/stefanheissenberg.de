@@ -10,11 +10,12 @@ import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
 
-test("sitemap lists homepage only (unlisted-but-indexable policy)", () => {
+test("sitemap lists homepage and /cv (portfolio unlisted-but-indexable)", () => {
   const sitemap = readFileSync(join(root, "app/sitemap.ts"), "utf8");
   const urlEntries = [...sitemap.matchAll(/url:\s*(`[^`]+`|baseUrl)/g)].map((m) => m[0]);
-  assert.equal(urlEntries.length, 1, `expected one sitemap entry, got: ${urlEntries.join(", ")}`);
+  assert.equal(urlEntries.length, 2, `expected two sitemap entries, got: ${urlEntries.join(", ")}`);
   assert.match(urlEntries[0], /baseUrl/);
+  assert.match(sitemap, /url:\s*`\$\{baseUrl\}\/cv`/);
   assert.doesNotMatch(sitemap, /url:\s*[`'"][^`'"]*design-portfolio-sh/);
   assert.doesNotMatch(sitemap, /url:\s*[`'"]https?:\/\/[^`'"]*linkedin/i);
 });

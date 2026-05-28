@@ -4,11 +4,11 @@
  *
  * KEY CONCEPTS:
  * - Server Component — no client JS needed
- * - Portrait image reuses existing /public/images/ hero portrait
+ * - Portrait image: desktop (lg+) uses contain/right-bottom PNG; mobile uses cover/center JPG
+ * - Dual-image pattern mirrors HeroSection.tsx: hidden lg:block / lg:hidden wrappers
  * - Left-to-right gradient overlay (hero-fade) ensures text legibility over portrait
  * - h1 = Stefan (Outfit 200) + Heißenberg (gradient italic 800)
  * - Role kicker uses .type-kicker-wide + .gradient-text-safe
- * - Responsive: portrait fades on mobile, text stays readable
  * - min-height 760px desktop, auto on mobile to prevent overflow
  */
 
@@ -23,16 +23,38 @@ export function CvHeroSection() {
       style={{ minHeight: "760px", background: "var(--background)" }}
       aria-label="Introduction"
     >
-      {/* Portrait background — right-aligned */}
-      <div className="pointer-events-none absolute inset-0 mx-auto max-w-[1600px]" aria-hidden>
-        <Image
-          src="/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png"
-          alt=""
-          fill
-          className="object-contain object-right-bottom"
-          sizes="100vw"
-          priority
-        />
+      {/* Portrait background — desktop: right-aligned contain, mobile: cover */}
+      <div className="pointer-events-none absolute inset-0 mx-auto max-w-[1600px]">
+        {/* Desktop portrait — lg and above */}
+        <div className="pointer-events-none absolute inset-0 hidden lg:block">
+          <div className="relative h-full w-full">
+            <Image
+              src="/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png"
+              alt=""
+              fill
+              className="object-contain object-right-bottom"
+              priority
+              unoptimized
+              sizes="(max-width: 1600px) 100vw, 1600px"
+              aria-hidden
+            />
+          </div>
+        </div>
+        {/* Mobile portrait — below lg */}
+        <div className="pointer-events-none absolute inset-0 lg:hidden">
+          <div className="relative h-full w-full">
+            <Image
+              src="/images/hero-portrait-strategic-ux-design-stefan_heissenberg-mobile.jpg"
+              alt=""
+              fill
+              className="object-cover object-[center_20%]"
+              priority
+              unoptimized
+              sizes="(max-width: 1600px) 100vw, 1600px"
+              aria-hidden
+            />
+          </div>
+        </div>
       </div>
 
       {/* Left-to-right gradient fade — ensures text legibility */}

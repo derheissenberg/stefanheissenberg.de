@@ -10,14 +10,17 @@ import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
 
-test("sitemap lists homepage and /cv (portfolio unlisted-but-indexable)", () => {
+test("sitemap lists all public indexable routes", () => {
   const sitemap = readFileSync(join(root, "app/sitemap.ts"), "utf8");
-  const urlEntries = [...sitemap.matchAll(/url:\s*(`[^`]+`|baseUrl)/g)].map((m) => m[0]);
-  assert.equal(urlEntries.length, 2, `expected two sitemap entries, got: ${urlEntries.join(", ")}`);
-  assert.match(urlEntries[0], /baseUrl/);
-  assert.match(sitemap, /url:\s*`\$\{baseUrl\}\/cv`/);
-  assert.doesNotMatch(sitemap, /url:\s*[`'"][^`'"]*design-portfolio-sh/);
-  assert.doesNotMatch(sitemap, /url:\s*[`'"]https?:\/\/[^`'"]*linkedin/i);
+  const routes = readFileSync(join(root, "lib/seo/sitemap-routes.ts"), "utf8");
+
+  assert.match(sitemap, /PUBLIC_SITEMAP_ROUTES/);
+  assert.match(routes, /path: "\/cv"/);
+  assert.match(routes, /path: "\/design-portfolio-sh"/);
+  assert.match(routes, /path: "\/design-portfolio-sh\/dhl"/);
+  assert.match(routes, /path: "\/design-portfolio-sh\/saloodo"/);
+  assert.match(routes, /path: "\/design-portfolio-sh\/obinext"/);
+  assert.doesNotMatch(routes, /linkedin/i);
 });
 
 test("portfolio landing page has index:true metadata", () => {
@@ -28,13 +31,15 @@ test("portfolio landing page has index:true metadata", () => {
   assert.match(portfolioPage, /index:\s*true/);
 });
 
-test("case study pages have noindex metadata", () => {
-  // DHL case study should remain noindex
-  const dhlPage = readFileSync(
-    join(root, "app/design-portfolio-sh/dhl/page.tsx"),
-    "utf8",
-  );
-  assert.match(dhlPage, /index:\s*false/);
+test("case study pages have index:true metadata", () => {
+  for (const slug of ["dhl", "saloodo", "obinext"]) {
+    const page = readFileSync(
+      join(root, `app/design-portfolio-sh/${slug}/page.tsx`),
+      "utf8",
+    );
+    assert.match(page, /index:\s*true/, `${slug} case study should be indexable`);
+    assert.doesNotMatch(page, /index:\s*false/, `${slug} case study should not be noindex`);
+  }
 });
 
 test("shared trust badge data exists", () => {

@@ -30,14 +30,10 @@ const baseUrl = "https://www.stefanheissenberg.de";
 const ogImage = "https://www.stefanheissenberg.de/_assets/v11/8a48c1e089ad8c8a5243b9cb08ab393088169f94.png";
 
 /**
- * ARCHITECTURE NOTE: Robots policy change (2026-05-23)
+ * ARCHITECTURE NOTE: Robots policy (2026-05-28)
  *
- * Changed from { index: false, follow: true } to { index: true, follow: true }
- * because the portfolio page now contains unique, valuable content (AI-powered
- * interactive hero) that should be discoverable via search engines.
- *
- * Case studies (dhl, saloodo, obinext) remain noindex as they duplicate content
- * from the portfolio landing. This page is the canonical entry point.
+ * Portfolio hub and all case study pages are index: true — linked from /cv and
+ * listed in sitemap.xml. Each case study also ships Article JSON-LD.
  */
 export const metadata: Metadata = {
   title: "UX Design Portfolio | Stefan Heißenberg | UX Strategy & Case Studies",
@@ -46,7 +42,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/design-portfolio-sh`,
   },
   robots: {
-    index: true, // INDEX: Portfolio page with AI chat hero is canonical entry point
+    index: true,
     follow: true,
   },
   openGraph: {
@@ -71,6 +67,32 @@ export const metadata: Metadata = {
   },
 };
 
+const portfolioCollectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "UX Design Portfolio — Stefan Heißenberg",
+  url: `${baseUrl}/design-portfolio-sh`,
+  description:
+    "Selected UX strategy and design case studies: myDHLi (DHL), Saloodo!, and OBI Next.",
+  hasPart: [
+    {
+      "@type": "Article",
+      "@id": `${baseUrl}/design-portfolio-sh/dhl`,
+      name: "DHL UX Case Study — myDHLi",
+    },
+    {
+      "@type": "Article",
+      "@id": `${baseUrl}/design-portfolio-sh/saloodo`,
+      name: "Saloodo! UX Case Study",
+    },
+    {
+      "@type": "Article",
+      "@id": `${baseUrl}/design-portfolio-sh/obinext`,
+      name: "OBI Next UX Case Study",
+    },
+  ],
+};
+
 const portraitVars = {
   "--chat-portrait-desktop": "url('/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png')",
   "--chat-portrait-mobile": "url('/images/hero-portrait-strategic-ux-design-stefan_heissenberg-mobile.jpg')",
@@ -80,6 +102,10 @@ const portraitVars = {
 export default function DesignPortfolioPage() {
   return (
     <main className="relative w-full bg-[var(--chat-page-bg)]" style={portraitVars}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioCollectionJsonLd) }}
+      />
       {/* Chat Hero - AI-powered interactive hero with portrait background */}
       <Chat theme="stefan-portfolio" assistantLabel="Stefan's Assistant" />
 

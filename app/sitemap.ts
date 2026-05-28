@@ -6,35 +6,19 @@
  *
  * PREVIEW: Visit /sitemap.xml when dev server runs to preview the generated XML
  *
- * REFRESH COMMAND (after homepage updates):
- *   git log -1 --format=%cI -- app/page.tsx
- *
  * POLICY (aligned with robots metadata):
- *   - Only the homepage is listed here (index: true, authoritative entry point).
- *   - /design-portfolio-sh has index: true and is crawlable via links, but is
- *     intentionally omitted from this sitemap (unlisted but indexable policy).
- *     It surfaces only when Google discovers it through internal links.
- *   - Case studies (dhl, saloodo, obinext) remain noindex — crawlable via links,
- *     not listed in sitemap, not intended for search results.
- *   - No third-party URLs (Google ignores them in site sitemaps).
+ *   - Lists all public indexable routes: homepage, /cv, portfolio hub, case studies
+ *   - Routes defined in lib/seo/sitemap-routes.ts (single source of truth)
+ *   - No third-party URLs (Google ignores them in site sitemaps)
  */
 
 import type { MetadataRoute } from "next";
-import { CV_LAST_MODIFIED_ISO } from "@/lib/data/cv/cv-meta";
-
-const baseUrl = "https://www.stefanheissenberg.de";
+import { PUBLIC_SITEMAP_ROUTES, SITE_BASE_URL } from "@/lib/seo/sitemap-routes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date("2026-05-06T16:47:34+02:00"),
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/cv`,
-      lastModified: new Date(CV_LAST_MODIFIED_ISO),
-      priority: 0.9,
-    },
-  ];
+  return PUBLIC_SITEMAP_ROUTES.map((route) => ({
+    url: route.path ? `${SITE_BASE_URL}${route.path}` : SITE_BASE_URL,
+    lastModified: new Date(route.lastModified),
+    priority: route.priority,
+  }));
 }

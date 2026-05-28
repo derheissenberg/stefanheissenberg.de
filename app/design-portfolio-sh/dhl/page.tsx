@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/design-portfolio-sh/dhl`,
   },
   robots: {
-    index: false, // LEARNING: Exclude this case study page from search engine indexing
-    follow: true, // LEARNING: Allow search engines to follow links (for link equity)
+    index: true,
+    follow: true,
   },
   openGraph: {
     url: `${baseUrl}/design-portfolio-sh/dhl`,

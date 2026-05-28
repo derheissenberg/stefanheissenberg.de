@@ -69,7 +69,8 @@ Cologne, North Rhine-Westphalia, Germany. Open to European opportunities.
 
 ## Crawling notes
 
-- [Sitemap](https://www.stefanheissenberg.de/sitemap.xml): lists homepage and `/cv`.
-- Portfolio case studies at `/design-portfolio-sh` are crawlable via links; individual case study pages use `noindex, follow`.
+- [Sitemap](https://www.stefanheissenberg.de/sitemap.xml): lists homepage, `/cv`, `/design-portfolio-sh`, and case studies (`/dhl`, `/saloodo`, `/obinext`).
+- All portfolio and case study pages are indexable (`index: true`) and linked from `/cv`.
 - Homepage and `/cv` JSON-LD: Person and ProfilePage structured data in initial HTML.
+- Case study pages include Article JSON-LD in initial HTML.
 - This file: https://www.stefanheissenberg.de/llms.txt

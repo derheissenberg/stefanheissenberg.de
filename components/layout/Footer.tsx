@@ -4,6 +4,7 @@
  */
 
 const socialLinks = [
+  { label: "CV", href: "/cv" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/stefanheissenberg/" },
   { label: "Product Hunt", href: "https://www.producthunt.com/@derheissenberg" },
   { label: "GitHub", href: "https://github.com/derheissenberg" },

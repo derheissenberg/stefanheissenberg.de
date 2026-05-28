@@ -17,13 +17,13 @@ type SystemRailItem = {
 const systemRailItems: SystemRailItem[] = [
   {
     src: "/images/mydhli/scaled-design-system/1-UI-library.jpeg",
-    alt: "Component canvas with hexagons",
+    alt: "Design system component audit canvas — mapping UI library across DHL B2B portals",
     step: "Audit · 2020",
     caption: "Mapping the component landscape across DHL's portals before deciding what to keep, replace, or build.",
   },
   {
     src: "/images/mydhli/scaled-design-system/5-design-lifecycle.png",
-    alt: "Creation to publish workflow",
+    alt: "Design system component lifecycle workflow — design ops from creation to publication",
     step: "Process · 2021",
     caption: "The component lifecycle: every new component moves through quality check, design review, and publication.",
     imageClassName: "object-contain",
@@ -31,19 +31,19 @@ const systemRailItems: SystemRailItem[] = [
   },
   {
     src: "/images/mydhli/scaled-design-system/2-scaled-design-system.webp",
-    alt: "Wireframe to UI evolution",
+    alt: "Scaled design system wireframe to UI evolution — enterprise component governance",
     step: "Foundation · 2022",
     caption: "Wireframe to component to live UI — the same pattern, governed across business units.",
   },
   {
     src: "/images/mydhli/scaled-design-system/3-from-sketch.webp",
-    alt: "UI mockups variety",
+    alt: "Design system UI component library — forms, navigation, and notifications for global B2B product",
     step: "Scale · 2023",
     caption: "Forms, navigation, notifications, brand refresh prompts — components covering the full surface area of a global B2B product.",
   },
   {
     src: "/images/mydhli/scaled-design-system/4-mobile-example.webp",
-    alt: "Light and dark mobile screens",
+    alt: "Design system light and dark mode mobile screens — tokenised components and theming",
     step: "Themes · 2024",
     caption: "Light and dark mode shipped from the same tokenised component. One source of truth, two expressions.",
   },

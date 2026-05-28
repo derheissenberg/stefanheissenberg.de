@@ -13,6 +13,7 @@
 
 import Image from "next/image";
 import { CaseStudyTeaser } from "./CaseStudyTeaser";
+import { customerLogoAlt } from "@/lib/seo/image-alt";
 
 export function OBINextCaseStudyTeaser() {
   return (
@@ -25,7 +26,7 @@ export function OBINextCaseStudyTeaser() {
         <div className="relative h-auto w-full max-w-[180px]">
           <Image
             src="/images/customers/11-obi-next.png"
-            alt="OBI Next Logo"
+            alt={customerLogoAlt("/images/customers/11-obi-next.png", "OBI Next")}
             width={180}
             height={80}
             className="h-auto w-full object-contain"
@@ -38,7 +39,7 @@ export function OBINextCaseStudyTeaser() {
         "OBI Next was OBI Group's bet that a retailer could move like a startup. I came in with sunzinet to build the bathroom planner MVP in 30 days — then stayed six months to prove it worked with data. The pattern we found became OBI's playbook for digital services: kitchen planner, garden planner, 14 configurators across 640+ stores.",
       ]}
       imageSrc="/images/portfolio/obinext-casestudy-teaser.png"
-      imageAlt="OBI Next bathroom planner on laptop"
+      imageAlt="OBI Next digital bathroom planner on laptop — retail UX, product discovery, and workshop-to-MVP innovation case study"
       imagePosition="left"
     />
   );

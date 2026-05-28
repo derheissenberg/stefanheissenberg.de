@@ -27,21 +27,21 @@ const warRoomSliderItems = [
     caption:
       "Kick-off workshop: Design Thinking sessions with stakeholders across OBI to align on customer pain points and business goals.",
     src: "/images/obinext/kick-off-workshop.png",
-    alt: "Kick-off workshop whiteboard with project goals and strategy",
+    alt: "OBI Next kick-off Design Thinking workshop — stakeholder alignment and product discovery sprint",
   },
   {
     step: "Step 02 · Week 2",
     caption:
       "Tracking concept: Analytics framework designed from day one to measure every click and user interaction.",
     src: "/images/obinext/tracking-concept.png",
-    alt: "Analytics tracking and measurement concept",
+    alt: "OBI Next analytics and tracking concept — behavioral analytics and data-driven UX design",
   },
   {
     step: "Step 03 · Week 3-4",
     caption:
       "UX lab setup: Moderated user interviews and testing sessions in our loft space near the agency.",
     src: "/images/obinext/ux-labor-interviews-moderated-usertests.png",
-    alt: "UX lab and meeting room setup",
+    alt: "OBI Next UX lab with moderated user interviews — usability testing and user research setup",
   },
 ];
 

@@ -61,29 +61,28 @@ export const metadata: Metadata = {
 // LEARNING: Customer logos for the "Global Launch" section
 // These are stored as SVGs in the mydhli/customers folder
 const customerLogos = [
-  { src: "/images/mydhli/customers/HP.svg", alt: "HP", width: 60, height: 60 },
-  { src: "/images/mydhli/customers/Dell.svg", alt: "Dell", width: 60, height: 60 },
-  { src: "/images/mydhli/customers/Bayer.svg", alt: "Bayer", width: 60, height: 60 },
-  { src: "/images/mydhli/customers/Apple.svg", alt: "Apple", width: 50, height: 60 },
-  { src: "/images/mydhli/customers/Airbus.svg", alt: "Airbus", width: 162, height: 30 },
-  { src: "/images/mydhli/customers/3M.svg", alt: "3M", width: 60, height: 32 },
-  { src: "/images/mydhli/customers/Johnson&Johnson.svg", alt: "Johnson & Johnson", width: 300, height: 28 },
-  { src: "/images/mydhli/customers/Siemens.svg", alt: "Siemens", width: 189, height: 30 },
-  { src: "/images/mydhli/customers/nokia.svg", alt: "Nokia", width: 128, height: 30 },
-  { src: "/images/mydhli/customers/Samsung.svg", alt: "Samsung", width: 195, height: 30 },
-  { src: "/images/mydhli/customers/Boeing.svg", alt: "Boeing", width: 219, height: 50 },
+  { src: "/images/mydhli/customers/HP.svg", alt: "HP logo — myDHLi enterprise logistics customer", width: 60, height: 60 },
+  { src: "/images/mydhli/customers/Dell.svg", alt: "Dell logo — myDHLi B2B shipping platform customer", width: 60, height: 60 },
+  { src: "/images/mydhli/customers/Bayer.svg", alt: "Bayer logo — healthcare enterprise customer on myDHLi", width: 60, height: 60 },
+  { src: "/images/mydhli/customers/Apple.svg", alt: "Apple logo — global enterprise customer on myDHLi portal", width: 50, height: 60 },
+  { src: "/images/mydhli/customers/Airbus.svg", alt: "Airbus logo — aerospace logistics customer on myDHLi", width: 162, height: 30 },
+  { src: "/images/mydhli/customers/3M.svg", alt: "3M logo — industrial enterprise customer on myDHLi", width: 60, height: 32 },
+  { src: "/images/mydhli/customers/Johnson&Johnson.svg", alt: "Johnson & Johnson logo — healthcare enterprise myDHLi customer", width: 300, height: 28 },
+  { src: "/images/mydhli/customers/Siemens.svg", alt: "Siemens logo — manufacturing enterprise myDHLi customer", width: 189, height: 30 },
+  { src: "/images/mydhli/customers/nokia.svg", alt: "Nokia logo — technology enterprise myDHLi customer", width: 128, height: 30 },
+  { src: "/images/mydhli/customers/Samsung.svg", alt: "Samsung logo — global enterprise myDHLi customer", width: 195, height: 30 },
+  { src: "/images/mydhli/customers/Boeing.svg", alt: "Boeing logo — aerospace enterprise myDHLi customer", width: 219, height: 50 },
 ];
 
-// LEARNING: UX Research tool logos for the analytics section
 const uxResearchLogos = [
-  { src: "/images/mydhli/uxresearch/Usertesting.svg", alt: "UserTesting", width: 227, height: 60 },
-  { src: "/images/mydhli/uxresearch/Hotjar.svg", alt: "Hotjar", width: 125, height: 60 },
-  { src: "/images/mydhli/uxresearch/ai-studio.svg", alt: "AI Studio", width: 345, height: 50 },
-  { src: "/images/mydhli/uxresearch/GTM.svg", alt: "Google Tag Manager", width: 60, height: 60 },
-  { src: "/images/mydhli/uxresearch/google-analytics.svg", alt: "Google Analytics", width: 52, height: 60 },
+  { src: "/images/mydhli/uxresearch/Usertesting.svg", alt: "UserTesting logo — moderated UX research and usability testing platform", width: 227, height: 60 },
+  { src: "/images/mydhli/uxresearch/Hotjar.svg", alt: "Hotjar logo — behavioral analytics and qualitative UX research tooling", width: 125, height: 60 },
+  { src: "/images/mydhli/uxresearch/ai-studio.svg", alt: "AI Studio logo — generative AI tooling for design ops and research workflows", width: 345, height: 50 },
+  { src: "/images/mydhli/uxresearch/GTM.svg", alt: "Google Tag Manager logo — conversion tracking and analytics implementation", width: 60, height: 60 },
+  { src: "/images/mydhli/uxresearch/google-analytics.svg", alt: "Google Analytics logo — product analytics and data-driven UX decisions", width: 52, height: 60 },
   {
     src: "/images/mydhli/uxresearch/adobe-analytics.svg",
-    alt: "Adobe Analytics",
+    alt: "Adobe Analytics logo — enterprise behavioral analytics for B2B product design",
     width: 168,
     height: 28,
   },
@@ -159,7 +158,7 @@ export default function DHLCaseStudyPage() {
               <div className="relative aspect-square w-full overflow-hidden rounded-lg">
                 <Image
                   src="/images/mydhli/logistic-industry-status.png"
-                  alt="Logistics industry status and market overview"
+                  alt="Global logistics market overview infographic — B2B freight industry context for myDHLi UX strategy"
                   fill
                   className="object-contain"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -445,7 +444,7 @@ export default function DHLCaseStudyPage() {
                 <div className="relative aspect-[2000/1703] w-full overflow-hidden rounded-lg">
                   <Image
                     src="/images/mydhli/welcome-ipad.png"
-                    alt="myDHLi Welcome screen on iPad"
+                    alt="myDHLi welcome and onboarding screen on iPad — enterprise B2B SaaS UX and customer onboarding design"
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 820px"

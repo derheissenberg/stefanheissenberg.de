@@ -58,27 +58,25 @@ export const metadata: Metadata = {
 // LEARNING: Tech stack logos for the "Refactoring for Scale" section
 // Using actual logos from refactoring-design-system folder
 const techStackLogos = [
-  { src: "/images/saloodo/refactoring-design-system/abstract-design-versions.svg", alt: "Abstract", width: 60, height: 60 },
-  { src: "/images/saloodo/refactoring-design-system/atomic-design.svg", alt: "Atomic Design", width: 60, height: 60 },
-  { src: "/images/saloodo/refactoring-design-system/sketch-ui-design.svg", alt: "Sketch", width: 66, height: 60 },
-  { src: "/images/saloodo/refactoring-design-system/zeplin-design-system-styleguide-components.svg", alt: "Zeplin", width: 75, height: 60 },
-  { src: "/images/saloodo/refactoring-design-system/storybook-living-styleguide-components-design-system.svg", alt: "Storybook", width: 48, height: 60 },
-  { src: "/images/saloodo/refactoring-design-system/react-components.svg", alt: "React", width: 67, height: 60 },
-  { src: "/images/saloodo/refactoring-design-system/browserstack-component-testing.svg", alt: "Browserstack", width: 60, height: 60 },
+  { src: "/images/saloodo/refactoring-design-system/abstract-design-versions.svg", alt: "Abstract logo — design version control for scalable design system workflow", width: 60, height: 60 },
+  { src: "/images/saloodo/refactoring-design-system/atomic-design.svg", alt: "Atomic Design methodology — component-based design system architecture", width: 60, height: 60 },
+  { src: "/images/saloodo/refactoring-design-system/sketch-ui-design.svg", alt: "Sketch logo — UI design tooling for marketplace product design", width: 66, height: 60 },
+  { src: "/images/saloodo/refactoring-design-system/zeplin-design-system-styleguide-components.svg", alt: "Zeplin logo — design system handoff and styleguide documentation", width: 75, height: 60 },
+  { src: "/images/saloodo/refactoring-design-system/storybook-living-styleguide-components-design-system.svg", alt: "Storybook logo — living component library for design systems at scale", width: 48, height: 60 },
+  { src: "/images/saloodo/refactoring-design-system/react-components.svg", alt: "React logo — front-end component implementation for design system tokens", width: 67, height: 60 },
+  { src: "/images/saloodo/refactoring-design-system/browserstack-component-testing.svg", alt: "BrowserStack logo — cross-browser component testing for design QA", width: 60, height: 60 },
 ];
 
-// LEARNING: Analytics tool logos for the "UX ROI" section
-// Using actual logos from ux-roi folder
 const analyticsLogos = [
-  { src: "/images/saloodo/ux-roi/Hotjar.svg", alt: "Hotjar", width: 125, height: 60 },
-  { src: "/images/saloodo/ux-roi/Intercom.svg", alt: "Intercom", width: 60, height: 60 },
-  { src: "/images/saloodo/ux-roi/Elastic.svg", alt: "Elastic", width: 60, height: 60 },
-  { src: "/images/saloodo/ux-roi/Segment.svg", alt: "Segment", width: 58, height: 60 },
-  { src: "/images/saloodo/ux-roi/Salesforce.svg", alt: "Salesforce", width: 86, height: 60 },
-  { src: "/images/saloodo/ux-roi/GTM.svg", alt: "Google Tag Manager", width: 60, height: 60 },
-  { src: "/images/saloodo/ux-roi/google-ads.svg", alt: "Google Ads", width: 66, height: 60 },
-  { src: "/images/saloodo/ux-roi/googleanalytics.svg", alt: "Google Analytics", width: 52, height: 60 },
-  { src: "/images/saloodo/ux-roi/power-bi.svg", alt: "Power BI", width: 45, height: 60 },
+  { src: "/images/saloodo/ux-roi/Hotjar.svg", alt: "Hotjar logo — behavioral analytics and UX research for conversion optimisation", width: 125, height: 60 },
+  { src: "/images/saloodo/ux-roi/Intercom.svg", alt: "Intercom logo — customer messaging and product feedback loops", width: 60, height: 60 },
+  { src: "/images/saloodo/ux-roi/Elastic.svg", alt: "Elastic logo — search and analytics infrastructure for data-driven design", width: 60, height: 60 },
+  { src: "/images/saloodo/ux-roi/Segment.svg", alt: "Segment logo — customer data platform for product analytics", width: 58, height: 60 },
+  { src: "/images/saloodo/ux-roi/Salesforce.svg", alt: "Salesforce logo — CRM integration for B2B marketplace operations", width: 86, height: 60 },
+  { src: "/images/saloodo/ux-roi/GTM.svg", alt: "Google Tag Manager logo — conversion tracking and growth analytics", width: 60, height: 60 },
+  { src: "/images/saloodo/ux-roi/google-ads.svg", alt: "Google Ads logo — performance marketing and acquisition analytics", width: 66, height: 60 },
+  { src: "/images/saloodo/ux-roi/googleanalytics.svg", alt: "Google Analytics logo — product analytics and UX ROI measurement", width: 52, height: 60 },
+  { src: "/images/saloodo/ux-roi/power-bi.svg", alt: "Power BI logo — business intelligence dashboards for product decisions", width: 45, height: 60 },
 ];
 
 /** Matches SaloodoCaseStudyHero badge (Kode Mono); cyan palette for in-page case study card */
@@ -182,7 +180,7 @@ export default function SaloodoCaseStudyPage() {
             <div className="parallax-layer parallax-slow absolute inset-0">
               <Image
                 src="/images/saloodo/Component-example-macbook 1.png"
-                alt="Saloodo component library example on MacBook"
+                alt="Saloodo design system component library on MacBook — atomic design, Storybook, and scalable marketplace UI"
                 fill
                 className="object-contain"
                 sizes="100vw"
@@ -271,7 +269,7 @@ export default function SaloodoCaseStudyPage() {
             <div className="parallax-layer parallax-slow absolute inset-0">
               <Image
                 src="/images/saloodo/app-screens.png"
-                alt="Saloodo app screens showing various platform features"
+                alt="Saloodo freight marketplace app screens — founding designer UX, conversion funnel, and data-driven product design"
                 fill
                 className="object-contain"
                 sizes="100vw"
@@ -341,7 +339,7 @@ export default function SaloodoCaseStudyPage() {
               <div className="absolute inset-0">
                 <Image
                   src="/images/saloodo/complete-payment.png"
-                  alt="Saloodo complete payment flow"
+                  alt="Saloodo end-to-end payment flow UI — B2B marketplace checkout and conversion optimisation design"
                   fill
                   className="object-contain"
                   sizes="100vw"
@@ -480,7 +478,7 @@ export default function SaloodoCaseStudyPage() {
                     <div className="relative mx-auto aspect-[297/590] w-full max-w-[240px] overflow-hidden lg:max-w-[280px]">
                       <Image
                         src="/images/saloodo/android-mockup-whattsapp 1.png"
-                        alt="WhatsApp integration for Africa"
+                        alt="Saloodo WhatsApp integration for African markets — localised UX and go-to-market product design"
                         fill
                         className="object-contain"
                         sizes="(max-width: 1024px) 240px, 280px"
@@ -575,7 +573,7 @@ export default function SaloodoCaseStudyPage() {
             <div className="parallax-layer parallax-slow absolute inset-0">
               <Image
                 src="/images/saloodo/ipad-shipmentlist.png"
-                alt="Saloodo iPad shipment list view"
+                alt="Saloodo shipment list on iPad — logistics marketplace UX and carrier management interface"
                 fill
                 className="object-contain"
                 sizes="100vw"

@@ -4,6 +4,7 @@
  *
  * KEY CONCEPTS:
  * - imageSrc paths reference existing /public/images/ directories
+ * - imageAlt strings are SEO- and accessibility-friendly descriptions with relevant UX/product keywords
  * - Only 3 highlights shown: DHL, Saloodo, OBI Next
  */
 
@@ -12,7 +13,8 @@ import type { CvCaseStudy } from "@/types/cv";
 export const CV_CASE_STUDIES: CvCaseStudy[] = [
   {
     imageSrc: "/images/mydhli/Dashboard-collage.png",
-    imageAlt: "myDHLi — DHL Global Forwarding B2B Portal",
+    imageAlt:
+      "myDHLi B2B portal dashboard on desktop, tablet, and mobile — enterprise UX design, design systems, and product leadership by Stefan Heißenberg at DHL Global Forwarding",
     kicker: "DHL Global Forwarding · 2020 — Present",
     title: "Building the ",
     titleHighlight: "central B2B portal",
@@ -22,7 +24,8 @@ export const CV_CASE_STUDIES: CvCaseStudy[] = [
   },
   {
     imageSrc: "/images/saloodo/app-screens.png",
-    imageAlt: "Saloodo! — DHL Logistics Marketplace",
+    imageAlt:
+      "Saloodo logistics marketplace app screens — founding designer UX, conversion optimisation, and data-driven product design for DHL freight marketplace",
     kicker: "Saloodo! · 2018 — 2020",
     title: "Founding designer for a ",
     titleHighlight: "logistics disruptor",
@@ -32,7 +35,8 @@ export const CV_CASE_STUDIES: CvCaseStudy[] = [
   },
   {
     imageSrc: "/images/obinext/hero-obinext.png",
-    imageAlt: "OBI Next — Digital Bathroom Planner",
+    imageAlt:
+      "OBI Next digital bathroom planner on laptop and mobile — retail product discovery UX, workshop-to-MVP sprint, and enterprise innovation consulting",
     kicker: "OBI Next · 2016 — 2017",
     title: "30 days: workshop to ",
     titleHighlight: "MVP launch",

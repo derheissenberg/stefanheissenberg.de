@@ -85,7 +85,7 @@ export function DHLCaseStudyHero() {
               controls
               className="h-full w-full object-cover"
               poster="/images/portfolio/dhl-casestudy-hero.jpg"
-              aria-label="myDHLi – Simply Connected. Digital logistics boosting your business"
+              aria-label="myDHLi product demo video — B2B logistics portal UX, digital quoting, and enterprise customer onboarding by Stefan Heißenberg"
             >
               <source src="/videos/myDHLi – Simply Connected. Digital logistics boosting your business..mp4" type="video/mp4" />
               Your browser does not support the video tag.

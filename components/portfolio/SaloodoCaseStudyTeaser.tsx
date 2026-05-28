@@ -12,6 +12,7 @@
 
 import Image from "next/image";
 import { CaseStudyTeaser } from "./CaseStudyTeaser";
+import { customerLogoAlt } from "@/lib/seo/image-alt";
 
 export function SaloodoCaseStudyTeaser() {
   return (
@@ -23,7 +24,7 @@ export function SaloodoCaseStudyTeaser() {
         <div className="relative h-auto w-full max-w-[180px]">
           <Image
             src="/images/customers/19-saloodo.png"
-            alt="Saloodo Logo"
+            alt={customerLogoAlt("/images/customers/19-saloodo.png", "Saloodo")}
             width={180}
             height={80}
             className="h-auto w-full object-contain"
@@ -38,7 +39,7 @@ export function SaloodoCaseStudyTeaser() {
       imageSrc="/images/portfolio/casestudy-saloodo_visual_MEA-desktop.png"
       imageSrcDesktop="/images/portfolio/casestudy-saloodo_visual_MEA-desktop.png"
       imageSrcMobile="/images/portfolio/casestudy-saloodo_visual_MEA-responsive.png"
-      imageAlt="Saloodo truck on futuristic road"
+      imageAlt="Saloodo digital freight marketplace truck visual — founding designer UX, data-driven logistics product design case study"
       imagePosition="right"
     />
   );

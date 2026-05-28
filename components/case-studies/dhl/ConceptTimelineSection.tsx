@@ -16,43 +16,43 @@ const railItems: RailItem[] = [
     step: "Step 01 · Late 2018",
     caption: "1st scribble of myDHLi from 2019.",
     src: "/images/mydhli/concept-design-scribble.png",
-    alt: "1st scribble of myDHLi",
+    alt: "Early myDHLi product concept sketch — B2B logistics portal UX ideation and product discovery",
   },
   {
     step: "Step 02 · 2019",
     caption: "1st Axure prototype for customer interviews and stakeholder workshops.",
     src: "/images/mydhli/concept-low-fidelity-wireframe.png",
-    alt: "1st Axure prototype for customer interviews and stakeholder workshops",
+    alt: "myDHLi low-fidelity Axure prototype for stakeholder workshops and UX research interviews",
   },
   {
     step: "Step 03 · 2019",
     caption: "Early flow chart for system discovery, and basis for self-registration.",
     src: "/images/mydhli/flowcharts-uxflow-architecture-design.png",
-    alt: "Early flow chart for system discovery",
+    alt: "myDHLi user flow and information architecture diagram — enterprise UX and system discovery",
   },
   {
     step: "Step 04 · 2019",
     caption: "Early DHL landscape and architecture brainstorming session.",
     src: "/images/mydhli/architecture-hands-on-concepts.png",
-    alt: "Early DHL landscape and architecture brainstorming session",
+    alt: "DHL digital landscape brainstorming session — cross-functional product strategy and UX alignment",
   },
   {
     step: "Step 05 · 2019",
     caption: "Initial myDHLi Kick-Off/Stakeholder Workshops with Saloodo-Team in Bonn",
     src: "/images/mydhli/kick-off-workshop-stakeholder.png",
-    alt: "Initial myDHLi kick-off/stakeholder workshops with Saloodo-Team in Bonn",
+    alt: "myDHLi kick-off stakeholder workshop in Bonn — design leadership and stakeholder governance",
   },
   {
     step: "Step 06",
     caption: "UX-Research & Analytics Training",
     src: "/images/mydhli/analytics-coaching-stefanheissenberg.png",
-    alt: "UX-Research & Analytics Training",
+    alt: "UX research and analytics training session — building evidence-based product design capability",
   },
   {
     step: "Step 07",
     caption: "IT-Workshops in Prague",
     src: "/images/mydhli/it-workshops.png",
-    alt: "IT-Workshops in Prague",
+    alt: "Cross-functional IT workshop in Prague — design systems collaboration with engineering teams",
   },
 ];
 
@@ -99,7 +99,7 @@ export function ConceptTimelineSection() {
             <div className="relative aspect-[645/482] w-full overflow-hidden rounded-lg lg:aspect-auto lg:h-full">
               <Image
                 src="/images/mydhli/Dashboard-collage.png"
-                alt="myDHLi Dashboard shown on iMac, iPad, and iPhone demonstrating responsive design"
+                alt="myDHLi enterprise dashboard on iMac, iPad, and iPhone — responsive B2B SaaS UX design and design systems at scale"
                 fill
                 className="object-contain object-center"
                 sizes="(max-width: 768px) 100vw, 55vw"

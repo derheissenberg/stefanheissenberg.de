@@ -225,7 +225,7 @@ export default function OBINextCaseStudyPage() {
               <div className="relative aspect-[1000/902] w-full">
                 <Image
                   src="/images/obinext/hero-obinext.png"
-                  alt="OBI Next bathroom planner MVP shown on iMac and iPhone"
+                  alt="OBI Next digital bathroom planner MVP on iMac and iPhone — retail product configurator UX and workshop-to-launch sprint"
                   fill
                   className="object-contain"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -275,7 +275,7 @@ export default function OBINextCaseStudyPage() {
             <div className="relative aspect-[2332/900] w-full max-w-[1000px]">
               <Image
                 src="/images/obinext/teaser-badplanungsunterlagen.png"
-                alt="Bathroom planning documents teaser"
+                alt="OBI Next bathroom planning documents and customer journey artifacts — product discovery deliverables"
                 fill
                 className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 1000px"
@@ -390,7 +390,7 @@ export default function OBINextCaseStudyPage() {
               <div className="parallax-layer parallax-slow absolute inset-0">
                 <Image
                   src="/images/obinext/Beratungstermin-vereinbaren-Step1-MacBook.png"
-                  alt="Consultation booking step on MacBook"
+                  alt="OBI Next in-store consultation booking on MacBook — omnichannel retail UX and service design"
                   fill
                   className="object-contain"
                   sizes="(max-width: 1024px) 100vw, 1156px"
@@ -451,7 +451,7 @@ export default function OBINextCaseStudyPage() {
             <div className="relative aspect-[1920/1201] w-full max-w-[1160px]">
               <Image
                 src="/images/obinext/obi-next-project-ending.png"
-                alt="OBI Next project showcase with multiple device mockups"
+                alt="OBI Next digital bathroom planner showcase across devices — enterprise retail innovation case study"
                 fill
                 className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 1160px"

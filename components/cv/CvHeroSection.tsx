@@ -14,6 +14,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { CV_HERO_PORTRAIT_ALT } from "@/lib/seo/image-alt";
 
 export function CvHeroSection() {
   return (
@@ -30,13 +31,12 @@ export function CvHeroSection() {
           <div className="relative h-full w-full">
             <Image
               src="/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png"
-              alt=""
+              alt={CV_HERO_PORTRAIT_ALT}
               fill
               className="object-contain object-right-bottom"
               priority
               unoptimized
               sizes="(max-width: 1600px) 100vw, 1600px"
-              aria-hidden
             />
           </div>
         </div>
@@ -45,13 +45,12 @@ export function CvHeroSection() {
           <div className="relative h-full w-full">
             <Image
               src="/images/hero-portrait-strategic-ux-design-stefan_heissenberg-mobile.jpg"
-              alt=""
+              alt={CV_HERO_PORTRAIT_ALT}
               fill
               className="object-cover object-[center_20%]"
               priority
               unoptimized
               sizes="(max-width: 1600px) 100vw, 1600px"
-              aria-hidden
             />
           </div>
         </div>

@@ -4,34 +4,38 @@
  *
  * KEY CONCEPTS:
  * - Server Component — reuses existing CaseStudyLogoStack
- * - All 15 logos from /public/images/customers/ are included (all verified to exist)
+ * - Alt text enriched via lib/seo/image-alt.ts for SEO and accessibility
  * - Passes showKicker=true with CV-specific label
- * - showTopBorder and showBottomBorder both true for the full horizontal rule treatment
- * - No new component needed — CaseStudyLogoStack handles everything
  */
 
 import {
   CaseStudyLogoStack,
   type CaseStudyLogoStackItem,
 } from "@/components/case-studies/CaseStudyLogoStack";
+import { customerLogoAlt } from "@/lib/seo/image-alt";
 
-const CV_CLIENT_LOGOS: CaseStudyLogoStackItem[] = [
-  { src: "/images/customers/01-galderma.svg", alt: "Galderma", width: 120, height: 40 },
-  { src: "/images/customers/02-biontech.png", alt: "BioNTech", width: 120, height: 40 },
-  { src: "/images/customers/03-dhl.png", alt: "DHL", width: 120, height: 40 },
-  { src: "/images/customers/04-bayer.png", alt: "Bayer", width: 120, height: 40 },
-  { src: "/images/customers/05-nkt.png", alt: "NKT", width: 120, height: 40 },
-  { src: "/images/customers/06-avene.png", alt: "Avène", width: 120, height: 40 },
-  { src: "/images/customers/07-kunstsammlung-nrw.png", alt: "Kunstsammlung NRW", width: 120, height: 40 },
-  { src: "/images/customers/08-lesmills.png", alt: "Les Mills", width: 120, height: 40 },
-  { src: "/images/customers/09.yazaki.png", alt: "Yazaki", width: 120, height: 40 },
-  { src: "/images/customers/10-messeDuesseldorf.png", alt: "Messe Düsseldorf", width: 120, height: 40 },
-  { src: "/images/customers/11-obi-next.png", alt: "OBI Next", width: 120, height: 40 },
-  { src: "/images/customers/12-msd.png", alt: "MSD", width: 120, height: 40 },
-  { src: "/images/customers/13-berner-group.png", alt: "Berner Group", width: 120, height: 40 },
-  { src: "/images/customers/14-docCheck.png", alt: "DocCheck", width: 120, height: 40 },
-  { src: "/images/customers/15-freseniuskabi.png", alt: "Fresenius Kabi", width: 120, height: 40 },
+const CV_CLIENT_LOGO_SOURCES: Omit<CaseStudyLogoStackItem, "alt">[] = [
+  { src: "/images/customers/01-galderma.svg", width: 120, height: 40 },
+  { src: "/images/customers/02-biontech.png", width: 120, height: 40 },
+  { src: "/images/customers/03-dhl.png", width: 120, height: 40 },
+  { src: "/images/customers/04-bayer.png", width: 120, height: 40 },
+  { src: "/images/customers/05-nkt.png", width: 120, height: 40 },
+  { src: "/images/customers/06-avene.png", width: 120, height: 40 },
+  { src: "/images/customers/07-kunstsammlung-nrw.png", width: 120, height: 40 },
+  { src: "/images/customers/08-lesmills.png", width: 120, height: 40 },
+  { src: "/images/customers/09.yazaki.png", width: 120, height: 40 },
+  { src: "/images/customers/10-messeDuesseldorf.png", width: 120, height: 40 },
+  { src: "/images/customers/11-obi-next.png", width: 120, height: 40 },
+  { src: "/images/customers/12-msd.png", width: 120, height: 40 },
+  { src: "/images/customers/13-berner-group.png", width: 120, height: 40 },
+  { src: "/images/customers/14-docCheck.png", width: 120, height: 40 },
+  { src: "/images/customers/15-freseniuskabi.png", width: 120, height: 40 },
 ];
+
+const CV_CLIENT_LOGOS: CaseStudyLogoStackItem[] = CV_CLIENT_LOGO_SOURCES.map((logo) => ({
+  ...logo,
+  alt: customerLogoAlt(logo.src, logo.src.split("/").pop()?.replace(/\.\w+$/, "") ?? "Client"),
+}));
 
 export function CvClientWall() {
   return (

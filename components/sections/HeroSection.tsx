@@ -34,12 +34,13 @@
  *
  * 6. ACCESSIBILITY
  *    - aria-label: Describes section purpose for screen readers
- *    - aria-hidden: Hides decorative images from screen readers
+ *    - Meaningful alt on portrait images for SEO and screen reader users
  *    - Semantic HTML: <section>, <h1>, <p> for proper document structure
  */
 
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { HERO_PORTRAIT_ALT } from "@/lib/seo/image-alt";
 
 type HeroSectionProps = {
   ctaHref?: string;
@@ -53,13 +54,12 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
           <div className="relative h-full w-full">
             <Image
               src="/images/hero-portrait-strategic-ux-design-stefan_heissenberg-desktop.png"
-              alt=""
+              alt={HERO_PORTRAIT_ALT}
               fill
               className="object-contain object-right-bottom"
               priority
               unoptimized
               sizes="(max-width: 1600px) 100vw, 1600px"
-              aria-hidden
             />
           </div>
         </div>
@@ -67,13 +67,12 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
           <div className="relative h-full w-full">
             <Image
               src="/images/hero-portrait-strategic-ux-design-stefan_heissenberg-mobile.jpg"
-              alt=""
+              alt={HERO_PORTRAIT_ALT}
               fill
               className="object-cover object-[center_20%]"
               priority
               unoptimized
               sizes="(max-width: 1600px) 100vw, 1600px"
-              aria-hidden
             />
           </div>
         </div>

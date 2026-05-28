@@ -13,6 +13,7 @@
 
 import Image from "next/image";
 import { CaseStudyTeaser } from "./CaseStudyTeaser";
+import { customerLogoAlt } from "@/lib/seo/image-alt";
 
 export function DHLCaseStudyTeaser() {
   return (
@@ -24,7 +25,7 @@ export function DHLCaseStudyTeaser() {
         <div className="relative h-auto w-full max-w-[180px]">
           <Image
             src="/images/customers/03-dhl.png"
-            alt="DHL Logo"
+            alt={customerLogoAlt("/images/customers/03-dhl.png", "DHL Global Forwarding")}
             width={180}
             height={80}
             className="h-auto w-full object-contain"
@@ -37,7 +38,7 @@ export function DHLCaseStudyTeaser() {
         "myDHLi started as a sketch I drew while still at Saloodo!. Seven years later it's the central portal for DHL Global Forwarding — quoting, booking, tracking, documents, analytics for 22,000+ enterprise customers across 50+ countries.",
       ]}
       imageSrc="/images/portfolio/dhl-casestudy-teaser.png"
-      imageAlt="DHL myDHLi portal on tablet and smartphones"
+      imageAlt="myDHLi B2B portal on tablet and smartphones — enterprise UX design, design systems, and product leadership case study"
       imagePosition="left"
     />
   );

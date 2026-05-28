@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Outfit, Kode_Mono, Cherry_Bomb_One } from "next/font/google";
+import { buildTrustBadgeSchemaCredentials } from "@/lib/data/trust-badges";
 import "./globals.css";
 
 // LEARNING: next/font/google automatically:
@@ -167,6 +168,7 @@ const personJsonLd = {
       name: "Professional Scrum Master I (PSM I)",
       credentialCategory: "certification",
     },
+    ...buildTrustBadgeSchemaCredentials(),
   ],
   seeks: {
     "@type": "Demand",

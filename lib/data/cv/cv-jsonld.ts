@@ -142,6 +142,7 @@ export type SchemaCredential = {
   validFrom?: string;
   validUntil?: string;
   dateCreated?: string;
+  url?: string;
 };
 
 export type SchemaAlumni = {
@@ -198,6 +199,7 @@ export function buildHasCredential(credentialBlocks: CvCredentialBlock[]): Schem
     if (years.validFrom) credential.validFrom = years.validFrom;
     if (years.validUntil) credential.validUntil = years.validUntil;
     if (years.dateCreated) credential.dateCreated = years.dateCreated;
+    if (item.credentialUrl) credential.url = item.credentialUrl;
 
     return credential;
   });

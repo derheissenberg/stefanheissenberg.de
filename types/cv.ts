@@ -62,6 +62,8 @@ export type CvCredentialItem = {
   titleHighlight?: string; // Gradient italic portion
   org?: string;            // Organisation / issuer
   year?: string;           // e.g. "2023—25" | "Won"
+  /** Verifiable credential URL (Skilljar, issuer, PDF) for JSON-LD */
+  credentialUrl?: string;
 };
 
 export type CvCredentialBlock = {

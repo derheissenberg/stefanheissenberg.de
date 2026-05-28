@@ -62,3 +62,36 @@ export const CUSTOMER_LOGO_ALT: Record<string, string> = {
 export function customerLogoAlt(src: string, fallback: string): string {
   return CUSTOMER_LOGO_ALT[src] ?? `${fallback} — enterprise UX and product design client`;
 }
+
+/** Trust bar / award badge marks — keyed by public asset path */
+export const TRUST_BADGE_ALT: Record<string, string> = {
+  "/images/trustbadges/comprix-design-award.png":
+    "Com Prix Design Award — healthcare communication design prize, Stefan Heißenberg",
+  "/images/trustbadges/design-ward-winning-design.svg":
+    "German Design Award Winner — acclaimed UX, product design, and digital experience recognition",
+  "/images/trustbadges/german-brand-design-award-winner.svg":
+    "German Brand Award Winner — brand identity, experience design, and corporate design excellence",
+  "/images/trustbadges/ux-master-design-stefan-heissenberg-certified-nng.png":
+    "Nielsen Norman Group UX Master certification — advanced UX research, interaction design, and design leadership (2023–2025)",
+  "/images/trustbadges/scrum-master-professional-stefan-heissenberg-psm-i.png":
+    "Scrum.org Professional Scrum Master PSM I certification — agile product delivery and team facilitation (2022)",
+  "/images/trustbadges/Anthropic_certificates.svg":
+    "Anthropic Academy — Claude Code in Action certificate and Agent Skills credential, verified AI-augmented product and design workflow",
+};
+
+/** Schema.org credential metadata for trust badges (JSON-LD, CV structured data) */
+export const TRUST_BADGE_SCHEMA_CREDENTIALS = [
+  {
+    name: "Claude Code in Action",
+    recognizedBy: "Anthropic Academy",
+    credentialCategory: "certification",
+    url: "https://verify.skilljar.com/c/zdabk9i55ayv",
+    dateCompleted: "2026-05-17",
+  },
+  {
+    name: "Agent Skills",
+    recognizedBy: "Anthropic Academy",
+    credentialCategory: "certification",
+    dateCompleted: "2026",
+  },
+] as const;

@@ -56,6 +56,19 @@ export const CV_CREDENTIALS: CvCredentialBlock[] = [
         org: "Scrum.org",
         year: "2022",
       },
+      {
+        title: "Claude Code ",
+        titleHighlight: "in Action",
+        org: "Anthropic Academy",
+        year: "2026",
+        credentialUrl: "https://verify.skilljar.com/c/zdabk9i55ayv",
+      },
+      {
+        title: "Agent ",
+        titleHighlight: "Skills",
+        org: "Anthropic Academy",
+        year: "2026",
+      },
     ],
   },
   {

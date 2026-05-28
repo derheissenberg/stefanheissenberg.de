@@ -37,7 +37,7 @@ export function CvCaseStudyCard({
           src={imageSrc}
           alt={imageAlt}
           fill
-          className="object-cover transition-transform duration-[600ms] ease-in-out group-hover:scale-[1.04]"
+          className="object-contain transition-transform duration-[600ms] ease-in-out group-hover:scale-[1.04]"
           sizes="(max-width: 900px) 100vw, 33vw"
         />
       </div>
@@ -46,7 +46,7 @@ export function CvCaseStudyCard({
       <div className="flex flex-1 flex-col gap-2 p-[22px] pb-6">
         {/* Kicker */}
         <p
-          className="text-[10.5px] uppercase text-[var(--accent-cyan-300)] tracking-[0.24em]"
+          className="text-[10.5px] uppercase text-white/55 tracking-[0.24em]"
           style={{ fontFamily: "var(--font-kode-mono), ui-monospace, monospace", fontWeight: 500 }}
         >
           {kicker}

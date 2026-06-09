@@ -107,7 +107,11 @@ export default function DesignPortfolioPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioCollectionJsonLd) }}
       />
       {/* Chat Hero - AI-powered interactive hero with portrait background */}
-      <Chat theme="stefan-portfolio" assistantLabel="Stefan's Assistant" />
+      <Chat
+        theme="stefan-portfolio"
+        assistantLabel="Stefan's Assistant"
+        scrollCue={{ label: "More to read" }}
+      />
 
       {/* Case Study Teasers - Matching Figma designs */}
       {/* LEARNING: Each case study has its own teaser section with image and text */}

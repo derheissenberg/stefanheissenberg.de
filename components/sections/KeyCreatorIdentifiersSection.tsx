@@ -22,7 +22,7 @@ import AuroraBlue from "@/components/backgrounds/AuroraBlue";
 
 const metrics = [
   { value: "400+", label: "Projects delivered", color: "blue" as const },
-  { value: "21", label: "Selfhosted Websites", color: "yellow" as const },
+  { value: "22", label: "Selfhosted Websites", color: "yellow" as const },
   { value: "5", label: "Startups founded", color: "blue" as const },
   { value: "6.720", label: "RAW photos in 2025", color: "yellow" as const },
   { value: "24", label: "Books read in 2025", color: "blue" as const },

@@ -26,7 +26,7 @@ const metrics = [
   { value: "5", label: "Startups founded", color: "blue" as const },
   { value: "6.720", label: "RAW photos in 2025", color: "yellow" as const },
   { value: "24", label: "Books read in 2025", color: "blue" as const },
-  { value: "11.260", label: "Documented daily ideas since 2019.", color: "yellow" as const },
+  { value: "11.301", label: "Documented daily ideas since 2019.", color: "yellow" as const },
   { value: "8", label: "Countries visited in 2025", color: "blue" as const },
   { value: "17", label: "Years of continuous online presence", color: "yellow" as const },
   { value: "19", label: "Daily habits", color: "blue" as const },

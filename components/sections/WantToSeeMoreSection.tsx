@@ -52,7 +52,7 @@ export function WantToSeeMoreSection({ ctaHref = "mailto:hallo@stefanheissenberg
             Get in touch
           </Button>
           <Button variant="outline" href="/" className="w-full justify-center sm:w-auto">
-            ← Back to home
+            Discover my Website →
           </Button>
         </div>
       </div>

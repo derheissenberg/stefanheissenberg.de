@@ -1,1 +1,0 @@
-import{i as e}from"./index-8pbD7JIe.js";import{a as t,n,r}from"./DeckScreen-DuBVgJEm.js";var i=e();function a(){return n(void 0),(0,i.jsx)(`main`,{className:`h-screen w-screen bg-background`,children:(0,i.jsx)(t,{children:(0,i.jsx)(r,{})})})}export{a as component};

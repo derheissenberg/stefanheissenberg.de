@@ -41,7 +41,7 @@ const PROPERTIES: { icon: string; label: string; value: React.ReactNode }[] = [
     icon: "☰",
     label: "Team",
     value: (
-      <span className="inline-block rounded-[4px] bg-[#3a2d24] px-[9px] py-[2px] text-[13px] font-medium text-[#d9a679]">
+      <span className="inline-block rounded-[4px] bg-[#3a2d24] px-[9px] py-[2px] text-[14px] leading-[20px] font-normal text-[#d9a679]">
         Design
       </span>
     ),
@@ -51,7 +51,7 @@ const PROPERTIES: { icon: string; label: string; value: React.ReactNode }[] = [
     icon: "☉",
     label: "Where are you",
     value: (
-      <span className="inline-block rounded-[4px] bg-[#3a2a44] px-[9px] py-[2px] text-[13px] font-medium text-[#c3a3e3]">
+      <span className="inline-block rounded-[4px] bg-[#3a2a44] px-[9px] py-[2px] text-[14px] leading-[20px] font-normal text-[#c3a3e3]">
         Cologne, Germany — CET
       </span>
     ),
@@ -92,8 +92,8 @@ const TALK_ABOUT: { emoji: string; text: string }[] = [
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mb-[22px] last:mb-0">
-      <h2 className="mb-2 text-[19px] font-bold text-white">{title}</h2>
+    <section className="mb-[26px] last:mb-0">
+      <h2 className="mb-[6px] text-[20px] font-semibold leading-[26px] text-white">{title}</h2>
       {children}
     </section>
   );
@@ -105,9 +105,9 @@ function EmojiList({ items }: { items: { emoji: string; text: string }[] }) {
       {items.map((item) => (
         <li
           key={item.text}
-          className="my-[7px] flex items-start gap-[9px] text-[14.5px] leading-[1.5] text-[#DCDCDC]"
+          className="my-[6px] flex items-start gap-[9px] text-[16px] leading-[24px] text-[#DCDCDC]"
         >
-          <span aria-hidden className="shrink-0 leading-[1.5]">
+          <span aria-hidden className="shrink-0 leading-[24px]">
             {item.emoji}
           </span>
           <span>{item.text}</span>
@@ -122,18 +122,18 @@ function EmojiList({ items }: { items: { emoji: string; text: string }[] }) {
 export default function HospitableProfilePage() {
   return (
     <main className="min-h-screen bg-[#191919] px-6 py-12 text-[#EBEBEB] sm:px-10 sm:py-16">
-      <article className="mx-auto w-full max-w-[760px]">
+      <article className="mx-auto w-full max-w-[720px]">
         <div aria-hidden className="mb-[14px] text-[52px] leading-none">
           🎸
         </div>
 
-        <h1 className="mb-4 text-[34px] font-extrabold tracking-[-0.5px] text-white sm:text-[40px]">
+        <h1 className="mb-4 text-[32px] font-bold leading-[40px] text-white sm:text-[40px] sm:leading-[48px]">
           Stefan Heißenberg
         </h1>
 
         <dl className="mb-[6px]">
           {PROPERTIES.map((prop) => (
-            <div key={prop.label} className="flex flex-wrap items-center py-[5px] text-[14px]">
+            <div key={prop.label} className="flex flex-wrap items-center py-[5px] text-[14px] leading-[21px]">
               <dt className="flex w-[112px] shrink-0 items-center gap-2 text-[#9B9B9B] sm:w-[150px]">
                 <span aria-hidden className="w-[15px] text-[#7a7a7a]">
                   {prop.icon}
@@ -163,7 +163,7 @@ export default function HospitableProfilePage() {
 
           <div className="flex-1">
             <Section title="Mission">
-              <p className="m-0 text-[15px] leading-[1.55] text-[#D6D6D6]">
+              <p className="m-0 text-[16px] leading-[24px] text-[#D6D6D6]">
                 Own the craft and the standard behind every screen a host touches, and keep my hands
                 in the work. Simple at one door and at a hundred, and the quiet half of that is time
                 given back <span aria-hidden>✨</span>
@@ -179,8 +179,8 @@ export default function HospitableProfilePage() {
             </Section>
 
             <Section title="First thing I'd look at">
-              <p className="m-0 flex items-start gap-[9px] text-[14.5px] leading-[1.5] text-[#DCDCDC]">
-                <span aria-hidden className="shrink-0 leading-[1.5]">
+              <p className="m-0 flex items-start gap-[9px] text-[16px] leading-[24px] text-[#DCDCDC]">
+                <span aria-hidden className="shrink-0 leading-[24px]">
                   👨🏻‍💻
                 </span>
                 <span>

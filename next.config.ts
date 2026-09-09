@@ -22,6 +22,14 @@ const nextConfig: NextConfig = {
           source: "/design-deep-dive-zeos/:path*",
           destination: "/design-deep-dive-zeos/index.html",
         },
+        {
+          source: "/design-system-telekom",
+          destination: "/design-system-telekom/index.html",
+        },
+        {
+          source: "/design-system-telekom/:path*",
+          destination: "/design-system-telekom/index.html",
+        },
       ],
     };
   },
@@ -34,6 +42,10 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/design-deep-dive-zeos/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/design-system-telekom/:path*",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
     ];

@@ -1,0 +1,1 @@
+import{a as e,i as t,t as n}from"./index-C09Xc89G.js";import{i as r,t as i}from"./DeckScreen-B4v8V3a-.js";var a=t();function o(){let{slideId:t}=n.useParams(),o=r(t);if(!o)throw e();return(0,a.jsx)(i,{slide:o})}export{o as component};

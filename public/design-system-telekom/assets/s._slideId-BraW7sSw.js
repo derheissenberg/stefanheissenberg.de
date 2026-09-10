@@ -1,1 +1,0 @@
-import{a as e,i as t,t as n}from"./index-D01H32t7.js";import{i as r,t as i}from"./DeckScreen-CnxDOdiC.js";var a=t();function o(){let{slideId:t}=n.useParams(),o=r(t);if(!o)throw e();return(0,a.jsx)(i,{slide:o})}export{o as component};

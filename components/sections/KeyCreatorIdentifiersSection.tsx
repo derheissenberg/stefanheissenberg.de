@@ -32,7 +32,7 @@ const metrics = [
   { value: "19", label: "Daily habits", color: "blue" as const },
   { value: "6.720", label: "RAW photos in 2025", color: "yellow" as const },
   { value: "24", label: "Books read in 2025", color: "blue" as const },
-  { value: "11.866", label: "Documented daily ideas since 2019", color: "yellow" as const },
+  { value: "11.881", label: "Documented daily ideas since 2019", color: "yellow" as const },
 ];
 
 export function KeyCreatorIdentifiersSection() {

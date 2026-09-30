@@ -24,15 +24,15 @@ const metrics = [
   { value: "400+", label: "Projects delivered", color: "blue" as const },
   { value: "82", label: "Clients", color: "yellow" as const },
   { value: "5", label: "Startups founded", color: "blue" as const },
-  { value: "207", label: "hours Claude Code in 2026", color: "yellow" as const },
-  { value: "1.781", label: "GitHub contributions in the last year", color: "blue" as const },
+  { value: "211", label: "hours Claude Code in 2026", color: "yellow" as const },
+  { value: "1.790", label: "GitHub contributions in the last year", color: "blue" as const },
   { value: "22", label: "Selfhosted Websites", color: "yellow" as const },
   { value: "8", label: "Countries visited in 2025", color: "blue" as const },
   { value: "17", label: "Years of continuous online presence", color: "yellow" as const },
   { value: "19", label: "Daily habits", color: "blue" as const },
   { value: "6.720", label: "RAW photos in 2025", color: "yellow" as const },
   { value: "24", label: "Books read in 2025", color: "blue" as const },
-  { value: "11.881", label: "Documented daily ideas since 2019", color: "yellow" as const },
+  { value: "11.893", label: "Documented daily ideas since 2019", color: "yellow" as const },
 ];
 
 export function KeyCreatorIdentifiersSection() {

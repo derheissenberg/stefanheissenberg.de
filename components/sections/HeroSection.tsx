@@ -104,7 +104,7 @@ export function HeroSection({ ctaHref = "mailto:hallo@stefanheissenberg.de" }: H
           </p>
 
           <p className="font-outfit mt-7 max-w-[520px] text-[18px] leading-[1.55] text-white/80">
-            Fifteen years designing digital products.
+            Sixteen years designing digital products.
             <br />
             Connecting UX metrics with business outcomes - from startup to enterprise.
           </p>
